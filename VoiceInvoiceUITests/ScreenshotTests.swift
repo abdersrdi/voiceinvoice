@@ -96,7 +96,7 @@ final class ScreenshotTests: XCTestCase {
             if field.waitForExistence(timeout: 10) {
                 field.tap()
                 field.typeText("Two shirts at 20 each and a pair of pants for 40")
-                app.staticTexts["What I heard"].tap()
+                if app.buttons["Done"].waitForExistence(timeout: 3) { app.buttons["Done"].tap() }
                 settle(1.5)
                 shot("dictation")
             } else {

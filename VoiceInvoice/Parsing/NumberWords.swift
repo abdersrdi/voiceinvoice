@@ -58,8 +58,8 @@ enum NumberWords {
             case .connector:
                 guard consumed, i + 1 < toks.count, toks[i + 1].value == nil,
                       let next = lex.numbers[toks[i + 1].key],
-                      case .small(let v) = next,
-                      connectorAllowed(current: current, total: total, next: v, lex: lex)
+                      let nextValue = connectorValue(next),
+                      connectorAllowed(current: current, total: total, next: nextValue, lex: lex)
                 else { break scan }
                 i += 1
             }
@@ -98,6 +98,14 @@ enum NumberWords {
         return (value, i - start)
     }
 
+    private static func connectorValue(_ kind: NumKind) -> Int? {
+        switch kind {
+        case .small(let v): return v
+        case .fixedHundred(let v): return v
+        default: return nil
+        }
+    }
+
     static func canAppendSmall(current: Int, value: Int, lex: Lexicon) -> Bool {
         if current == 0 { return true }
         let low = current % 100
@@ -114,8 +122,10 @@ enum NumberWords {
     static func connectorAllowed(current: Int, total: Int, next: Int, lex: Lexicon) -> Bool {
         let low = current % 100
         switch lex.language {
-        case .en, .it:
+        case .en:
             return next < 100 && ((current >= 100 && low == 0) || (total > 0 && current == 0))
+        case .it:
+            return (total > 0 && current == 0) || (next < 100 && current >= 100 && low == 0)
         case .fr:
             return [20, 30, 40, 50, 60].contains(low) && (next == 1 || next == 11)
         case .es:

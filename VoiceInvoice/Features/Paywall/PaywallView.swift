@@ -84,7 +84,9 @@ struct PaywallView: View {
 
     @ViewBuilder
     private var plans: some View {
-        if subscriptions.products.isEmpty {
+        if subscriptions.products.isEmpty && DemoMode.isActive {
+            demoPlans
+        } else if subscriptions.products.isEmpty {
             VStack(spacing: 10) {
                 if subscriptions.isLoadingProducts {
                     ProgressView()
@@ -105,6 +107,50 @@ struct PaywallView: View {
                 }
             }
         }
+    }
+
+    /// Static example plans, shown only in automated screenshot runs.
+    private var demoPlans: some View {
+        VStack(spacing: 12) {
+            demoCard(title: "Yearly", price: "$39.99", period: "per year", detail: "$3.33 / month", badge: "Save 33%", trial: "7-day free trial", selected: true)
+            demoCard(title: "Monthly", price: "$4.99", period: "per month", detail: nil, badge: nil, trial: nil, selected: false)
+        }
+    }
+
+    private func demoCard(title: String, price: String, period: String, detail: String?, badge: String?, trial: String?, selected: Bool) -> some View {
+        HStack(spacing: 12) {
+            VStack(alignment: .leading, spacing: 4) {
+                HStack(spacing: 8) {
+                    Text(verbatim: title).font(.system(.headline, design: .rounded))
+                    if let badge {
+                        Text(verbatim: badge)
+                            .font(.system(.caption2, design: .rounded, weight: .bold))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 3)
+                            .background(Theme.burgundy, in: Capsule())
+                    }
+                }
+                if let detail {
+                    Text(verbatim: detail).font(.caption).foregroundStyle(Theme.secondaryText)
+                }
+                if let trial {
+                    Text(verbatim: trial)
+                        .font(.system(.caption, design: .rounded, weight: .semibold))
+                        .foregroundStyle(Theme.accent)
+                }
+            }
+            Spacer()
+            VStack(alignment: .trailing, spacing: 2) {
+                Text(verbatim: price).font(Theme.amount(20, weight: .bold))
+                Text(verbatim: period).font(.caption).foregroundStyle(Theme.secondaryText)
+            }
+        }
+        .cardStyle()
+        .overlay(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .strokeBorder(selected ? Theme.accent : Color.clear, lineWidth: 2)
+        )
     }
 
     private func planCard(_ product: Product) -> some View {

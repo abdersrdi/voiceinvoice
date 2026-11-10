@@ -62,6 +62,7 @@ final class CounterModeController {
     }
 
     private func tick() {
+        if DemoMode.isActive { return }
         switch phase {
         case .waiting:
             if speech.state == .idle {

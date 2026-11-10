@@ -3,7 +3,7 @@ import SwiftData
 
 @main
 struct VoiceInvoiceApp: App {
-    private let container = Persistence.makeContainer()
+    private let container = DemoMode.isActive ? DemoData.container() : Persistence.makeContainer()
     @State private var subscriptions = SubscriptionStore()
     @State private var router = AppRouter()
     @Environment(\.scenePhase) private var scenePhase

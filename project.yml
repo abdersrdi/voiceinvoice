@@ -104,7 +104,25 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: cc.voiceinvoice.app.tests
         GENERATE_INFOPLIST_FILE: YES
+  VoiceInvoiceUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - VoiceInvoiceUITests
+    dependencies:
+      - target: VoiceInvoice
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: cc.voiceinvoice.app.uitests
+        GENERATE_INFOPLIST_FILE: YES
 schemes:
+  VoiceInvoiceUI:
+    build:
+      targets:
+        VoiceInvoice: all
+    test:
+      targets:
+        - VoiceInvoiceUITests
   VoiceInvoice:
     build:
       targets:

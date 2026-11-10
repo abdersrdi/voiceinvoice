@@ -1,0 +1,79 @@
+name: Screenshots
+
+# Launches the app with demo data on several simulators, walks through every main screen with
+# UI tests, and uploads the screenshots as artifacts. Started manually.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  shots:
+    name: ${{ matrix.label }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    continue-on-error: ${{ matrix.experimental }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { label: iphone-17-pro-max, runner: macos-26, device: "iPhone 17 Pro Max", xcode: "26", experimental: false }
+          - { label: ipad-pro-13, runner: macos-26, device: "iPad Pro 13-inch (M5)", xcode: "26", experimental: false }
+          - { label: iphone-duo, runner: xcode-27, device: "iPhone Duo", xcode: "27", experimental: true }
+          - { label: iphone-18-pro-max, runner: xcode-27, device: "iPhone 18 Pro Max", xcode: "27", experimental: true }
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Select Xcode ${{ matrix.xcode }}
+        run: |
+          APP=$(ls -d /Applications/Xcode_${{ matrix.xcode }}* 2>/dev/null | sort -V | tail -1)
+          echo "Using $APP"
+          sudo xcode-select -s "$APP"
+          xcodebuild -version
+
+      - name: Install XcodeGen and generate the project
+        run: |
+          brew install xcodegen
+          xcodegen generate
+
+      - name: Create and boot the simulator
+        id: sim
+        run: |
+          read -r DEVICE_TYPE RUNTIME < <(python3 tools/pick_simulator.py "${{ matrix.device }}")
+          echo "Device type: $DEVICE_TYPE"
+          echo "Runtime: $RUNTIME"
+          UDID=$(xcrun simctl create "Shots" "$DEVICE_TYPE" "$RUNTIME")
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularMode active --cellularBars 4 --wifiBars 3 || true
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+
+      - name: Run the UI tour
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project VoiceInvoice.xcodeproj \
+            -scheme VoiceInvoiceUI \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -resultBundlePath UITests.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            2>&1 | tee ui.log
+
+      - name: Screenshots found
+        if: always()
+        run: find "$HOME/ui-screenshots" -type f | sort || true
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ matrix.label }}
+          path: /Users/runner/ui-screenshots
+          if-no-files-found: warn
+
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log-${{ matrix.label }}
+          path: ui.log
+          if-no-files-found: warn

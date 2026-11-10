@@ -79,7 +79,7 @@ struct EmployeeRow: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(employee.name.isEmpty ? String(localized: "Unnamed") : employee.name)
                     .font(.system(.body, design: .rounded, weight: .medium))
-                Text(VoiceprintStore.hasVoiceprint(employee) ? "Voice enrolled" : "No voice enrolled")
+                Text(VoiceprintStore.hasVoiceprint(employee) ? String(localized: "Voice enrolled") : String(localized: "No voice enrolled"))
                     .font(.caption)
                     .foregroundStyle(Theme.secondaryText)
             }
@@ -113,11 +113,11 @@ struct EmployeeDetailView: View {
             }
 
             Section {
-                Label(hasVoice ? "Voice enrolled" : "No voice enrolled",
+                Label(hasVoice ? String(localized: "Voice enrolled") : String(localized: "No voice enrolled"),
                       systemImage: hasVoice ? "waveform.circle.fill" : "mic.slash")
                     .foregroundStyle(hasVoice ? Theme.accent : Theme.secondaryText)
 
-                Button(hasVoice ? "Re-enroll voice" : "Enroll voice") {
+                Button(hasVoice ? String(localized: "Re-enroll voice") : String(localized: "Enroll voice")) {
                     if !hasVoice && enrolledCount >= VoiceLimits.maxEnrolledVoices {
                         showLimitAlert = true
                     } else {
@@ -276,7 +276,7 @@ struct VoiceEnrollmentFlow: View {
             }
             .frame(height: 120)
 
-            Text(capture.isRecording ? "Speak in your normal voice…" : "Tap the mic, then read the sentence aloud.")
+            Text(capture.isRecording ? String(localized: "Speak in your normal voice…") : String(localized: "Tap the mic, then read the sentence aloud."))
                 .font(.footnote)
                 .foregroundStyle(Theme.secondaryText)
 

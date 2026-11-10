@@ -1,0 +1,1126 @@
+# Translation source for the string catalogs. Run tools/build_catalogs.py to regenerate them.
+# Format: a key line (the English text), then fr:/es:/it:/zh: lines. Blank line between entries.
+# Positional specifiers (%1$@, %2$lld) are used where word order changes.
+
+@app
+
+A shop can enroll up to %lld voices. Delete one to enroll another.
+fr: Un commerce peut enregistrer jusqu'à %lld voix. Supprimez-en une pour en enregistrer une autre.
+es: Un comercio puede registrar hasta %lld voces. Elimina una para registrar otra.
+it: Un negozio può registrare fino a %lld voci. Eliminane una per registrarne un'altra.
+zh: 每家店最多可登记 %lld 个声音。请先删除一个再登记新的。
+
+A voiceprint is not a security lock. It only helps label who dictated an invoice.
+fr: Une empreinte vocale n'est pas un verrou de sécurité. Elle sert uniquement à indiquer qui a dicté une facture.
+es: Una huella de voz no es un cierre de seguridad. Solo ayuda a indicar quién dictó una factura.
+it: Un'impronta vocale non è un blocco di sicurezza. Serve solo a indicare chi ha dettato una fattura.
+zh: 声纹不是安全锁，只用于标注是谁口述了发票。
+
+AMOUNT
+fr: MONTANT
+es: IMPORTE
+it: IMPORTO
+zh: 金额
+
+Active
+fr: Actif
+es: Activo
+it: Attivo
+zh: 已启用
+
+Add
+fr: Ajouter
+es: Añadir
+it: Aggiungi
+zh: 添加
+
+Add item
+fr: Ajouter un article
+es: Añadir artículo
+it: Aggiungi articolo
+zh: 添加项目
+
+Add team member
+fr: Ajouter un membre
+es: Añadir miembro del equipo
+it: Aggiungi membro del team
+zh: 添加团队成员
+
+Add the people who dictate invoices. Enroll up to %lld voices so VoiceInvoice can tell who is speaking and note it on each invoice.
+fr: Ajoutez les personnes qui dictent des factures. Enregistrez jusqu'à %lld voix pour que VoiceInvoice sache qui parle et l'indique sur chaque facture.
+es: Añade a las personas que dictan facturas. Registra hasta %lld voces para que VoiceInvoice sepa quién habla y lo anote en cada factura.
+it: Aggiungi le persone che dettano le fatture. Registra fino a %lld voci così VoiceInvoice riconosce chi parla e lo annota su ogni fattura.
+zh: 添加会口述发票的人员。最多登记 %lld 个声音，VoiceInvoice 就能识别说话人并记录在每张发票上。
+
+Address
+fr: Adresse
+es: Dirección
+it: Indirizzo
+zh: 地址
+
+Apple servers
+fr: Serveurs Apple
+es: Servidores de Apple
+it: Server Apple
+zh: Apple 服务器
+
+Authorized signature
+fr: Signature autorisée
+es: Firma autorizada
+it: Firma autorizzata
+zh: 授权签名
+
+BILL TO
+fr: FACTURÉ À
+es: FACTURAR A
+it: INTESTATARIO
+zh: 收票方
+
+Branding
+fr: Image de marque
+es: Marca
+it: Immagine del marchio
+zh: 品牌
+
+Cancel
+fr: Annuler
+es: Cancelar
+it: Annulla
+zh: 取消
+
+Check the price
+fr: Vérifiez le prix
+es: Revisa el precio
+it: Controlla il prezzo
+zh: 请检查价格
+
+Choose
+fr: Choisir
+es: Elegir
+it: Scegli
+zh: 选择
+
+Choose photo
+fr: Choisir une photo
+es: Elegir foto
+it: Scegli foto
+zh: 选择照片
+
+Clean-up
+fr: Nettoyage
+es: Limpieza
+it: Pulizia
+zh: 清理
+
+Clear
+fr: Effacer
+es: Borrar
+it: Cancella
+zh: 清除
+
+Close
+fr: Fermer
+es: Cerrar
+it: Chiudi
+zh: 关闭
+
+Company stamp
+fr: Tampon de l'entreprise
+es: Sello de la empresa
+it: Timbro aziendale
+zh: 公司印章
+
+Could not build the PDF
+fr: Impossible de créer le PDF
+es: No se pudo crear el PDF
+it: Impossibile creare il PDF
+zh: 无法生成 PDF
+
+Currency
+fr: Devise
+es: Moneda
+it: Valuta
+zh: 货币
+
+Customer
+fr: Client
+es: Cliente
+it: Cliente
+zh: 客户
+
+Customer name
+fr: Nom du client
+es: Nombre del cliente
+it: Nome del cliente
+zh: 客户名称
+
+DESCRIPTION
+fr: DESCRIPTION
+es: DESCRIPCIÓN
+it: DESCRIZIONE
+zh: 说明
+
+Default tax (%)
+fr: Taxe par défaut (%)
+es: Impuesto por defecto (%)
+it: Imposta predefinita (%)
+zh: 默认税率 (%)
+
+Default tax rate (%)
+fr: Taux de taxe par défaut (%)
+es: Tasa de impuesto por defecto (%)
+it: Aliquota predefinita (%)
+zh: 默认税率 (%)
+
+Delete
+fr: Supprimer
+es: Eliminar
+it: Elimina
+zh: 删除
+
+Delete voice
+fr: Supprimer la voix
+es: Eliminar voz
+it: Elimina voce
+zh: 删除声音
+
+Details
+fr: Détails
+es: Detalles
+it: Dettagli
+zh: 详情
+
+Dictate
+fr: Dicter
+es: Dictar
+it: Detta
+zh: 口述
+
+Dictate an invoice
+fr: Dicter une facture
+es: Dictar una factura
+it: Detta una fattura
+zh: 口述发票
+
+Discount
+fr: Remise
+es: Descuento
+it: Sconto
+zh: 折扣
+
+Discount (%)
+fr: Remise (%)
+es: Descuento (%)
+it: Sconto (%)
+zh: 折扣 (%)
+
+Draft
+fr: Brouillon
+es: Borrador
+it: Bozza
+zh: 草稿
+
+Due
+fr: Échéance
+es: Vencimiento
+it: Scadenza
+zh: 到期
+
+Due date
+fr: Date d'échéance
+es: Fecha de vencimiento
+it: Data di scadenza
+zh: 到期日
+
+Edit
+fr: Modifier
+es: Editar
+it: Modifica
+zh: 编辑
+
+Edit invoice
+fr: Modifier la facture
+es: Editar factura
+it: Modifica fattura
+zh: 编辑发票
+
+Email
+fr: E-mail
+es: Correo electrónico
+it: E-mail
+zh: 电子邮件
+
+Enroll voice
+fr: Enregistrer la voix
+es: Registrar voz
+it: Registra voce
+zh: 登记声音
+
+Enrollment did not work. Please try again.
+fr: L'enregistrement a échoué. Veuillez réessayer.
+es: El registro no funcionó. Inténtalo de nuevo.
+it: La registrazione non è riuscita. Riprova.
+zh: 登记失败，请重试。
+
+Everything you already made stays free to view, export and share
+fr: Tout ce que vous avez déjà créé reste gratuit à consulter, exporter et partager
+es: Todo lo que ya creaste sigue siendo gratis para ver, exportar y compartir
+it: Tutto ciò che hai già creato resta gratuito da consultare, esportare e condividere
+zh: 已创建的内容始终可免费查看、导出和分享
+
+Footer note
+fr: Note de bas de page
+es: Nota al pie
+it: Nota a piè di pagina
+zh: 页脚备注
+
+Free plan
+fr: Offre gratuite
+es: Plan gratuito
+it: Piano gratuito
+zh: 免费版
+
+Get started
+fr: Commencer
+es: Empezar
+it: Inizia
+zh: 开始使用
+
+Hear how much you invoiced today.
+fr: Écoutez le montant facturé aujourd'hui.
+es: Escucha cuánto facturaste hoy.
+it: Ascolta quanto hai fatturato oggi.
+zh: 听听你今天开出的发票总额。
+
+INVOICE
+fr: FACTURE
+es: FACTURA
+it: FATTURA
+zh: 发票
+
+Invoice
+fr: Facture
+es: Factura
+it: Fattura
+zh: 发票
+
+Invoices
+fr: Factures
+es: Facturas
+it: Fatture
+zh: 发票
+
+Invoicing
+fr: Facturation
+es: Facturación
+it: Fatturazione
+zh: 开票设置
+
+Issue date
+fr: Date d'émission
+es: Fecha de emisión
+it: Data di emissione
+zh: 开票日期
+
+Issued
+fr: Émise le
+es: Emitida
+it: Emessa
+zh: 开票
+
+Item
+fr: Article
+es: Artículo
+it: Articolo
+zh: 项目
+
+Items
+fr: Articles
+es: Artículos
+it: Articoli
+zh: 项目
+
+Listening…
+fr: Écoute…
+es: Escuchando…
+it: In ascolto…
+zh: 正在聆听…
+
+Manage subscription
+fr: Gérer l'abonnement
+es: Gestionar suscripción
+it: Gestisci abbonamento
+zh: 管理订阅
+
+Microphone access is turned off for VoiceInvoice. You can enable it in Settings.
+fr: L'accès au micro est désactivé pour VoiceInvoice. Vous pouvez l'activer dans Réglages.
+es: El acceso al micrófono está desactivado para VoiceInvoice. Puedes activarlo en Ajustes.
+it: L'accesso al microfono è disattivato per VoiceInvoice. Puoi attivarlo in Impostazioni.
+zh: VoiceInvoice 的麦克风权限已关闭，可在“设置”中开启。
+
+Monthly
+fr: Mensuel
+es: Mensual
+it: Mensile
+zh: 按月
+
+Move right to keep faint ink. Move left to remove paper noise and shadows.
+fr: Déplacez à droite pour garder l'encre claire. Déplacez à gauche pour retirer le bruit et les ombres du papier.
+es: Mueve a la derecha para conservar la tinta tenue. Mueve a la izquierda para quitar el ruido y las sombras del papel.
+it: Sposta a destra per mantenere l'inchiostro tenue. Sposta a sinistra per eliminare disturbi e ombre della carta.
+zh: 向右拖动可保留淡墨迹，向左拖动可去除纸张噪点和阴影。
+
+NOTES
+fr: NOTES
+es: NOTAS
+it: NOTE
+zh: 备注
+
+Name
+fr: Nom
+es: Nombre
+it: Nome
+zh: 名称
+
+New invoice
+fr: Nouvelle facture
+es: Nueva factura
+it: Nuova fattura
+zh: 新建发票
+
+No active subscription was found for this Apple ID.
+fr: Aucun abonnement actif n'a été trouvé pour cet identifiant Apple.
+es: No se encontró ninguna suscripción activa para este ID de Apple.
+it: Nessun abbonamento attivo trovato per questo ID Apple.
+zh: 此 Apple ID 下未找到有效订阅。
+
+No customer
+fr: Aucun client
+es: Sin cliente
+it: Nessun cliente
+zh: 无客户
+
+No invoices yet
+fr: Aucune facture pour l'instant
+es: Aún no hay facturas
+it: Ancora nessuna fattura
+zh: 还没有发票
+
+No invoices yet today.
+fr: Aucune facture aujourd'hui.
+es: Aún no hay facturas hoy.
+it: Nessuna fattura oggi.
+zh: 今天还没有发票。
+
+No results
+fr: Aucun résultat
+es: Sin resultados
+it: Nessun risultato
+zh: 无结果
+
+No stamp found. Try a clearer photo or move the slider right.
+fr: Aucun tampon trouvé. Essayez une photo plus nette ou déplacez le curseur à droite.
+es: No se encontró ningún sello. Prueba con una foto más nítida o mueve el control a la derecha.
+it: Nessun timbro trovato. Prova una foto più nitida o sposta il cursore a destra.
+zh: 未找到印章。请换一张更清晰的照片，或向右拖动滑块。
+
+No voice enrolled
+fr: Aucune voix enregistrée
+es: Ninguna voz registrada
+it: Nessuna voce registrata
+zh: 未登记声音
+
+Nobody listed
+fr: Personne dans la liste
+es: Nadie de la lista
+it: Nessuno in elenco
+zh: 不在列表中
+
+Notes or payment terms
+fr: Notes ou conditions de paiement
+es: Notas o condiciones de pago
+it: Note o condizioni di pagamento
+zh: 备注或付款条款
+
+Number prefix
+fr: Préfixe de numéro
+es: Prefijo de numeración
+it: Prefisso numerazione
+zh: 编号前缀
+
+OK
+fr: OK
+es: OK
+it: OK
+zh: 好
+
+On-device
+fr: Sur l'appareil
+es: En el dispositivo
+it: Sul dispositivo
+zh: 本机处理
+
+Only a numeric voiceprint is kept, never a recording. With sync on it is stored in the shop's iCloud so you enroll once; turn it off to keep it on this device only. Deleting removes it everywhere.
+fr: Seule une empreinte vocale numérique est conservée, jamais un enregistrement. Avec la synchronisation, elle est stockée dans l'iCloud du commerce : vous ne l'enregistrez qu'une fois. Désactivez-la pour la garder sur cet appareil uniquement. La supprimer l'efface partout.
+es: Solo se guarda una huella de voz numérica, nunca una grabación. Con la sincronización activada se almacena en el iCloud del comercio y solo la registras una vez; desactívala para conservarla solo en este dispositivo. Al eliminarla se borra en todas partes.
+it: Viene conservata solo un'impronta vocale numerica, mai una registrazione. Con la sincronizzazione attiva è salvata nell'iCloud del negozio, quindi la registri una sola volta; disattivala per tenerla solo su questo dispositivo. Eliminandola sparisce ovunque.
+zh: 仅保存数字声纹，绝不保存录音。开启同步后声纹存放在店铺的 iCloud 中，只需登记一次；关闭后只保存在本设备。删除后会在所有设备上移除。
+
+Only a numeric voiceprint is stored, never the recording. It can be deleted at any time, and it is removed from every device.
+fr: Seule une empreinte vocale numérique est enregistrée, jamais la voix elle-même. Elle peut être supprimée à tout moment et disparaît de tous les appareils.
+es: Solo se almacena una huella de voz numérica, nunca la grabación. Se puede eliminar en cualquier momento y se borra de todos los dispositivos.
+it: Viene salvata solo un'impronta vocale numerica, mai la registrazione. Può essere eliminata in qualsiasi momento e viene rimossa da ogni dispositivo.
+zh: 仅存储数字声纹，不存储录音。可随时删除，并会从所有设备上移除。
+
+PRICE
+fr: PRIX
+es: PRECIO
+it: PREZZO
+zh: 单价
+
+Paid
+fr: Payée
+es: Pagada
+it: Pagata
+zh: 已付款
+
+Payment is charged to your Apple ID at confirmation of purchase. The subscription renews automatically unless it is canceled at least 24 hours before the end of the current period. You can manage or cancel it in your Apple ID settings. Any free trial converts to a paid subscription unless canceled before it ends.
+fr: Le paiement est débité de votre identifiant Apple à la confirmation de l'achat. L'abonnement se renouvelle automatiquement, sauf s'il est annulé au moins 24 heures avant la fin de la période en cours. Vous pouvez gérer ou annuler l'abonnement dans les réglages de votre identifiant Apple. Tout essai gratuit devient un abonnement payant sauf annulation avant sa fin.
+es: El pago se carga a tu ID de Apple al confirmar la compra. La suscripción se renueva automáticamente salvo que se cancele al menos 24 horas antes del final del período en curso. Puedes gestionarla o cancelarla en los ajustes de tu ID de Apple. Cualquier prueba gratuita se convierte en una suscripción de pago salvo que se cancele antes de que termine.
+it: Il pagamento viene addebitato sul tuo ID Apple alla conferma dell'acquisto. L'abbonamento si rinnova automaticamente a meno che non venga annullato almeno 24 ore prima della fine del periodo in corso. Puoi gestirlo o annullarlo nelle impostazioni del tuo ID Apple. Qualsiasi prova gratuita diventa un abbonamento a pagamento se non viene annullata prima della scadenza.
+zh: 确认购买时，费用将从你的 Apple ID 扣除。除非在当前订阅期结束前至少 24 小时取消，否则订阅会自动续订。你可在 Apple ID 设置中管理或取消订阅。免费试用结束前若未取消，将自动转为付费订阅。
+
+Phone
+fr: Téléphone
+es: Teléfono
+it: Telefono
+zh: 电话
+
+Price
+fr: Prix
+es: Precio
+it: Prezzo
+zh: 单价
+
+Prices are not available right now.
+fr: Les prix ne sont pas disponibles pour le moment.
+es: Los precios no están disponibles ahora mismo.
+it: I prezzi non sono disponibili al momento.
+zh: 暂时无法获取价格。
+
+Prices could not be loaded. Check your connection and try again.
+fr: Impossible de charger les prix. Vérifiez votre connexion et réessayez.
+es: No se pudieron cargar los precios. Comprueba tu conexión e inténtalo de nuevo.
+it: Impossibile caricare i prezzi. Controlla la connessione e riprova.
+zh: 无法加载价格。请检查网络后重试。
+
+Pricing
+fr: Tarification
+es: Precios
+it: Prezzi
+zh: 价格与税费
+
+Privacy Policy
+fr: Politique de confidentialité
+es: Política de privacidad
+it: Informativa sulla privacy
+zh: 隐私政策
+
+QTY
+fr: QTÉ
+es: CANT.
+it: Q.TÀ
+zh: 数量
+
+Qty
+fr: Qté
+es: Cant.
+it: Q.tà
+zh: 数量
+
+Re-enroll voice
+fr: Réenregistrer la voix
+es: Volver a registrar voz
+it: Registra di nuovo la voce
+zh: 重新登记声音
+
+Reading %lld of %lld
+fr: Lecture %1$lld sur %2$lld
+es: Lectura %1$lld de %2$lld
+it: Lettura %1$lld di %2$lld
+zh: 第 %1$lld 句，共 %2$lld 句
+
+Redo
+fr: Refaire
+es: Rehacer
+it: Rifai
+zh: 重签
+
+Replace
+fr: Remplacer
+es: Reemplazar
+it: Sostituisci
+zh: 替换
+
+Restore purchases
+fr: Restaurer les achats
+es: Restaurar compras
+it: Ripristina acquisti
+zh: 恢复购买
+
+Save
+fr: Enregistrer
+es: Guardar
+it: Salva
+zh: 保存
+
+Save %lld%%
+fr: Économisez %lld %%
+es: Ahorra %lld %%
+it: Risparmia %lld%%
+zh: 省 %lld%%
+
+Say something like: “Two shirts at 20 each and a pair of pants for 40.”
+fr: Dites par exemple : « Deux chemises à 20 chacune et un pantalon pour 40. »
+es: Di algo como: «Dos camisas a 20 cada una y unos pantalones por 40.»
+it: Di' qualcosa come: «Due camicie a 20 l'una e un paio di pantaloni a 40.»
+zh: 试着说：“两件衬衫每件20块，一条裤子40块。”
+
+Scan with camera
+fr: Scanner avec l'appareil photo
+es: Escanear con la cámara
+it: Scansiona con la fotocamera
+zh: 用相机扫描
+
+Search invoices
+fr: Rechercher des factures
+es: Buscar facturas
+it: Cerca fatture
+zh: 搜索发票
+
+Sent
+fr: Envoyée
+es: Enviada
+it: Inviata
+zh: 已发送
+
+Set up your shop
+fr: Configurez votre commerce
+es: Configura tu comercio
+it: Configura il tuo negozio
+zh: 设置你的店铺
+
+Share invoice
+fr: Partager la facture
+es: Compartir factura
+it: Condividi fattura
+zh: 分享发票
+
+Shop
+fr: Commerce
+es: Comercio
+it: Negozio
+zh: 店铺
+
+Shop name
+fr: Nom du commerce
+es: Nombre del comercio
+it: Nome del negozio
+zh: 店铺名称
+
+Sign
+fr: Signer
+es: Firmar
+it: Firma
+zh: 签名
+
+Sign inside the box
+fr: Signez dans le cadre
+es: Firma dentro del recuadro
+it: Firma nel riquadro
+zh: 请在框内签名
+
+Signature
+fr: Signature
+es: Firma
+it: Firma
+zh: 签名
+
+Speak in your normal voice…
+fr: Parlez d'une voix normale…
+es: Habla con tu voz normal…
+it: Parla con la tua voce normale…
+zh: 请用平常的声音说话…
+
+Speak your sale. Send a finished invoice.
+fr: Dictez votre vente. Envoyez une facture prête.
+es: Dicta tu venta. Envía una factura lista.
+it: Detta la tua vendita. Invia una fattura pronta.
+zh: 说出你的销售，发出成品发票。
+
+Speaker
+fr: Locuteur
+es: Hablante
+it: Parlante
+zh: 说话人
+
+Speech recognition is not available for this language right now.
+fr: La reconnaissance vocale n'est pas disponible pour cette langue pour le moment.
+es: El reconocimiento de voz no está disponible para este idioma ahora mismo.
+it: Il riconoscimento vocale non è disponibile per questa lingua al momento.
+zh: 暂时无法对该语言进行语音识别。
+
+Speech recognition is turned off for VoiceInvoice. You can enable it in Settings.
+fr: La reconnaissance vocale est désactivée pour VoiceInvoice. Vous pouvez l'activer dans Réglages.
+es: El reconocimiento de voz está desactivado para VoiceInvoice. Puedes activarlo en Ajustes.
+it: Il riconoscimento vocale è disattivato per VoiceInvoice. Puoi attivarlo in Impostazioni.
+zh: VoiceInvoice 的语音识别权限已关闭，可在“设置”中开启。
+
+Start dictating a new invoice.
+fr: Commencez à dicter une nouvelle facture.
+es: Empieza a dictar una factura nueva.
+it: Inizia a dettare una nuova fattura.
+zh: 开始口述一张新发票。
+
+Start dictation
+fr: Démarrer la dictée
+es: Iniciar dictado
+it: Avvia dettatura
+zh: 开始口述
+
+Start free trial
+fr: Démarrer l'essai gratuit
+es: Iniciar prueba gratuita
+it: Inizia la prova gratuita
+zh: 开始免费试用
+
+Stop dictation
+fr: Arrêter la dictée
+es: Detener dictado
+it: Interrompi dettatura
+zh: 停止口述
+
+Subscribe
+fr: S'abonner
+es: Suscribirse
+it: Abbonati
+zh: 订阅
+
+Subscription
+fr: Abonnement
+es: Suscripción
+it: Abbonamento
+zh: 订阅
+
+Subtotal
+fr: Sous-total
+es: Subtotal
+it: Subtotale
+zh: 小计
+
+Sync voice to my other devices
+fr: Synchroniser la voix sur mes autres appareils
+es: Sincronizar la voz con mis otros dispositivos
+it: Sincronizza la voce sugli altri dispositivi
+zh: 将声音同步到我的其他设备
+
+Syncs across your devices through your own iCloud
+fr: Synchronisé sur vos appareils via votre propre iCloud
+es: Se sincroniza entre tus dispositivos con tu propio iCloud
+it: Si sincronizza sui tuoi dispositivi tramite il tuo iCloud
+zh: 通过你自己的 iCloud 在设备间同步
+
+TOTAL
+fr: TOTAL
+es: TOTAL
+it: TOTALE
+zh: 合计
+
+Tap + to create your first invoice.
+fr: Touchez + pour créer votre première facture.
+es: Toca + para crear tu primera factura.
+it: Tocca + per creare la tua prima fattura.
+zh: 点按 + 创建你的第一张发票。
+
+Tap the mic, or type here
+fr: Touchez le micro ou saisissez ici
+es: Toca el micrófono o escribe aquí
+it: Tocca il microfono o scrivi qui
+zh: 点按麦克风，或在此输入
+
+Tap the mic, then read the sentence aloud.
+fr: Touchez le micro, puis lisez la phrase à voix haute.
+es: Toca el micrófono y lee la frase en voz alta.
+it: Tocca il microfono e leggi la frase ad alta voce.
+zh: 点按麦克风，然后大声朗读这句话。
+
+Tax
+fr: Taxe
+es: Impuesto
+it: Imposta
+zh: 税额
+
+Tax (%)
+fr: Taxe (%)
+es: Impuesto (%)
+it: Imposta (%)
+zh: 税率 (%)
+
+Tax ID
+fr: Numéro fiscal
+es: ID fiscal
+it: Codice fiscale / P. IVA
+zh: 税号
+
+Team & voices
+fr: Équipe et voix
+es: Equipo y voces
+it: Team e voci
+zh: 团队与声音
+
+Team member
+fr: Membre de l'équipe
+es: Miembro del equipo
+it: Membro del team
+zh: 团队成员
+
+Terms of Use
+fr: Conditions d'utilisation
+es: Términos de uso
+it: Termini di utilizzo
+zh: 使用条款
+
+The PDF file could not be created.
+fr: Le fichier PDF n'a pas pu être créé.
+es: No se pudo crear el archivo PDF.
+it: Impossibile creare il file PDF.
+zh: 无法创建 PDF 文件。
+
+The person being enrolled agrees
+fr: La personne enregistrée est d'accord
+es: La persona que se registra está de acuerdo
+it: La persona registrata acconsente
+zh: 被登记的人已同意
+
+The purchase could not be verified.
+fr: L'achat n'a pas pu être vérifié.
+es: No se pudo verificar la compra.
+it: Impossibile verificare l'acquisto.
+zh: 无法验证此次购买。
+
+The purchase is waiting for approval.
+fr: L'achat est en attente d'approbation.
+es: La compra está pendiente de aprobación.
+it: L'acquisto è in attesa di approvazione.
+zh: 购买正在等待批准。
+
+This month
+fr: Ce mois-ci
+es: Este mes
+it: Questo mese
+zh: 本月
+
+this person
+fr: cette personne
+es: esta persona
+it: questa persona
+zh: 此人
+
+Today
+fr: Aujourd'hui
+es: Hoy
+it: Oggi
+zh: 今天
+
+Today you invoiced %@ across %lld invoices.
+fr: Aujourd'hui, vous avez facturé %1$@ sur %2$lld factures.
+es: Hoy facturaste %1$@ en %2$lld facturas.
+it: Oggi hai fatturato %1$@ su %2$lld fatture.
+zh: 今天共开了 %2$lld 张发票，合计 %1$@。
+
+Today's total
+fr: Total du jour
+es: Total de hoy
+it: Totale di oggi
+zh: 今日合计
+
+Total
+fr: Total
+es: Total
+it: Totale
+zh: 合计
+
+Try again
+fr: Réessayer
+es: Reintentar
+it: Riprova
+zh: 重试
+
+Unlimited invoices every month
+fr: Factures illimitées chaque mois
+es: Facturas ilimitadas cada mes
+it: Fatture illimitate ogni mese
+zh: 每月无限张发票
+
+Unlimited invoices, every month.
+fr: Factures illimitées, chaque mois.
+es: Facturas ilimitadas, cada mes.
+it: Fatture illimitate, ogni mese.
+zh: 每月无限张发票。
+
+Unnamed
+fr: Sans nom
+es: Sin nombre
+it: Senza nome
+zh: 未命名
+
+Use these items
+fr: Utiliser ces articles
+es: Usar estos artículos
+it: Usa questi articoli
+zh: 使用这些项目
+
+Voice
+fr: Voix
+es: Voz
+it: Voce
+zh: 声音
+
+Voice consent
+fr: Consentement vocal
+es: Consentimiento de voz
+it: Consenso vocale
+zh: 声音授权
+
+Voice enrolled
+fr: Voix enregistrée
+es: Voz registrada
+it: Voce registrata
+zh: 已登记声音
+
+Voice enrollment
+fr: Enregistrement de la voix
+es: Registro de voz
+it: Registrazione della voce
+zh: 声音登记
+
+Voice limit reached
+fr: Limite de voix atteinte
+es: Límite de voces alcanzado
+it: Limite di voci raggiunto
+zh: 已达声音数量上限
+
+VoiceInvoice will learn the voice of %@ from three short readings, so it can tell who is dictating.
+fr: VoiceInvoice apprendra la voix de %@ à partir de trois courtes lectures afin de reconnaître qui dicte.
+es: VoiceInvoice aprenderá la voz de %@ con tres lecturas cortas para saber quién está dictando.
+it: VoiceInvoice imparerà la voce di %@ da tre brevi letture, così saprà chi sta dettando.
+zh: VoiceInvoice 将通过三次简短朗读学习%@的声音，以便识别谁在口述。
+
+We didn't hear enough. Move closer, speak a little louder and try again.
+fr: Nous n'avons pas assez entendu. Rapprochez-vous, parlez un peu plus fort et réessayez.
+es: No oímos lo suficiente. Acércate, habla un poco más alto e inténtalo de nuevo.
+it: Non abbiamo sentito abbastanza. Avvicinati, parla un po' più forte e riprova.
+zh: 没听清。请靠近一些，稍微大声一点再试一次。
+
+What I heard
+fr: Ce que j'ai entendu
+es: Lo que he oído
+it: Cosa ho sentito
+zh: 识别结果
+
+Who's speaking?
+fr: Qui parle ?
+es: ¿Quién habla?
+it: Chi parla?
+zh: 谁在说话？
+
+Yearly
+fr: Annuel
+es: Anual
+it: Annuale
+zh: 按年
+
+You've used your %lld free invoices this month.
+fr: Vous avez utilisé vos %lld factures gratuites ce mois-ci.
+es: Has usado tus %lld facturas gratuitas de este mes.
+it: Hai usato le tue %lld fatture gratuite di questo mese.
+zh: 你本月的 %lld 张免费发票已用完。
+
+Your invoices stay on your devices and sync through your own iCloud.
+fr: Vos factures restent sur vos appareils et se synchronisent via votre propre iCloud.
+es: Tus facturas se quedan en tus dispositivos y se sincronizan con tu propio iCloud.
+it: Le tue fatture restano sui tuoi dispositivi e si sincronizzano tramite il tuo iCloud.
+zh: 你的发票保存在你的设备上，并通过你自己的 iCloud 同步。
+
+e.g. Maison Dupont
+fr: p. ex. Maison Dupont
+es: p. ej. Casa Dupont
+it: es. Rossi & Figli
+zh: 例如：王记商行
+
+per month
+fr: par mois
+es: por mes
+it: al mese
+zh: 每月
+
+per year
+fr: par an
+es: por año
+it: all'anno
+zh: 每年
+
+“Two shirts at twenty each and a pair of pants for forty.”
+fr: « Deux chemises à vingt chacune et un pantalon pour quarante. »
+es: «Dos camisas a veinte cada una y unos pantalones por cuarenta.»
+it: «Due camicie a venti l'una e un paio di pantaloni a quaranta.»
+zh: “两件衬衫每件二十块，一条裤子四十块。”
+
+“Add three coffees for twelve in total.”
+fr: « Ajoute trois cafés pour douze au total. »
+es: «Añade tres cafés por doce en total.»
+it: «Aggiungi tre caffè per dodici in totale.»
+zh: “加三杯咖啡，一共十二块。”
+
+“One jacket at a hundred and fifty, thank you.”
+fr: « Une veste à cent cinquante, merci. »
+es: «Una chaqueta a ciento cincuenta, gracias.»
+it: «Una giacca a centocinquanta, grazie.»
+zh: “一件外套一百五十块，谢谢。”
+
+%@ / month
+fr: %@ / mois
+es: %@ / mes
+it: %@ / mese
+zh: %@ / 月
+
+%lld of %lld free invoices left
+fr: %1$lld sur %2$lld factures gratuites restantes
+es: %1$lld de %2$lld facturas gratuitas restantes
+it: %1$lld di %2$lld fatture gratuite rimaste
+zh: 剩余 %1$lld / %2$lld 张免费发票
+
+%lld of %lld left
+fr: %1$lld sur %2$lld restantes
+es: %1$lld de %2$lld restantes
+it: %1$lld di %2$lld rimaste
+zh: 剩余 %1$lld / %2$lld
+
+%lld-day free trial
+fr: Essai gratuit de %lld jours
+es: Prueba gratuita de %lld días
+it: Prova gratuita di %lld giorni
+zh: %lld 天免费试用
+
+%lld-week free trial
+fr: Essai gratuit de %lld semaine(s)
+es: Prueba gratuita de %lld semana(s)
+it: Prova gratuita di %lld settimana/e
+zh: %lld 周免费试用
+
+%lld-month free trial
+fr: Essai gratuit de %lld mois
+es: Prueba gratuita de %lld mes(es)
+it: Prova gratuita di %lld mese/i
+zh: %lld 个月免费试用
+
+%lld-year free trial
+fr: Essai gratuit de %lld an(s)
+es: Prueba gratuita de %lld año(s)
+it: Prova gratuita di %lld anno/i
+zh: %lld 年免费试用
+
+@plural %lld invoices
+en.one: %lld invoice
+en.other: %lld invoices
+fr.one: %lld facture
+fr.other: %lld factures
+es.one: %lld factura
+es.other: %lld facturas
+it.one: %lld fattura
+it.other: %lld fatture
+zh.other: %lld 张发票
+
+@widget
+
+Today
+fr: Aujourd'hui
+es: Hoy
+it: Oggi
+zh: 今天
+
+New invoice
+fr: Nouvelle facture
+es: Nueva factura
+it: Nuova fattura
+zh: 新建发票
+
+Start dictating an invoice.
+fr: Commencez à dicter une facture.
+es: Empieza a dictar una factura.
+it: Inizia a dettare una fattura.
+zh: 开始口述发票。
+
+Start dictating a new invoice.
+fr: Commencez à dicter une nouvelle facture.
+es: Empieza a dictar una factura nueva.
+it: Inizia a dettare una nuova fattura.
+zh: 开始口述一张新发票。
+
+Today's invoiced total. Tap to dictate a new invoice.
+fr: Total facturé aujourd'hui. Touchez pour dicter une nouvelle facture.
+es: Total facturado hoy. Toca para dictar una factura nueva.
+it: Totale fatturato oggi. Tocca per dettare una nuova fattura.
+zh: 今日开票总额。点按即可口述新发票。
+
+%@ today
+fr: %@ aujourd'hui
+es: %@ hoy
+it: %@ oggi
+zh: 今日 %@
+
+%lld today
+fr: %lld aujourd'hui
+es: %lld hoy
+it: %lld oggi
+zh: 今日 %lld
+
+%lld free left this month
+fr: %lld gratuites restantes ce mois-ci
+es: %lld gratis restantes este mes
+it: %lld gratuite rimaste questo mese
+zh: 本月剩余 %lld 张免费
+
+@plural %lld invoices
+en.one: %lld invoice
+en.other: %lld invoices
+fr.one: %lld facture
+fr.other: %lld factures
+es.one: %lld factura
+es.other: %lld facturas
+it.one: %lld fattura
+it.other: %lld fatture
+zh.other: %lld 张发票
+
+@infoplist
+
+NSMicrophoneUsageDescription
+en: VoiceInvoice listens while you dictate invoice items.
+fr: VoiceInvoice écoute pendant que vous dictez les articles de la facture.
+es: VoiceInvoice escucha mientras dictas los artículos de la factura.
+it: VoiceInvoice ascolta mentre detti gli articoli della fattura.
+zh: VoiceInvoice 会在你口述发票项目时收听。
+
+NSSpeechRecognitionUsageDescription
+en: VoiceInvoice turns your dictation into invoice line items.
+fr: VoiceInvoice transforme votre dictée en lignes de facture.
+es: VoiceInvoice convierte tu dictado en líneas de factura.
+it: VoiceInvoice trasforma la tua dettatura in righe di fattura.
+zh: VoiceInvoice 会把你的口述转换为发票项目。
+
+NSCameraUsageDescription
+en: VoiceInvoice scans your company stamp with the camera.
+fr: VoiceInvoice scanne le tampon de votre entreprise avec l'appareil photo.
+es: VoiceInvoice escanea el sello de tu empresa con la cámara.
+it: VoiceInvoice scansiona il timbro della tua azienda con la fotocamera.
+zh: VoiceInvoice 使用相机扫描你的公司印章。

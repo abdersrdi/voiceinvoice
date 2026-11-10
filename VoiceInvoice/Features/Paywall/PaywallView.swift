@@ -57,8 +57,8 @@ struct PaywallView: View {
                     .font(.system(.largeTitle, design: .rounded, weight: .bold))
                     .foregroundStyle(.white)
                 Text(limitReached
-                     ? "You've used your \(UsagePolicy.freeMonthlyLimit) free invoices this month."
-                     : "Unlimited invoices, every month.")
+                     ? String(localized: "You've used your \(UsagePolicy.freeMonthlyLimit) free invoices this month.")
+                     : String(localized: "Unlimited invoices, every month."))
                     .font(.system(.body, design: .rounded))
                     .foregroundStyle(.white.opacity(0.8))
             }
@@ -117,7 +117,7 @@ struct PaywallView: View {
             HStack(spacing: 12) {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 8) {
-                        Text(isYearly ? "Yearly" : "Monthly")
+                        Text(isYearly ? String(localized: "Yearly") : String(localized: "Monthly"))
                             .font(.system(.headline, design: .rounded))
                         if isYearly, let percent = savingsPercent {
                             Text("Save \(percent)%")
@@ -143,7 +143,7 @@ struct PaywallView: View {
                 VStack(alignment: .trailing, spacing: 2) {
                     Text(product.displayPrice)
                         .font(Theme.amount(20, weight: .bold))
-                    Text(isYearly ? "per year" : "per month")
+                    Text(isYearly ? String(localized: "per year") : String(localized: "per month"))
                         .font(.caption)
                         .foregroundStyle(Theme.secondaryText)
                 }

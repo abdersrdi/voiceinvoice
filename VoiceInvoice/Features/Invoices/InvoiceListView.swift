@@ -151,7 +151,7 @@ struct InvoiceListView: View {
             Image(systemName: "doc.text.magnifyingglass")
                 .font(.system(size: 40))
                 .foregroundStyle(Theme.secondaryText)
-            Text(search.isEmpty ? "No invoices yet" : "No results")
+            Text(search.isEmpty ? String(localized: "No invoices yet") : String(localized: "No results"))
                 .font(.system(.headline, design: .rounded))
             if search.isEmpty {
                 Text("Tap + to create your first invoice.")

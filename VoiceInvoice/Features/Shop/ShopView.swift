@@ -36,11 +36,11 @@ private struct ShopForm: View {
                     showPaywall = true
                 } label: {
                     HStack {
-                        Label(subscriptions.isPro ? "VoiceInvoice Pro" : "Free plan", systemImage: "crown.fill")
+                        Label(subscriptions.isPro ? "VoiceInvoice Pro" : String(localized: "Free plan"), systemImage: "crown.fill")
                         Spacer()
                         Text(subscriptions.isPro
                              ? String(localized: "Active")
-                             : "\(UsagePolicy.remaining(in: store)) of \(UsagePolicy.freeMonthlyLimit) left")
+                             : String(localized: "\(UsagePolicy.remaining(in: store)) of \(UsagePolicy.freeMonthlyLimit) left"))
                             .foregroundStyle(Theme.secondaryText)
                     }
                 }
@@ -163,7 +163,7 @@ private struct ShopForm: View {
                 }
                 .buttonStyle(.borderless)
             }
-            Menu(store.stampData == nil ? "Add" : "Replace") {
+            Menu(store.stampData == nil ? String(localized: "Add") : String(localized: "Replace")) {
                 if VNDocumentCameraViewController.isSupported {
                     Button {
                         showScanner = true
@@ -201,7 +201,7 @@ private struct ShopForm: View {
                 }
                 .buttonStyle(.borderless)
             }
-            Button(store.signatureData == nil ? "Sign" : "Redo") {
+            Button(store.signatureData == nil ? String(localized: "Sign") : String(localized: "Redo")) {
                 showingSignature = true
             }
             .buttonStyle(.borderless)
@@ -238,7 +238,7 @@ struct BrandAssetRow: View {
                 .buttonStyle(.borderless)
             }
             PhotosPicker(selection: $pickerItem, matching: .images) {
-                Text(data == nil ? "Choose" : "Replace")
+                Text(data == nil ? String(localized: "Choose") : String(localized: "Replace"))
             }
             .buttonStyle(.borderless)
         }

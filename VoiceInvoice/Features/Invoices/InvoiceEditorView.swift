@@ -80,7 +80,7 @@ struct InvoiceEditorView: View {
         .scrollContentBackground(.hidden)
         .background(Theme.background.ignoresSafeArea())
         .scrollDismissesKeyboard(.interactively)
-        .navigationTitle(isNew ? "New invoice" : "Edit invoice")
+        .navigationTitle(isNew ? String(localized: "New invoice") : String(localized: "Edit invoice"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {

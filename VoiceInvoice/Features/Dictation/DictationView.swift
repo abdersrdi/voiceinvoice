@@ -78,7 +78,7 @@ struct DictationView: View {
             Spacer()
             if speech.isListening {
                 Label(
-                    speech.isOnDevice ? "On-device" : "Apple servers",
+                    speech.isOnDevice ? String(localized: "On-device") : String(localized: "Apple servers"),
                     systemImage: speech.isOnDevice ? "lock.fill" : "icloud.fill"
                 )
                 .font(.caption)
@@ -274,7 +274,7 @@ struct DictationView: View {
             }
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(speech.isListening ? "Stop dictation" : "Start dictation")
+        .accessibilityLabel(speech.isListening ? String(localized: "Stop dictation") : String(localized: "Start dictation"))
         .frame(height: 104)
     }
 }

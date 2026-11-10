@@ -134,14 +134,14 @@ final class SpeakerGateTests: XCTestCase {
     func testGateDropsAPhraseFromAnotherVoice() throws {
         let rate = Double(TestAudio.rate)
         let enrollment = try [Float(0.95), 1.0, 1.05].enumerated().map { index, scale in
-            try embedding(TestAudio.synth(.voiceA, f0Scale: scale, seconds: 1.5, seed: UInt64(index + 1)))
+            try embedding(TestAudio.synth(TestAudio.voiceA, f0Scale: scale, seconds: 1.5, seed: UInt64(index + 1)))
         }
         let voiceprint = try XCTUnwrap(Voiceprint.enroll(from: enrollment))
         let profile = VoiceProfile(id: "A", centroid: voiceprint.centroid, radius: voiceprint.radius)
 
-        let voiceA = TestAudio.synth(.voiceA, f0Scale: 1.03, seconds: 1.5, seed: 11)
+        let voiceA = TestAudio.synth(TestAudio.voiceA, f0Scale: 1.03, seconds: 1.5, seed: 11)
         let silence = [Float](repeating: 0, count: Int(rate))
-        let voiceB = TestAudio.synth(.voiceB, seconds: 1.5, seed: 12)
+        let voiceB = TestAudio.synth(TestAudio.voiceB, seconds: 1.5, seed: 12)
         let samples = voiceA + silence + voiceB
 
         let words = [

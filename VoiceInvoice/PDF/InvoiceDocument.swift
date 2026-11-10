@@ -16,6 +16,7 @@ struct InvoiceDocument {
     var shopPhone = ""
     var shopEmail = ""
     var footerNote = ""
+    var languageCode = ""
     var logo: UIImage?
     var stamp: UIImage?
     var signature: UIImage?
@@ -31,6 +32,8 @@ struct InvoiceDocument {
     var taxRate = 0.0
     var discountPercent = 0.0
     var lines: [Line] = []
+
+    var locale: Locale { DocumentLanguage.locale(for: languageCode) }
 
     var totals: InvoiceTotals {
         InvoiceMath.totals(
@@ -50,6 +53,7 @@ struct InvoiceDocument {
         shopPhone = store.phone
         shopEmail = store.email
         footerNote = store.footerNote
+        languageCode = invoice.languageCode.isEmpty ? store.documentLanguage : invoice.languageCode
         logo = store.logoData.flatMap(UIImage.init(data:))
         stamp = store.stampData.flatMap(UIImage.init(data:))
         signature = store.signatureData.flatMap(UIImage.init(data:))

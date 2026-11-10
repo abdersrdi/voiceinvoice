@@ -38,6 +38,7 @@ final class StoreProfile {
     var invoicePrefix: String = "INV"
     var nextNumber: Int = 1
     var footerNote: String = ""
+    var documentLanguage: String = ""
     /// Free-tier counter ("2026-11") so deleting an invoice never gives the slot back.
     var usageMonth: String = ""
     var usageCount: Int = 0
@@ -76,6 +77,7 @@ final class Invoice {
     var taxRate: Double = 0
     var discountPercent: Double = 0
     var notes: String = ""
+    var languageCode: String = ""
     var createdByName: String = ""
     var createdAt: Date = Date()
     var updatedAt: Date = Date()

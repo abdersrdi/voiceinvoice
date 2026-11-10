@@ -1006,6 +1006,84 @@ es: Versión
 it: Versione
 zh: 版本
 
+All
+fr: Tous
+es: Todas
+it: Tutte
+zh: 全部
+
+After you stop, phrases that do not sound like the speaker are left out, and you can bring them back. Needs an enrolled voice.
+fr: Après l'arrêt, les phrases qui ne ressemblent pas à la voix du locuteur sont écartées, et vous pouvez les rétablir. Nécessite une voix enregistrée.
+es: Al terminar, se omiten las frases que no suenan como el hablante y puedes recuperarlas. Requiere una voz registrada.
+it: Quando smetti, le frasi che non assomigliano alla voce di chi parla vengono escluse e puoi recuperarle. Richiede una voce registrata.
+zh: 停止后，听起来不像说话人的语句会被排除，你可以将其恢复。需要已登记的声音。
+
+Counter mode
+fr: Mode comptoir
+es: Modo mostrador
+it: Modalità banco
+zh: 柜台模式
+
+Discard
+fr: Ignorer
+es: Descartar
+it: Scarta
+zh: 放弃
+
+Ignore other voices while dictating (beta)
+fr: Ignorer les autres voix pendant la dictée (bêta)
+es: Ignorar otras voces al dictar (beta)
+it: Ignora le altre voci durante la dettatura (beta)
+zh: 口述时忽略其他声音（测试版）
+
+Include everything
+fr: Tout inclure
+es: Incluir todo
+it: Includi tutto
+zh: 全部保留
+
+Invoice language
+fr: Langue de la facture
+es: Idioma de la factura
+it: Lingua della fattura
+zh: 发票语言
+
+Open invoice
+fr: Ouvrir la facture
+es: Abrir factura
+it: Apri fattura
+zh: 打开发票
+
+Same as shop
+fr: Comme le commerce
+es: Igual que el comercio
+it: Come il negozio
+zh: 与店铺相同
+
+Same as the app
+fr: Comme l'app
+es: Igual que la app
+it: Come l'app
+zh: 与应用相同
+
+Say this to start an invoice
+fr: Dites ceci pour démarrer une facture
+es: Di esto para empezar una factura
+it: Di' questo per iniziare una fattura
+zh: 说出这句话即可开始一张发票
+
+Status
+fr: Statut
+es: Estado
+it: Stato
+zh: 状态
+
+The microphone stays on while this screen is open.
+fr: Le micro reste actif tant que cet écran est ouvert.
+es: El micrófono permanece activo mientras esta pantalla está abierta.
+it: Il microfono resta attivo finché questa schermata è aperta.
+zh: 此屏幕打开期间，麦克风会保持开启。
+
 per month
 fr: par mois
 es: por mes
@@ -1088,6 +1166,17 @@ es.other: %lld facturas
 it.one: %lld fattura
 it.other: %lld fatture
 zh.other: %lld 张发票
+
+@plural Ignored %lld phrases from other voices
+en.one: Ignored %lld phrase from another voice
+en.other: Ignored %lld phrases from other voices
+fr.one: %lld phrase d'une autre voix ignorée
+fr.other: %lld phrases d'autres voix ignorées
+es.one: Se ignoró %lld frase de otra voz
+es.other: Se ignoraron %lld frases de otras voces
+it.one: Ignorata %lld frase di un'altra voce
+it.other: Ignorate %lld frasi di altre voci
+zh.other: 已忽略 %lld 句其他声音
 
 @widget
 

@@ -17,6 +17,8 @@ struct InvoiceListView: View {
     @State private var search = ""
     @State private var route: EditorRoute?
     @State private var showDictation = false
+    @State private var showCounter = false
+    @State private var statusFilter: InvoiceStatus?
     @State private var pendingRoute: EditorRoute?
     @State private var invoiceToDelete: Invoice?
 
@@ -24,10 +26,11 @@ struct InvoiceListView: View {
 
     private var filtered: [Invoice] {
         let term = search.trimmingCharacters(in: .whitespaces)
-        guard !term.isEmpty else { return invoices }
-        return invoices.filter {
-            $0.number.localizedCaseInsensitiveContains(term)
-                || $0.customerName.localizedCaseInsensitiveContains(term)
+        return invoices.filter { invoice in
+            if let statusFilter, invoice.status != statusFilter { return false }
+            guard !term.isEmpty else { return true }
+            return invoice.number.localizedCaseInsensitiveContains(term)
+                || invoice.customerName.localizedCaseInsensitiveContains(term)
         }
     }
 
@@ -45,6 +48,8 @@ struct InvoiceListView: View {
             ScrollView {
                 LazyVStack(spacing: 12) {
                     summaryCard
+
+                    statusFilterBar
 
                     if filtered.isEmpty {
                         emptyState
@@ -77,6 +82,16 @@ struct InvoiceListView: View {
             .navigationTitle("Invoices")
             .searchable(text: $search, prompt: "Search invoices")
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        Haptics.tap()
+                        guard allowCreation() else { return }
+                        showCounter = true
+                    } label: {
+                        Image(systemName: "ear.badge.waveform")
+                    }
+                    .accessibilityLabel("Counter mode")
+                }
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         Haptics.tap()
@@ -125,6 +140,11 @@ struct InvoiceListView: View {
             }
             .sheet(isPresented: $showPaywall) {
                 PaywallView(limitReached: !UsagePolicy.canCreate(store: store, isPro: subscriptions.isPro))
+            }
+            .fullScreenCover(isPresented: $showCounter, onDismiss: presentPendingRoute) {
+                CounterModeView(currencyCode: store?.currencyCode ?? "USD") { items, speaker in
+                    pendingRoute = makeRoute(from: items, speaker: speaker)
+                }
             }
             .sheet(item: $route) { route in
                 NavigationStack {
@@ -219,6 +239,23 @@ struct InvoiceListView: View {
         guard router.dictationRequested, store != nil else { return }
         router.dictationRequested = false
         if allowCreation() { showDictation = true }
+    }
+
+    private var statusFilterBar: some View {
+        Picker("Status", selection: $statusFilter) {
+            Text("All").tag(InvoiceStatus?.none)
+            ForEach(InvoiceStatus.allCases) { status in
+                Text(status.title).tag(Optional(status))
+            }
+        }
+        .pickerStyle(.segmented)
+    }
+
+    private func presentPendingRoute() {
+        if let pending = pendingRoute {
+            route = pending
+            pendingRoute = nil
+        }
     }
 
     private func allowCreation() -> Bool {

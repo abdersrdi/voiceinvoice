@@ -83,6 +83,12 @@ struct InvoiceEditorView: View {
                 if invoice.dueDate != nil {
                     DatePicker("Due", selection: dueDateValue, displayedComponents: .date)
                 }
+                Picker("Invoice language", selection: $invoice.languageCode) {
+                    Text("Same as shop").tag("")
+                    ForEach(DocumentLanguage.allCases) { language in
+                        Text(language.displayName).tag(language.rawValue)
+                    }
+                }
                 TextField("Notes or payment terms", text: $invoice.notes, axis: .vertical)
                     .lineLimit(2...5)
             }

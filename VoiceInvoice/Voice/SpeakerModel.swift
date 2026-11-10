@@ -141,6 +141,7 @@ final class SampleBuffer: @unchecked Sendable {
     private let lock = NSLock()
     private var samples: [Float] = []
     private var rate: Double = 0
+    private var dropped = 0
     private let maxSeconds: Double
 
     init(maxSeconds: Double = 10) {
@@ -156,13 +157,24 @@ final class SampleBuffer: @unchecked Sendable {
         if rate == 0 { rate = buffer.format.sampleRate }
         samples.append(contentsOf: UnsafeBufferPointer(start: channel, count: count))
         let limit = Int(maxSeconds * rate)
-        if samples.count > limit { samples.removeFirst(samples.count - limit) }
+        if samples.count > limit {
+            let excess = samples.count - limit
+            samples.removeFirst(excess)
+            dropped += excess
+        }
     }
 
     func snapshot() -> (samples: [Float], sampleRate: Double) {
         lock.lock()
         defer { lock.unlock() }
         return (samples, rate)
+    }
+
+    /// Samples plus how many older samples were already discarded, so word timestamps can be mapped to positions.
+    func snapshotWithOffset() -> (samples: [Float], sampleRate: Double, startOffset: Int) {
+        lock.lock()
+        defer { lock.unlock() }
+        return (samples, rate, dropped)
     }
 
     var duration: Double {
@@ -176,5 +188,6 @@ final class SampleBuffer: @unchecked Sendable {
         defer { lock.unlock() }
         samples.removeAll(keepingCapacity: true)
         rate = 0
+        dropped = 0
     }
 }

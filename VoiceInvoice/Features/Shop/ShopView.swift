@@ -72,6 +72,12 @@ private struct ShopForm: View {
 
             Section("Invoicing") {
                 CurrencyPicker(code: $store.currencyCode)
+                Picker("Invoice language", selection: $store.documentLanguage) {
+                    Text("Same as the app").tag("")
+                    ForEach(DocumentLanguage.allCases) { language in
+                        Text(language.displayName).tag(language.rawValue)
+                    }
+                }
                 HStack {
                     Text("Default tax (%)")
                     Spacer()

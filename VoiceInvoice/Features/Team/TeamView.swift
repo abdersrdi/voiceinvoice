@@ -12,6 +12,7 @@ struct TeamView: View {
 
     @State private var showAdd = false
     @State private var newName = ""
+    @AppStorage("ignoreOtherVoices") private var ignoreOtherVoices = false
 
     var body: some View {
         List {
@@ -19,6 +20,12 @@ struct TeamView: View {
                 Text("Add the people who dictate invoices. Enroll up to \(VoiceLimits.maxEnrolledVoices) voices so VoiceInvoice can tell who is speaking and note it on each invoice.")
                     .font(.footnote)
                     .foregroundStyle(Theme.secondaryText)
+            }
+
+            Section {
+                Toggle("Ignore other voices while dictating (beta)", isOn: $ignoreOtherVoices)
+            } footer: {
+                Text("After you stop, phrases that do not sound like the speaker are left out, and you can bring them back. Needs an enrolled voice.")
             }
 
             Section {

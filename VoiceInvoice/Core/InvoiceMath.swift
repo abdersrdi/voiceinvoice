@@ -48,8 +48,8 @@ enum InvoiceMath {
 }
 
 enum Money {
-    static func string(_ value: Double, currencyCode: String) -> String {
-        value.formatted(.currency(code: currencyCode))
+    static func string(_ value: Double, currencyCode: String, locale: Locale = .current) -> String {
+        value.formatted(.currency(code: currencyCode).locale(locale))
     }
 }
 

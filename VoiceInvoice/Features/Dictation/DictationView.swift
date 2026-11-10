@@ -13,10 +13,14 @@ struct DictationView: View {
     @State private var speakerUID: String?
     @State private var speakerUnrecognized = false
     @State private var refined: [ParsedItem]?
+    @State private var gatedText: String?
+    @State private var gatedDropped = 0
+    @AppStorage("ignoreOtherVoices") private var ignoreOtherVoices = false
     @AppStorage("dictationLanguage") private var languageRaw = ParserLanguage.preferred().rawValue
 
     private var language: ParserLanguage { ParserLanguage(rawValue: languageRaw) ?? .en }
-    private var ruleItems: [ParsedItem] { LineItemParser.parse(speech.transcript, language: language) }
+    private var effectiveTranscript: String { gatedText ?? speech.transcript }
+    private var ruleItems: [ParsedItem] { LineItemParser.parse(effectiveTranscript, language: language) }
     private var items: [ParsedItem] { refined ?? ruleItems }
     private var speaker: Employee? { employees.first { $0.uid == speakerUID } }
 
@@ -49,6 +53,7 @@ struct DictationView: View {
             }
             .onDisappear { speech.stop() }
             .task(id: speech.isListening) { await identifySpeaker() }
+            .task(id: speech.isListening) { await applyVoiceGate() }
             .task(id: refineKey) { await refineWithAppleIntelligence() }
         }
     }
@@ -90,16 +95,47 @@ struct DictationView: View {
         }
     }
 
+    // MARK: Ignore other voices (beta)
+
+    /// After dictation, drops phrases that do not sound like the identified speaker.
+    private func applyVoiceGate() async {
+        gatedText = nil
+        gatedDropped = 0
+        guard !speech.isListening, ignoreOtherVoices, let speaker,
+              let voiceprint = VoiceprintStore.load(for: speaker), !speech.words.isEmpty else { return }
+        try? await Task.sleep(nanoseconds: 900_000_000)
+        guard !Task.isCancelled, !speech.isListening else { return }
+
+        let profile = VoiceProfile(id: speaker.uid, centroid: voiceprint.centroid, radius: voiceprint.radius)
+        let words = speech.words
+        let clip = speech.sampleBuffer.snapshotWithOffset()
+        let language = self.language
+        let result = await Task.detached(priority: .userInitiated) {
+            SpeakerGate.filter(
+                words: words,
+                samples: clip.samples,
+                sampleRate: clip.sampleRate,
+                startOffset: clip.startOffset,
+                profile: profile
+            )
+        }.value
+        guard !Task.isCancelled else { return }
+        if result.droppedPhrases > 0 {
+            gatedText = SpeakerGate.text(from: result.kept, language: language)
+            gatedDropped = result.droppedPhrases
+        }
+    }
+
     // MARK: Apple Intelligence assist
 
     private var refineKey: String {
-        "\(speech.transcript)|\(language.rawValue)|\(speech.isListening)"
+        "\(effectiveTranscript)|\(language.rawValue)|\(speech.isListening)"
     }
 
     /// When the rules could not read a price, let Apple Intelligence (if present) take a look.
     private func refineWithAppleIntelligence() async {
         refined = nil
-        let text = speech.transcript.trimmingCharacters(in: .whitespacesAndNewlines)
+        let text = effectiveTranscript.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !speech.isListening, !text.isEmpty, AppleIntelligenceParser.isAvailable else { return }
         let rules = ruleItems
         guard rules.isEmpty || rules.contains(where: { $0.needsReview }) else { return }
@@ -195,6 +231,19 @@ struct DictationView: View {
                 TextField("Tap the mic, or type here", text: $speech.transcript, axis: .vertical)
                     .font(.system(.title3, design: .rounded))
                     .lineLimit(2...8)
+            }
+
+            if gatedDropped > 0 {
+                HStack {
+                    Label("Ignored \(gatedDropped) phrases from other voices", systemImage: "person.2.slash")
+                    Spacer()
+                    Button("Include everything") {
+                        gatedText = nil
+                        gatedDropped = 0
+                    }
+                }
+                .font(.caption)
+                .foregroundStyle(Theme.secondaryText)
             }
 
             if case .denied(let message) = speech.state {

@@ -48,7 +48,16 @@ struct InvoicePageView: View {
         .frame(width: Self.pageSize.width, height: Self.pageSize.height, alignment: .topLeading)
         .background(Color.white)
         .environment(\.colorScheme, .light)
+        .environment(\.locale, document.locale)
         .foregroundStyle(ink)
+    }
+
+    private func money(_ value: Double) -> String {
+        Money.string(value, currencyCode: document.currencyCode, locale: document.locale)
+    }
+
+    private func dateText(_ date: Date) -> String {
+        date.formatted(Date.FormatStyle(date: .abbreviated, time: .omitted, locale: document.locale))
     }
 
     // MARK: Header
@@ -69,7 +78,7 @@ struct InvoicePageView: View {
                     Text(verbatim: document.shopAddress).font(.system(size: 9)).foregroundStyle(muted)
                 }
                 if !document.shopTaxID.isEmpty {
-                    Text(verbatim: "\(String(localized: "Tax ID")): \(document.shopTaxID)")
+                    (Text("Tax ID") + Text(verbatim: ": \(document.shopTaxID)"))
                         .font(.system(size: 9)).foregroundStyle(muted)
                 }
                 if !document.shopPhone.isEmpty || !document.shopEmail.isEmpty {
@@ -84,10 +93,10 @@ struct InvoicePageView: View {
                     .foregroundStyle(accent)
                 Text(verbatim: document.number)
                     .font(.system(size: 11, weight: .semibold))
-                Text(verbatim: "\(String(localized: "Issued")): \(document.issueDate.formatted(date: .abbreviated, time: .omitted))")
+                (Text("Issued") + Text(verbatim: ": \(dateText(document.issueDate))"))
                     .font(.system(size: 9)).foregroundStyle(muted)
                 if let due = document.dueDate {
-                    Text(verbatim: "\(String(localized: "Due")): \(due.formatted(date: .abbreviated, time: .omitted))")
+                    (Text("Due") + Text(verbatim: ": \(dateText(due))"))
                         .font(.system(size: 9)).foregroundStyle(muted)
                 }
             }
@@ -147,11 +156,10 @@ struct InvoicePageView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Text(verbatim: line.quantity.formatted())
                     .frame(width: 50, alignment: .trailing)
-                Text(verbatim: Money.string(line.unitPrice, currencyCode: document.currencyCode))
+                Text(verbatim: money(line.unitPrice))
                     .frame(width: 80, alignment: .trailing)
-                Text(verbatim: Money.string(
-                    InvoiceMath.lineAmount(quantity: line.quantity, unitPrice: line.unitPrice, currencyCode: document.currencyCode),
-                    currencyCode: document.currencyCode
+                Text(verbatim: money(
+                    InvoiceMath.lineAmount(quantity: line.quantity, unitPrice: line.unitPrice, currencyCode: document.currencyCode)
                 ))
                 .frame(width: 90, alignment: .trailing)
             }
@@ -169,18 +177,18 @@ struct InvoicePageView: View {
         return HStack {
             Spacer()
             VStack(spacing: 6) {
-                totalLine("Subtotal", Money.string(totals.subtotal, currencyCode: code))
+                totalLine("Subtotal", money(totals.subtotal))
                 if totals.discount > 0 {
-                    totalLine("Discount", "-" + Money.string(totals.discount, currencyCode: code))
+                    totalLine("Discount", "-" + money(totals.discount))
                 }
                 if document.taxRate > 0 {
-                    totalLine("Tax", Money.string(totals.tax, currencyCode: code))
+                    totalLine("Tax", money(totals.tax))
                 }
                 Rectangle().fill(accent).frame(height: 1.5)
                 HStack {
                     Text("TOTAL").font(.system(size: 11, weight: .bold))
                     Spacer()
-                    Text(verbatim: Money.string(totals.total, currencyCode: code))
+                    Text(verbatim: money(totals.total))
                         .font(.system(size: 16, weight: .heavy))
                         .foregroundStyle(accent)
                 }

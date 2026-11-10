@@ -17,24 +17,30 @@ final class SpeechService {
     }
 
     var transcript = ""
+    /// The same words with their timing, for the "ignore other voices" filter.
+    var words: [TimedWord] = []
     var level: Float = 0
     var state: State = .idle
     var isOnDevice = false
 
     var isListening: Bool { state == .listening }
 
-    /// Recent microphone samples, used to work out who is speaking.
-    let sampleBuffer = SampleBuffer(maxSeconds: 8)
+    /// The microphone audio of this session (up to a minute), used to work out who is speaking.
+    let sampleBuffer = SampleBuffer(maxSeconds: 60)
 
     private let audioEngine = AVAudioEngine()
     private var request: SFSpeechAudioBufferRecognitionRequest?
     private var task: SFSpeechRecognitionTask?
+    private var generation = 0
 
     // MARK: Control
 
     func start(localeIdentifier: String) async {
         guard state != .listening, state != .requestingPermission else { return }
+        generation += 1
+        let current = generation
         transcript = ""
+        words = []
         level = 0
         sampleBuffer.reset()
         state = .requestingPermission
@@ -53,6 +59,7 @@ final class SpeechService {
             state = .failed(String(localized: "Speech recognition is not available for this language right now."))
             return
         }
+        guard current == generation else { return } // cancelled while asking for permission
 
         isOnDevice = recognizer.supportsOnDeviceRecognition
         let request = SFSpeechAudioBufferRecognitionRequest()
@@ -83,8 +90,10 @@ final class SpeechService {
 
             task = recognizer.recognitionTask(
                 with: request,
-                resultHandler: Self.makeResultHandler { [weak self] text, isFinal, failed in
-                    Task { @MainActor in self?.handle(text: text, isFinal: isFinal, failed: failed) }
+                resultHandler: Self.makeResultHandler { [weak self] text, timed, isFinal, failed in
+                    Task { @MainActor in
+                        self?.handle(generation: current, text: text, timed: timed, isFinal: isFinal, failed: failed)
+                    }
                 }
             )
         } catch {
@@ -93,6 +102,7 @@ final class SpeechService {
         }
     }
 
+    /// Stops the microphone but lets the recognizer deliver its final text.
     func stop() {
         guard state == .listening || state == .requestingPermission else { return }
         teardownAudio()
@@ -100,11 +110,24 @@ final class SpeechService {
         state = .idle
     }
 
+    /// Stops everything immediately and ignores any text still on its way.
+    func cancel() {
+        generation += 1
+        teardownAudio()
+        request?.endAudio()
+        task?.cancel()
+        task = nil
+        request = nil
+        state = .idle
+    }
+
     // MARK: Internals
 
-    private func handle(text: String?, isFinal: Bool, failed: Bool) {
+    private func handle(generation g: Int, text: String?, timed: [TimedWord], isFinal: Bool, failed: Bool) {
+        guard g == generation else { return }
         if let text, state == .listening || state == .idle {
             transcript = text
+            words = timed
         }
         if isFinal || failed {
             task = nil
@@ -139,10 +162,13 @@ final class SpeechService {
     }
 
     nonisolated private static func makeResultHandler(
-        _ deliver: @escaping @Sendable (String?, Bool, Bool) -> Void
+        _ deliver: @escaping @Sendable (String?, [TimedWord], Bool, Bool) -> Void
     ) -> (SFSpeechRecognitionResult?, Error?) -> Void {
         return { result, error in
-            deliver(result?.bestTranscription.formattedString, result?.isFinal ?? false, error != nil)
+            let timed = result?.bestTranscription.segments.map {
+                TimedWord(text: $0.substring, start: $0.timestamp, duration: $0.duration)
+            } ?? []
+            deliver(result?.bestTranscription.formattedString, timed, result?.isFinal ?? false, error != nil)
         }
     }
 

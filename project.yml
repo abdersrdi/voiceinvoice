@@ -19,6 +19,9 @@ targets:
     platform: iOS
     sources:
       - VoiceInvoice
+      - Shared
+    dependencies:
+      - target: VoiceInvoiceWidgets
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.abdersrdi.voiceinvoice
@@ -29,8 +32,19 @@ targets:
         CFBundleDisplayName: VoiceInvoice
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations:
+          - en
+          - fr
+          - es
+          - it
+          - zh-Hans
         UILaunchScreen: {}
         ITSAppUsesNonExemptEncryption: false
+        CFBundleURLTypes:
+          - CFBundleURLName: com.abdersrdi.voiceinvoice
+            CFBundleURLSchemes:
+              - voiceinvoice
         UIApplicationSceneManifest:
           UIApplicationSupportsMultipleScenes: false
         UISupportedInterfaceOrientations:
@@ -52,6 +66,33 @@ targets:
           - iCloud.com.abdersrdi.voiceinvoice
         com.apple.developer.icloud-services:
           - CloudKit
+        com.apple.security.application-groups:
+          - group.com.abdersrdi.voiceinvoice
+  VoiceInvoiceWidgets:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - VoiceInvoiceWidgets
+      - Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.abdersrdi.voiceinvoice.widgets
+        GENERATE_INFOPLIST_FILE: NO
+        SKIP_INSTALL: YES
+    info:
+      path: VoiceInvoiceWidgets/Info.plist
+      properties:
+        CFBundleDisplayName: VoiceInvoice
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: VoiceInvoiceWidgets/VoiceInvoiceWidgets.entitlements
+      properties:
+        com.apple.security.application-groups:
+          - group.com.abdersrdi.voiceinvoice
   VoiceInvoiceTests:
     type: bundle.unit-test
     platform: iOS

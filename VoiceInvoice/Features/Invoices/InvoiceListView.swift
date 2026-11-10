@@ -11,6 +11,7 @@ struct InvoiceListView: View {
     @Query(sort: \Invoice.issueDate, order: .reverse) private var invoices: [Invoice]
     @Query private var stores: [StoreProfile]
     @Environment(SubscriptionStore.self) private var subscriptions
+    @Environment(AppRouter.self) private var router
 
     @State private var showPaywall = false
     @State private var search = ""
@@ -82,6 +83,11 @@ struct InvoiceListView: View {
                     }
                     .accessibilityLabel("New invoice")
                 }
+            }
+            .onAppear { consumeDictationRequest() }
+            .onChange(of: router.dictationRequested) { _, _ in consumeDictationRequest() }
+            .onChange(of: snapshotToken, initial: true) { _, _ in
+                SnapshotWriter.update(invoices: invoices, store: store, isPro: subscriptions.isPro)
             }
             .navigationDestination(for: Invoice.self) { invoice in
                 InvoiceDetailView(invoice: invoice)
@@ -173,6 +179,25 @@ struct InvoiceListView: View {
         .padding(.trailing, 20)
         .padding(.bottom, 20)
         .accessibilityLabel("Dictate an invoice")
+    }
+
+    /// Changes whenever something the widget shows changes.
+    private var snapshotToken: Int {
+        var hasher = Hasher()
+        for invoice in invoices {
+            hasher.combine(invoice.updatedAt)
+            hasher.combine(invoice.number)
+        }
+        hasher.combine(subscriptions.isPro)
+        hasher.combine(store?.usageCount ?? 0)
+        hasher.combine(store?.currencyCode ?? "")
+        return hasher.finalize()
+    }
+
+    private func consumeDictationRequest() {
+        guard router.dictationRequested, store != nil else { return }
+        router.dictationRequested = false
+        if allowCreation() { showDictation = true }
     }
 
     private func allowCreation() -> Bool {

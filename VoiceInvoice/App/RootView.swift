@@ -19,13 +19,18 @@ struct RootView: View {
 }
 
 struct MainTabView: View {
+    @Environment(AppRouter.self) private var router
+
     var body: some View {
-        TabView {
+        @Bindable var router = router
+        TabView(selection: $router.selectedTab) {
             InvoiceListView()
                 .tabItem { Label("Invoices", systemImage: "doc.text.fill") }
+                .tag(AppTab.invoices)
 
             ShopView()
                 .tabItem { Label("Shop", systemImage: "storefront.fill") }
+                .tag(AppTab.shop)
         }
     }
 }

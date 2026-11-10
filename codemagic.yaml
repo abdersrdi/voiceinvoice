@@ -37,6 +37,7 @@ workflows:
         script: keychain initialize
       - name: Prepare the certificate key (accepts plain text or base64; prints no secrets)
         script: |
+          #!/usr/bin/env bash
           for name in APP_STORE_CONNECT_ISSUER_ID APP_STORE_CONNECT_KEY_IDENTIFIER APP_STORE_CONNECT_PRIVATE_KEY CERTIFICATE_PRIVATE_KEY; do
             value="${!name}"
             if [ -z "$value" ]; then
@@ -112,6 +113,7 @@ workflows:
         script: keychain initialize
       - name: Prepare the certificate key (accepts plain text or base64; prints no secrets)
         script: |
+          #!/usr/bin/env bash
           for name in APP_STORE_CONNECT_ISSUER_ID APP_STORE_CONNECT_KEY_IDENTIFIER APP_STORE_CONNECT_PRIVATE_KEY CERTIFICATE_PRIVATE_KEY; do
             value="${!name}"
             if [ -z "$value" ]; then

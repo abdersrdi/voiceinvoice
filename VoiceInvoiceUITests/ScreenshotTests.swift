@@ -53,6 +53,21 @@ final class ScreenshotTests: XCTestCase {
         return true
     }
 
+    /// Goes back one screen. Tries the navigation bar button, then a button called Back, then an edge swipe.
+    private func goBack() {
+        let bar = app.navigationBars.buttons.element(boundBy: 0)
+        if bar.exists && bar.isHittable {
+            bar.tap()
+        } else if app.buttons["Back"].exists {
+            app.buttons["Back"].tap()
+        } else {
+            let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.01, dy: 0.5))
+            let end = app.coordinate(withNormalizedOffset: CGVector(dx: 0.8, dy: 0.5))
+            start.press(forDuration: 0.1, thenDragTo: end)
+        }
+        settle()
+    }
+
     private func button(containing text: String) -> XCUIElement {
         app.buttons.matching(NSPredicate(format: "label CONTAINS[c] %@", text)).firstMatch
     }
@@ -69,8 +84,10 @@ final class ScreenshotTests: XCTestCase {
         if tap(app.staticTexts["Boulangerie Martin"].firstMatch, "first invoice row") {
             settle(4)
             shot("invoice-pdf")
-            app.navigationBars.buttons.element(boundBy: 0).tap()
+            app.swipeUp()
             settle()
+            shot("invoice-pdf-bottom")
+            goBack()
         }
 
         // 3. Dictation with typed text (no microphone needed)
@@ -98,7 +115,7 @@ final class ScreenshotTests: XCTestCase {
             app.buttons["Paid"].tap()
             settle()
             shot("invoices-paid")
-            app.buttons["All"].tap()
+            if app.buttons["All"].exists { app.buttons["All"].tap() }
             settle()
         }
 

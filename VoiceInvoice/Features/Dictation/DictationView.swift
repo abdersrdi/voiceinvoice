@@ -14,6 +14,7 @@ struct DictationView: View {
     @State private var speakerUnrecognized = false
     @State private var refined: [ParsedItem]?
     @State private var gatedText: String?
+    @FocusState private var typing: Bool
     @State private var gatedDropped = 0
     @AppStorage("ignoreOtherVoices") private var ignoreOtherVoices = false
     @AppStorage("dictationLanguage") private var languageRaw = ParserLanguage.preferred().rawValue
@@ -49,6 +50,10 @@ struct DictationView: View {
                         speech.stop()
                         dismiss()
                     }
+                }
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") { typing = false }
                 }
             }
             .onDisappear { speech.stop() }
@@ -231,6 +236,7 @@ struct DictationView: View {
                 TextField("Tap the mic, or type here", text: $speech.transcript, axis: .vertical)
                     .font(.system(.title3, design: .rounded))
                     .lineLimit(2...8)
+                    .focused($typing)
             }
 
             if gatedDropped > 0 {
@@ -312,7 +318,7 @@ struct DictationView: View {
 
     private var controls: some View {
         VStack(spacing: 14) {
-            micButton
+            if !typing { micButton }
             Button("Use these items") {
                 speech.stop()
                 Haptics.success()

@@ -8,7 +8,7 @@ struct EditorRoute: Identifiable {
 
 struct InvoiceListView: View {
     @Environment(\.modelContext) private var context
-    @Query(sort: \Invoice.issueDate, order: .reverse) private var invoices: [Invoice]
+    @Query(sort: \Invoice.issueDate, order: .reverse) private var allInvoices: [Invoice]
     @Query private var stores: [StoreProfile]
     @Environment(SubscriptionStore.self) private var subscriptions
     @Environment(AppRouter.self) private var router
@@ -23,6 +23,10 @@ struct InvoiceListView: View {
     @State private var invoiceToDelete: Invoice?
 
     private var store: StoreProfile? { stores.first }
+
+    /// Invoices that have been saved. A new invoice being edited has no number yet and stays out of
+    /// the list and the totals until it is saved.
+    private var invoices: [Invoice] { allInvoices.filter { !$0.number.isEmpty } }
 
     private var filtered: [Invoice] {
         let term = search.trimmingCharacters(in: .whitespaces)
@@ -76,6 +80,8 @@ struct InvoiceListView: View {
                 }
                 .padding(.horizontal, 16)
                 .padding(.bottom, 24)
+                .frame(maxWidth: 760)
+                .frame(maxWidth: .infinity)
             }
             .background(Theme.background.ignoresSafeArea())
             .overlay(alignment: .bottomTrailing) { dictateButton }
@@ -88,7 +94,7 @@ struct InvoiceListView: View {
                         guard allowCreation() else { return }
                         showCounter = true
                     } label: {
-                        Image(systemName: "ear.badge.waveform")
+                        Image(systemName: "dot.radiowaves.left.and.right")
                     }
                     .accessibilityLabel("Counter mode")
                 }
@@ -105,6 +111,7 @@ struct InvoiceListView: View {
                 }
             }
             .onAppear { consumeDictationRequest() }
+            .task { removeAbandonedDrafts() }
             .onChange(of: router.dictationRequested) { _, _ in consumeDictationRequest() }
             .onChange(of: snapshotToken, initial: true) { _, _ in
                 SnapshotWriter.update(invoices: invoices, store: store, isPro: subscriptions.isPro)
@@ -249,6 +256,15 @@ struct InvoiceListView: View {
             }
         }
         .pickerStyle(.segmented)
+    }
+
+    /// An invoice that was never saved (for example the app was closed while editing) has no number.
+    private func removeAbandonedDrafts() {
+        guard route == nil, pendingRoute == nil, !showDictation, !showCounter else { return }
+        let abandoned = allInvoices.filter { $0.number.isEmpty }
+        guard !abandoned.isEmpty else { return }
+        for invoice in abandoned { context.delete(invoice) }
+        try? context.save()
     }
 
     private func presentPendingRoute() {

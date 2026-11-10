@@ -1,0 +1,20 @@
+name: List simulators
+
+on:
+  workflow_dispatch:
+
+jobs:
+  list:
+    runs-on: macos-26
+    timeout-minutes: 10
+    steps:
+      - name: Xcode and SDKs
+        run: |
+          xcodebuild -version
+          xcodebuild -showsdks | grep -i simulator
+      - name: Device types
+        run: xcrun simctl list devicetypes | grep -i -E "iPhone|iPad"
+      - name: Runtimes
+        run: xcrun simctl list runtimes
+      - name: Existing devices
+        run: xcrun simctl list devices available | head -80

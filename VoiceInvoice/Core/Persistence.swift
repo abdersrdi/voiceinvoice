@@ -17,6 +17,15 @@ enum Persistence {
     /// Syncs through the owner's private iCloud database. If CloudKit is unavailable
     /// (no entitlement, unsigned build) the app falls back to a local store so it never fails to launch.
     static func makeContainer() -> ModelContainer {
+        // Unit tests launch the app as a host; give them a throwaway store.
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil,
+           let container = try? makeInMemoryContainer() {
+            return container
+        }
+        // SwiftData does not always create this folder on a fresh install or simulator.
+        if let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
+            try? FileManager.default.createDirectory(at: support, withIntermediateDirectories: true)
+        }
         do {
             let cloud = ModelConfiguration(
                 schema: schema,

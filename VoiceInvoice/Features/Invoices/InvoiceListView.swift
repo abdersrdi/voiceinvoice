@@ -3,7 +3,7 @@ import SwiftData
 
 struct EditorRoute: Identifiable {
     let invoice: Invoice
-    var id: PersistentModelID { invoice.persistentModelID }
+    var id: PersistentIdentifier { invoice.persistentModelID }
 }
 
 struct InvoiceListView: View {

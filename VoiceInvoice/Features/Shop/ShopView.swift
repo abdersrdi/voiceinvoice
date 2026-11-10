@@ -1,6 +1,7 @@
 import SwiftUI
 import SwiftData
 import PhotosUI
+import VisionKit
 
 struct ShopView: View {
     @Query private var stores: [StoreProfile]
@@ -22,6 +23,11 @@ private struct ShopForm: View {
     @State private var showingSignature = false
     @State private var showPaywall = false
     @State private var showManage = false
+    @State private var showScanner = false
+    @State private var showStampPhotos = false
+    @State private var stampPhotoItem: PhotosPickerItem?
+    @State private var pendingStampImage: UIImage?
+    @State private var stampSource: StampSource?
 
     var body: some View {
         Form {
@@ -80,7 +86,7 @@ private struct ShopForm: View {
 
             Section("Branding") {
                 BrandAssetRow(title: "Logo", systemImage: "photo", data: $store.logoData)
-                BrandAssetRow(title: "Company stamp", systemImage: "seal", data: $store.stampData)
+                stampRow
                 signatureRow
             }
         }
@@ -88,12 +94,80 @@ private struct ShopForm: View {
         .background(Theme.background.ignoresSafeArea())
         .navigationTitle("Shop")
         .manageSubscriptionsSheet(isPresented: $showManage)
+        .fullScreenCover(isPresented: $showScanner, onDismiss: presentPendingStamp) {
+            DocumentScanner { image in
+                pendingStampImage = image
+                showScanner = false
+            }
+            .ignoresSafeArea()
+        }
+        .photosPicker(isPresented: $showStampPhotos, selection: $stampPhotoItem, matching: .images)
+        .onChange(of: stampPhotoItem) { _, item in
+            guard let item else { return }
+            Task {
+                if let data = try? await item.loadTransferable(type: Data.self),
+                   let image = UIImage(data: data) {
+                    stampSource = StampSource(image: image)
+                }
+                stampPhotoItem = nil
+            }
+        }
+        .sheet(item: $stampSource) { source in
+            StampEditorView(source: source) { png in
+                store.stampData = png
+            }
+        }
         .sheet(isPresented: $showPaywall) {
             PaywallView()
         }
         .sheet(isPresented: $showingSignature) {
             SignatureSheet { png in
                 store.signatureData = png
+            }
+        }
+    }
+
+    private func presentPendingStamp() {
+        if let image = pendingStampImage {
+            stampSource = StampSource(image: image)
+            pendingStampImage = nil
+        }
+    }
+
+    private var stampRow: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "seal")
+                .frame(width: 28)
+                .foregroundStyle(Theme.accent)
+            Text("Company stamp")
+            Spacer()
+            if let data = store.stampData, let image = UIImage(data: data) {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 32)
+                    .padding(4)
+                    .background(Color.white, in: RoundedRectangle(cornerRadius: 8))
+                Button(role: .destructive) {
+                    store.stampData = nil
+                } label: {
+                    Image(systemName: "trash")
+                }
+                .buttonStyle(.borderless)
+            }
+            Menu(store.stampData == nil ? "Add" : "Replace") {
+                if VNDocumentCameraViewController.isSupported {
+                    Button {
+                        showScanner = true
+                    } label: {
+                        Label("Scan with camera", systemImage: "camera.viewfinder")
+                    }
+                }
+                Button {
+                    showStampPhotos = true
+                } label: {
+                    Label("Choose photo", systemImage: "photo")
+                }
             }
         }
     }

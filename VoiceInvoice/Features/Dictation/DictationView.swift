@@ -1,16 +1,22 @@
 import SwiftUI
+import SwiftData
 
 struct DictationView: View {
     @Environment(\.dismiss) private var dismiss
 
     let currencyCode: String
-    let onFinish: ([ParsedItem]) -> Void
+    let onFinish: ([ParsedItem], String) -> Void
+
+    @Query(sort: \Employee.createdAt) private var employees: [Employee]
 
     @State private var speech = SpeechService()
+    @State private var speakerUID: String?
+    @State private var speakerUnrecognized = false
     @AppStorage("dictationLanguage") private var languageRaw = ParserLanguage.preferred().rawValue
 
     private var language: ParserLanguage { ParserLanguage(rawValue: languageRaw) ?? .en }
     private var items: [ParsedItem] { LineItemParser.parse(speech.transcript, language: language) }
+    private var speaker: Employee? { employees.first { $0.uid == speakerUID } }
 
     var body: some View {
         NavigationStack {
@@ -18,6 +24,7 @@ struct DictationView: View {
                 ScrollView {
                     VStack(spacing: 16) {
                         languageAndPrivacy
+                        speakerChip
                         transcriptCard
                         itemsCard
                     }
@@ -39,6 +46,7 @@ struct DictationView: View {
                 }
             }
             .onDisappear { speech.stop() }
+            .task(id: speech.isListening) { await identifySpeaker() }
         }
     }
 
@@ -75,6 +83,76 @@ struct DictationView: View {
                 )
                 .font(.caption)
                 .foregroundStyle(Theme.secondaryText)
+            }
+        }
+    }
+
+    // MARK: Speaker
+
+    @ViewBuilder
+    private var speakerChip: some View {
+        if !employees.isEmpty {
+            HStack {
+                Menu {
+                    ForEach(employees) { employee in
+                        Button {
+                            speakerUID = employee.uid
+                            speakerUnrecognized = false
+                        } label: {
+                            Text(employee.name.isEmpty ? String(localized: "Unnamed") : employee.name)
+                        }
+                    }
+                    Button("Nobody listed") {
+                        speakerUID = nil
+                        speakerUnrecognized = false
+                    }
+                } label: {
+                    Label(
+                        speaker?.name ?? (speakerUnrecognized ? String(localized: "Who's speaking?") : String(localized: "Speaker")),
+                        systemImage: speaker != nil ? "waveform.circle.fill" : "person.crop.circle.badge.questionmark"
+                    )
+                    .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 8)
+                    .background(Theme.card, in: Capsule())
+                    .overlay(Capsule().strokeBorder(speakerUnrecognized ? Color.orange : Theme.separator, lineWidth: speakerUnrecognized ? 1.5 : 0.5))
+                }
+                Spacer()
+            }
+        }
+    }
+
+    /// Listens to the first seconds of speech and matches them against enrolled voices.
+    /// If nobody matches confidently the user picks from the chip instead.
+    private func identifySpeaker() async {
+        guard speech.isListening else { return }
+        let profiles = VoiceprintStore.profiles(for: employees)
+        guard !profiles.isEmpty else { return }
+        speakerUnrecognized = false
+
+        while speech.isListening, !Task.isCancelled {
+            try? await Task.sleep(nanoseconds: 700_000_000)
+            guard speech.isListening, !Task.isCancelled else { return }
+            let duration = speech.sampleBuffer.duration
+            guard duration >= 3 else { continue }
+
+            let clip = speech.sampleBuffer.snapshot()
+            let match = await Task.detached(priority: .userInitiated) { () -> SpeakerMatch? in
+                guard let embedding = SpeakerEmbedding.make(samples: clip.samples, sampleRate: clip.sampleRate) else {
+                    return nil
+                }
+                return SpeakerMatcher.identify(embedding, profiles: profiles)
+            }.value
+
+            if let match {
+                speakerUID = match.id
+                speakerUnrecognized = false
+                Haptics.tap()
+                return
+            }
+            if duration >= 6 {
+                if speaker == nil { speakerUnrecognized = true }
+                return
             }
         }
     }
@@ -158,7 +236,7 @@ struct DictationView: View {
             Button("Use these items") {
                 speech.stop()
                 Haptics.success()
-                onFinish(items)
+                onFinish(items, speaker?.name ?? "")
                 dismiss()
             }
             .buttonStyle(PrimaryButtonStyle())

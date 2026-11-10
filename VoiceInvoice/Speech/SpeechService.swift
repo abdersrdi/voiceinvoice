@@ -23,6 +23,9 @@ final class SpeechService {
 
     var isListening: Bool { state == .listening }
 
+    /// Recent microphone samples, used to work out who is speaking.
+    let sampleBuffer = SampleBuffer(maxSeconds: 8)
+
     private let audioEngine = AVAudioEngine()
     private var request: SFSpeechAudioBufferRecognitionRequest?
     private var task: SFSpeechRecognitionTask?
@@ -33,6 +36,7 @@ final class SpeechService {
         guard state != .listening, state != .requestingPermission else { return }
         transcript = ""
         level = 0
+        sampleBuffer.reset()
         state = .requestingPermission
 
         let speechStatus = await Self.requestSpeechAuthorization()
@@ -69,7 +73,7 @@ final class SpeechService {
                 onBus: 0,
                 bufferSize: 1024,
                 format: format,
-                block: Self.makeTapBlock(request: request) { [weak self] level in
+                block: Self.makeTapBlock(request: request, samples: sampleBuffer) { [weak self] level in
                     Task { @MainActor in self?.level = level }
                 }
             )
@@ -124,10 +128,12 @@ final class SpeechService {
 
     nonisolated private static func makeTapBlock(
         request: SFSpeechAudioBufferRecognitionRequest,
+        samples: SampleBuffer,
         onLevel: @escaping @Sendable (Float) -> Void
     ) -> AVAudioNodeTapBlock {
         return { buffer, _ in
             request.append(buffer)
+            samples.append(buffer)
             onLevel(Self.rms(buffer))
         }
     }

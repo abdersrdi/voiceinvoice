@@ -98,8 +98,8 @@ struct InvoiceListView: View {
                     pendingRoute = nil
                 }
             }) {
-                DictationView(currencyCode: store?.currencyCode ?? "USD") { items in
-                    pendingRoute = makeRoute(from: items)
+                DictationView(currencyCode: store?.currencyCode ?? "USD") { items, speaker in
+                    pendingRoute = makeRoute(from: items, speaker: speaker)
                 }
             }
             .sheet(isPresented: $showPaywall) {
@@ -220,8 +220,9 @@ struct InvoiceListView: View {
         route = EditorRoute(invoice: invoice)
     }
 
-    private func makeRoute(from items: [ParsedItem]) -> EditorRoute? {
+    private func makeRoute(from items: [ParsedItem], speaker: String) -> EditorRoute? {
         guard let invoice = makeInvoice() else { return nil }
+        invoice.createdByName = speaker
         for (index, item) in items.enumerated() {
             let line = InvoiceLine()
             line.position = index
@@ -229,6 +230,7 @@ struct InvoiceListView: View {
             line.quantity = item.quantity
             line.unitPrice = item.unitPrice
             line.rawTranscript = item.rawText
+            line.dictatedByName = speaker
             context.insert(line)
             line.invoice = invoice
         }

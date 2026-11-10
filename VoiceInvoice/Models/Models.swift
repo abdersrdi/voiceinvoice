@@ -51,13 +51,16 @@ final class StoreProfile {
 
 @Model
 final class Employee {
+    var uid: String = ""
     var name: String = ""
     var createdAt: Date = Date()
     @Attribute(.externalStorage) var voiceprint: Data?
     var voiceSyncEnabled: Bool = true
     var voiceConsentAt: Date?
 
-    init() {}
+    init() {
+        uid = UUID().uuidString
+    }
 }
 
 @Model

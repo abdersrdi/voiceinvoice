@@ -49,6 +49,14 @@ private struct ShopForm: View {
                 }
             }
 
+            Section {
+                NavigationLink {
+                    TeamView()
+                } label: {
+                    Label("Team & voices", systemImage: "person.2.wave.2.fill")
+                }
+            }
+
             Section("Shop") {
                 TextField("Shop name", text: $store.name)
                 TextField("Address", text: $store.address, axis: .vertical)

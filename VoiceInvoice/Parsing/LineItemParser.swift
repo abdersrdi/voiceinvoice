@@ -37,6 +37,13 @@ enum LineItemParser {
                     return
                 }
             }
+            if lex.language == .it, lex.numbers[Lexicon.key(word)] == nil,
+               let parts = decompose(Lexicon.key(word), lex: lex) {
+                for part in parts {
+                    out.append(Tok(raw: part, key: part, value: nil))
+                }
+                return
+            }
             if word.allSatisfy({ !$0.isLetter && !$0.isNumber }) { return }
             out.append(Tok(raw: word, key: Lexicon.key(word), value: nil))
         }
@@ -75,6 +82,26 @@ enum LineItemParser {
         }
         flush()
         return out
+    }
+
+    /// Splits a fused Italian number ("duecentocinquanta") into known number words.
+    static func decompose(_ key: String, lex: Lexicon) -> [String]? {
+        let chars = Array(key)
+        guard chars.count >= 6 else { return nil }
+        var best = [[String]?](repeating: nil, count: chars.count + 1)
+        best[0] = []
+        for end in 1...chars.count {
+            for start in 0..<end {
+                guard let prefix = best[start] else { continue }
+                let piece = String(chars[start..<end])
+                guard piece != "e", lex.numbers[piece] != nil else { continue }
+                let candidate = prefix + [piece]
+                if let existing = best[end], existing.count <= candidate.count { continue }
+                best[end] = candidate
+            }
+        }
+        if let result = best[chars.count], result.count > 1 { return result }
+        return nil
     }
 
     static func parseDigits(_ text: String, decimalComma: Bool) -> Double? {

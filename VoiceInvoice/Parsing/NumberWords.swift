@@ -114,13 +114,13 @@ enum NumberWords {
     static func connectorAllowed(current: Int, total: Int, next: Int, lex: Lexicon) -> Bool {
         let low = current % 100
         switch lex.language {
-        case .en:
+        case .en, .it:
             return next < 100 && ((current >= 100 && low == 0) || (total > 0 && current == 0))
         case .fr:
             return [20, 30, 40, 50, 60].contains(low) && (next == 1 || next == 11)
         case .es:
             return low >= 30 && low % 10 == 0 && (1...9).contains(next)
-        case .it, .zh:
+        case .zh:
             return false
         }
     }

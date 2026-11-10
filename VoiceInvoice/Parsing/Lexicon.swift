@@ -193,6 +193,7 @@ struct Lexicon {
         }
         m["cento"] = .fixedHundred(100)
         m["mille"] = .thousand
+        m["e"] = .connector
         for (unit, unitValue) in units where unitValue >= 2 {
             m[unit + "cento"] = .fixedHundred(unitValue * 100)
             m[unit + "mila"] = .fixedThousand(unitValue * 1000)

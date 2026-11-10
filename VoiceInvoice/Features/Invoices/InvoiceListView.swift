@@ -18,6 +18,7 @@ struct InvoiceListView: View {
     @State private var route: EditorRoute?
     @State private var showDictation = false
     @State private var pendingRoute: EditorRoute?
+    @State private var invoiceToDelete: Invoice?
 
     private var store: StoreProfile? { stores.first }
 
@@ -54,9 +55,13 @@ struct InvoiceListView: View {
                             }
                             .buttonStyle(.plain)
                             .contextMenu {
+                                Button {
+                                    duplicate(invoice)
+                                } label: {
+                                    Label("Duplicate", systemImage: "plus.square.on.square")
+                                }
                                 Button(role: .destructive) {
-                                    context.delete(invoice)
-                                    try? context.save()
+                                    invoiceToDelete = invoice
                                 } label: {
                                     Label("Delete", systemImage: "trash")
                                 }
@@ -101,6 +106,22 @@ struct InvoiceListView: View {
                 DictationView(currencyCode: store?.currencyCode ?? "USD") { items, speaker in
                     pendingRoute = makeRoute(from: items, speaker: speaker)
                 }
+            }
+            .confirmationDialog(
+                "Delete this invoice?",
+                isPresented: Binding(get: { invoiceToDelete != nil }, set: { if !$0 { invoiceToDelete = nil } }),
+                titleVisibility: .visible
+            ) {
+                Button("Delete", role: .destructive) {
+                    if let invoice = invoiceToDelete {
+                        context.delete(invoice)
+                        try? context.save()
+                    }
+                    invoiceToDelete = nil
+                }
+                Button("Cancel", role: .cancel) { invoiceToDelete = nil }
+            } message: {
+                Text("This can't be undone.")
             }
             .sheet(isPresented: $showPaywall) {
                 PaywallView(limitReached: !UsagePolicy.canCreate(store: store, isPro: subscriptions.isPro))
@@ -213,6 +234,27 @@ struct InvoiceListView: View {
         invoice.taxRate = store.defaultTaxRate
         context.insert(invoice)
         return invoice
+    }
+
+    private func duplicate(_ source: Invoice) {
+        guard allowCreation(), let copy = makeInvoice() else { return }
+        copy.customerName = source.customerName
+        copy.customerAddress = source.customerAddress
+        copy.customerEmail = source.customerEmail
+        copy.currencyCode = source.currencyCode
+        copy.taxRate = source.taxRate
+        copy.discountPercent = source.discountPercent
+        copy.notes = source.notes
+        for (index, original) in source.sortedLines.enumerated() {
+            let line = InvoiceLine()
+            line.position = index
+            line.name = original.name
+            line.quantity = original.quantity
+            line.unitPrice = original.unitPrice
+            context.insert(line)
+            line.invoice = copy
+        }
+        route = EditorRoute(invoice: copy)
     }
 
     private func newInvoice() {

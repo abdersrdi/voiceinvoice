@@ -7,6 +7,7 @@ Writes:
   VoiceInvoice/Resources/Localizable.xcstrings   (app)
   VoiceInvoiceWidgets/Localizable.xcstrings      (widget extension and controls)
   VoiceInvoice/Resources/InfoPlist.xcstrings     (permission prompts)
+  VoiceInvoice/Resources/AppShortcuts.xcstrings  (Siri phrases)
 """
 import glob
 import json
@@ -24,14 +25,14 @@ def unit(value):
 
 
 def parse(path):
-    sections = {"app": [], "widget": [], "infoplist": []}
+    sections = {"app": [], "widget": [], "infoplist": [], "shortcuts": []}
     current = None
     entry = None
     for raw in open(path, encoding="utf-8").read().split("\n"):
         line = raw.rstrip()
         if line.startswith("#"):
             continue
-        if line in ("@app", "@widget", "@infoplist"):
+        if line in ("@app", "@widget", "@infoplist", "@shortcuts"):
             current = line[1:]
             entry = None
             continue
@@ -109,6 +110,7 @@ def main():
     write("VoiceInvoice/Resources/Localizable.xcstrings", build(sections["app"], with_en=False))
     write("VoiceInvoiceWidgets/Localizable.xcstrings", build(sections["widget"], with_en=False))
     write("VoiceInvoice/Resources/InfoPlist.xcstrings", build(sections["infoplist"], with_en=True))
+    write("VoiceInvoice/Resources/AppShortcuts.xcstrings", build(sections["shortcuts"], with_en=False))
 
 
 if __name__ == "__main__":

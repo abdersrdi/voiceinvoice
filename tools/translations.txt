@@ -958,6 +958,54 @@ es: p. ej. Casa Dupont
 it: es. Rossi & Figli
 zh: 例如：王记商行
 
+About
+fr: À propos
+es: Acerca de
+it: Informazioni
+zh: 关于
+
+Checked with Apple Intelligence
+fr: Vérifié avec Apple Intelligence
+es: Revisado con Apple Intelligence
+it: Verificato con Apple Intelligence
+zh: 已由 Apple 智能核对
+
+Delete this invoice?
+fr: Supprimer cette facture ?
+es: ¿Eliminar esta factura?
+it: Eliminare questa fattura?
+zh: 删除这张发票？
+
+Duplicate
+fr: Dupliquer
+es: Duplicar
+it: Duplica
+zh: 复制
+
+Looking for your shop in iCloud…
+fr: Recherche de votre commerce dans iCloud…
+es: Buscando tu comercio en iCloud…
+it: Ricerca del tuo negozio in iCloud…
+zh: 正在 iCloud 中查找你的店铺…
+
+Recent customers
+fr: Clients récents
+es: Clientes recientes
+it: Clienti recenti
+zh: 最近的客户
+
+This can't be undone.
+fr: Cette action est irréversible.
+es: Esta acción no se puede deshacer.
+it: Questa azione non può essere annullata.
+zh: 此操作无法撤销。
+
+Version
+fr: Version
+es: Versión
+it: Versione
+zh: 版本
+
 per month
 fr: par mois
 es: por mes
@@ -1124,3 +1172,35 @@ fr: VoiceInvoice scanne le tampon de votre entreprise avec l'appareil photo.
 es: VoiceInvoice escanea el sello de tu empresa con la cámara.
 it: VoiceInvoice scansiona il timbro della tua azienda con la fotocamera.
 zh: VoiceInvoice 使用相机扫描你的公司印章。
+
+@shortcuts
+
+New invoice in ${applicationName}
+fr: Nouvelle facture dans ${applicationName}
+es: Nueva factura en ${applicationName}
+it: Nuova fattura in ${applicationName}
+zh: 在${applicationName}中新建发票
+
+Create an invoice in ${applicationName}
+fr: Créer une facture dans ${applicationName}
+es: Crear una factura en ${applicationName}
+it: Crea una fattura in ${applicationName}
+zh: 在${applicationName}中创建发票
+
+Start an invoice with ${applicationName}
+fr: Commencer une facture avec ${applicationName}
+es: Empezar una factura con ${applicationName}
+it: Inizia una fattura con ${applicationName}
+zh: 用${applicationName}开始一张发票
+
+Show my total today in ${applicationName}
+fr: Afficher mon total du jour dans ${applicationName}
+es: Mostrar mi total de hoy en ${applicationName}
+it: Mostra il mio totale di oggi in ${applicationName}
+zh: 在${applicationName}中显示今日合计
+
+How much did I invoice today in ${applicationName}
+fr: Combien ai-je facturé aujourd'hui dans ${applicationName}
+es: Cuánto facturé hoy en ${applicationName}
+it: Quanto ho fatturato oggi in ${applicationName}
+zh: 我今天在${applicationName}中开了多少发票

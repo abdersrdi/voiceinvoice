@@ -12,10 +12,12 @@ struct DictationView: View {
     @State private var speech = SpeechService()
     @State private var speakerUID: String?
     @State private var speakerUnrecognized = false
+    @State private var refined: [ParsedItem]?
     @AppStorage("dictationLanguage") private var languageRaw = ParserLanguage.preferred().rawValue
 
     private var language: ParserLanguage { ParserLanguage(rawValue: languageRaw) ?? .en }
-    private var items: [ParsedItem] { LineItemParser.parse(speech.transcript, language: language) }
+    private var ruleItems: [ParsedItem] { LineItemParser.parse(speech.transcript, language: language) }
+    private var items: [ParsedItem] { refined ?? ruleItems }
     private var speaker: Employee? { employees.first { $0.uid == speakerUID } }
 
     var body: some View {
@@ -47,6 +49,7 @@ struct DictationView: View {
             }
             .onDisappear { speech.stop() }
             .task(id: speech.isListening) { await identifySpeaker() }
+            .task(id: refineKey) { await refineWithAppleIntelligence() }
         }
     }
 
@@ -84,6 +87,26 @@ struct DictationView: View {
                 .font(.caption)
                 .foregroundStyle(Theme.secondaryText)
             }
+        }
+    }
+
+    // MARK: Apple Intelligence assist
+
+    private var refineKey: String {
+        "\(speech.transcript)|\(language.rawValue)|\(speech.isListening)"
+    }
+
+    /// When the rules could not read a price, let Apple Intelligence (if present) take a look.
+    private func refineWithAppleIntelligence() async {
+        refined = nil
+        let text = speech.transcript.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !speech.isListening, !text.isEmpty, AppleIntelligenceParser.isAvailable else { return }
+        let rules = ruleItems
+        guard rules.isEmpty || rules.contains(where: { $0.needsReview }) else { return }
+        try? await Task.sleep(nanoseconds: 600_000_000)
+        if Task.isCancelled { return }
+        if let result = await AppleIntelligenceParser.parse(text, language: language), !Task.isCancelled {
+            refined = result
         }
     }
 
@@ -191,9 +214,17 @@ struct DictationView: View {
 
     private var itemsCard: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Items")
-                .font(.system(.caption, design: .rounded, weight: .semibold))
-                .foregroundStyle(Theme.secondaryText)
+            HStack {
+                Text("Items")
+                    .font(.system(.caption, design: .rounded, weight: .semibold))
+                    .foregroundStyle(Theme.secondaryText)
+                Spacer()
+                if refined != nil {
+                    Label("Checked with Apple Intelligence", systemImage: "sparkles")
+                        .font(.caption2)
+                        .foregroundStyle(Theme.accent)
+                }
+            }
 
             if items.isEmpty {
                 Text("Say something like: “Two shirts at 20 each and a pair of pants for 40.”")

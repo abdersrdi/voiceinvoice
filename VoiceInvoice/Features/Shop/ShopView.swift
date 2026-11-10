@@ -92,6 +92,12 @@ private struct ShopForm: View {
                     .lineLimit(1...3)
             }
 
+            Section("About") {
+                LabeledContent("Version", value: Self.versionString)
+                Link("Privacy Policy", destination: AppLinks.privacy)
+                Link("Terms of Use", destination: AppLinks.terms)
+            }
+
             Section("Branding") {
                 BrandAssetRow(title: "Logo", systemImage: "photo", data: $store.logoData)
                 stampRow
@@ -133,6 +139,13 @@ private struct ShopForm: View {
                 store.signatureData = png
             }
         }
+    }
+
+    private static var versionString: String {
+        let info = Bundle.main.infoDictionary
+        let version = info?["CFBundleShortVersionString"] as? String ?? "1.0"
+        let build = info?["CFBundleVersion"] as? String ?? "1"
+        return "\(version) (\(build))"
     }
 
     private func presentPendingStamp() {

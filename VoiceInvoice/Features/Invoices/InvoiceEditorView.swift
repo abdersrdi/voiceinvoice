@@ -5,6 +5,7 @@ struct InvoiceEditorView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @Query private var stores: [StoreProfile]
+    @Query(sort: \Invoice.issueDate, order: .reverse) private var pastInvoices: [Invoice]
 
     @Bindable var invoice: Invoice
     let isNew: Bool
@@ -20,6 +21,19 @@ struct InvoiceEditorView: View {
     var body: some View {
         Form {
             Section("Customer") {
+                if !recentCustomers.isEmpty {
+                    Menu {
+                        ForEach(recentCustomers, id: \.self) { customer in
+                            Button(customer.name) {
+                                invoice.customerName = customer.name
+                                invoice.customerAddress = customer.address
+                                invoice.customerEmail = customer.email
+                            }
+                        }
+                    } label: {
+                        Label("Recent customers", systemImage: "person.crop.circle.badge.clock")
+                    }
+                }
                 TextField("Customer name", text: $invoice.customerName)
                     .textContentType(.name)
                 TextField("Address", text: $invoice.customerAddress, axis: .vertical)
@@ -92,6 +106,18 @@ struct InvoiceEditorView: View {
                     .disabled(!canSave)
             }
         }
+    }
+
+    private var recentCustomers: [RecentCustomer] {
+        var seen = Set<String>()
+        var result: [RecentCustomer] = []
+        for past in pastInvoices where past.persistentModelID != invoice.persistentModelID {
+            let name = past.customerName.trimmingCharacters(in: .whitespaces)
+            guard !name.isEmpty, seen.insert(name.lowercased()).inserted else { continue }
+            result.append(RecentCustomer(name: name, address: past.customerAddress, email: past.customerEmail))
+            if result.count >= 8 { break }
+        }
+        return result
     }
 
     private var totalsBlock: some View {
@@ -186,6 +212,12 @@ struct InvoiceEditorView: View {
         Haptics.success()
         dismiss()
     }
+}
+
+struct RecentCustomer: Hashable {
+    var name: String
+    var address: String
+    var email: String
 }
 
 struct LineEditorRow: View {

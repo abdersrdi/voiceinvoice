@@ -1,6 +1,6 @@
 name: VoiceInvoice
 options:
-  bundleIdPrefix: com.abdersrdi
+  bundleIdPrefix: cc.voiceinvoice
   deploymentTarget:
     iOS: "17.0"
   createIntermediateGroups: true
@@ -24,7 +24,7 @@ targets:
       - target: VoiceInvoiceWidgets
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.abdersrdi.voiceinvoice
+        PRODUCT_BUNDLE_IDENTIFIER: cc.voiceinvoice.app
         GENERATE_INFOPLIST_FILE: NO
     info:
       path: VoiceInvoice/Info.plist
@@ -42,7 +42,7 @@ targets:
         UILaunchScreen: {}
         ITSAppUsesNonExemptEncryption: false
         CFBundleURLTypes:
-          - CFBundleURLName: com.abdersrdi.voiceinvoice
+          - CFBundleURLName: cc.voiceinvoice.app
             CFBundleURLSchemes:
               - voiceinvoice
         UIApplicationSceneManifest:
@@ -63,11 +63,11 @@ targets:
       path: VoiceInvoice/VoiceInvoice.entitlements
       properties:
         com.apple.developer.icloud-container-identifiers:
-          - iCloud.com.abdersrdi.voiceinvoice
+          - iCloud.cc.voiceinvoice.app
         com.apple.developer.icloud-services:
           - CloudKit
         com.apple.security.application-groups:
-          - group.com.abdersrdi.voiceinvoice
+          - group.cc.voiceinvoice.app
   VoiceInvoiceWidgets:
     type: app-extension
     platform: iOS
@@ -77,7 +77,7 @@ targets:
       - Shared
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.abdersrdi.voiceinvoice.widgets
+        PRODUCT_BUNDLE_IDENTIFIER: cc.voiceinvoice.app.widgets
         GENERATE_INFOPLIST_FILE: NO
         SKIP_INSTALL: YES
     info:
@@ -92,7 +92,7 @@ targets:
       path: VoiceInvoiceWidgets/VoiceInvoiceWidgets.entitlements
       properties:
         com.apple.security.application-groups:
-          - group.com.abdersrdi.voiceinvoice
+          - group.cc.voiceinvoice.app
   VoiceInvoiceTests:
     type: bundle.unit-test
     platform: iOS
@@ -102,7 +102,7 @@ targets:
       - target: VoiceInvoice
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.abdersrdi.voiceinvoice.tests
+        PRODUCT_BUNDLE_IDENTIFIER: cc.voiceinvoice.app.tests
         GENERATE_INFOPLIST_FILE: YES
 schemes:
   VoiceInvoice:

@@ -7,8 +7,8 @@ import Observation
 @MainActor
 @Observable
 final class SubscriptionStore {
-    static let monthlyID = "com.abdersrdi.voiceinvoice.pro.monthly"
-    static let yearlyID = "com.abdersrdi.voiceinvoice.pro.yearly"
+    static let monthlyID = "cc.voiceinvoice.app.pro.monthly"
+    static let yearlyID = "cc.voiceinvoice.app.pro.yearly"
     static let productIDs = [yearlyID, monthlyID]
 
     var products: [Product] = []

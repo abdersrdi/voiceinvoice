@@ -2,7 +2,7 @@ import Foundation
 
 /// State shared between the app, its widgets and its controls through an App Group.
 enum AppGroup {
-    static let id = "group.com.abdersrdi.voiceinvoice"
+    static let id = "group.cc.voiceinvoice.app"
 
     static var defaults: UserDefaults {
         UserDefaults(suiteName: id) ?? .standard

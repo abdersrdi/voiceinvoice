@@ -7,11 +7,11 @@ Names used in this project (change them everywhere if you pick different ones):
 
 | Item | Value |
 |---|---|
-| App bundle ID | `com.abdersrdi.voiceinvoice` |
-| Widget bundle ID | `com.abdersrdi.voiceinvoice.widgets` |
-| App Group | `group.com.abdersrdi.voiceinvoice` |
-| iCloud container | `iCloud.com.abdersrdi.voiceinvoice` |
-| Subscription products | `com.abdersrdi.voiceinvoice.pro.monthly`, `com.abdersrdi.voiceinvoice.pro.yearly` |
+| App bundle ID | `cc.voiceinvoice.app` |
+| Widget bundle ID | `cc.voiceinvoice.app.widgets` |
+| App Group | `group.cc.voiceinvoice.app` |
+| iCloud container | `iCloud.cc.voiceinvoice.app` |
+| Subscription products | `cc.voiceinvoice.app.pro.monthly`, `cc.voiceinvoice.app.pro.yearly` |
 
 ## 1. Join the Apple Developer Program
 
@@ -25,25 +25,25 @@ Open <https://developer.apple.com/account/resources/identifiers/list>.
 
 ### 2a. App Group
 1. Click **+**, choose **App Groups**, Continue.
-2. Description `VoiceInvoice`, Identifier `group.com.abdersrdi.voiceinvoice`. Continue, Register.
+2. Description `VoiceInvoice`, Identifier `group.cc.voiceinvoice.app`. Continue, Register.
 
 ### 2b. iCloud container
 1. Click **+**, choose **iCloud Containers**, Continue.
-2. Description `VoiceInvoice`, Identifier `iCloud.com.abdersrdi.voiceinvoice`. Continue, Register.
+2. Description `VoiceInvoice`, Identifier `iCloud.cc.voiceinvoice.app`. Continue, Register.
 
 ### 2c. The app's App ID
 1. Click **+**, choose **App IDs**, Continue, choose **App**, Continue.
-2. Description `VoiceInvoice`. Bundle ID: **Explicit**, `com.abdersrdi.voiceinvoice`.
+2. Description `VoiceInvoice`. Bundle ID: **Explicit**, `cc.voiceinvoice.app`.
 3. In Capabilities tick:
-   - **App Groups**, then **Configure** and select `group.com.abdersrdi.voiceinvoice`.
-   - **iCloud**, tick **Include CloudKit support**, then **Configure** and select `iCloud.com.abdersrdi.voiceinvoice`.
+   - **App Groups**, then **Configure** and select `group.cc.voiceinvoice.app`.
+   - **iCloud**, tick **Include CloudKit support**, then **Configure** and select `iCloud.cc.voiceinvoice.app`.
    - **In-App Purchase** is normally already on.
 4. Continue, Register.
 
 ### 2d. The widget's App ID
 1. Click **+**, **App IDs**, **App**.
-2. Description `VoiceInvoice Widgets`, Bundle ID **Explicit** `com.abdersrdi.voiceinvoice.widgets`.
-3. Tick **App Groups**, Configure, select `group.com.abdersrdi.voiceinvoice`. Continue, Register.
+2. Description `VoiceInvoice Widgets`, Bundle ID **Explicit** `cc.voiceinvoice.app.widgets`.
+3. Tick **App Groups**, Configure, select `group.cc.voiceinvoice.app`. Continue, Register.
 
 Microphone, speech recognition and camera need no capability: the app only declares usage descriptions.
 
@@ -55,7 +55,7 @@ Microphone, speech recognition and camera need no capability: the app only decla
 ## 4. Create the app in App Store Connect
 
 1. <https://appstoreconnect.apple.com> > **Apps** > **+** > **New App**.
-2. Platform iOS, Name `VoiceInvoice` (if taken, pick a variant such as `VoiceInvoice Pro`), Primary language English, Bundle ID `com.abdersrdi.voiceinvoice` from the dropdown, any SKU.
+2. Platform iOS, Name `VoiceInvoice` (if taken, pick a variant such as `VoiceInvoice Pro`), Primary language English, Bundle ID `cc.voiceinvoice.app` from the dropdown, any SKU.
 3. After creating it, open **App Information** and note the numeric **Apple ID**. Put it in `codemagic.yaml` as `APP_STORE_APPLE_ID`.
 
 ### Agreements, tax and banking (required for subscriptions)
@@ -63,8 +63,8 @@ Microphone, speech recognition and camera need no capability: the app only decla
 
 ### Subscriptions
 1. In the app: **Monetization** > **Subscriptions** > create a group `VoiceInvoice Pro`.
-2. Add `com.abdersrdi.voiceinvoice.pro.monthly`: duration 1 month, price $4.99.
-3. Add `com.abdersrdi.voiceinvoice.pro.yearly`: duration 1 year, price $39.99.
+2. Add `cc.voiceinvoice.app.pro.monthly`: duration 1 month, price $4.99.
+3. Add `cc.voiceinvoice.app.pro.yearly`: duration 1 year, price $39.99.
 4. On the yearly product add an **Introductory Offer**: Free, 1 week, all territories.
 5. Fill the display name and description for each language you ship and add the review screenshot Apple asks for.
 
@@ -88,7 +88,7 @@ TestFlight and App Store builds use the **Production** iCloud environment, where
 
 1. In Codemagic, start the **ios-development** workflow. When it finishes, open the build page on your iPhone and tap **Install** (your iPhone must be registered in step 3). Trust the developer profile if iOS asks (Settings > General > VPN & Device Management).
 2. Open the app, signed in to iCloud on the phone, and **use every part once**: create the shop, create an invoice with lines, add a team member and enroll a voice. Each kind of saved data creates its record type.
-3. Wait a minute, then open the **CloudKit Console**: <https://icloud.developer.apple.com> > your container `iCloud.com.abdersrdi.voiceinvoice` > **Schema**. You should see record types such as `CD_Invoice`, `CD_InvoiceLine`, `CD_StoreProfile` and `CD_Employee` in the Development environment.
+3. Wait a minute, then open the **CloudKit Console**: <https://icloud.developer.apple.com> > your container `iCloud.cc.voiceinvoice.app` > **Schema**. You should see record types such as `CD_Invoice`, `CD_InvoiceLine`, `CD_StoreProfile` and `CD_Employee` in the Development environment.
 4. Click **Deploy Schema Changes...** (to Production) and confirm.
 
 Skipping this means iCloud sync silently does nothing in TestFlight and App Store builds. The app still works, but only locally.

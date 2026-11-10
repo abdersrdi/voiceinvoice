@@ -24,8 +24,8 @@ workflows:
       groups:
         - signing
       vars:
-        APP_BUNDLE_ID: com.abdersrdi.voiceinvoice
-        WIDGET_BUNDLE_ID: com.abdersrdi.voiceinvoice.widgets
+        APP_BUNDLE_ID: cc.voiceinvoice.app
+        WIDGET_BUNDLE_ID: cc.voiceinvoice.app.widgets
     scripts:
       - name: Install XcodeGen
         script: brew install xcodegen
@@ -65,8 +65,8 @@ workflows:
       vars:
         # Numeric "Apple ID" shown under App Information in App Store Connect.
         APP_STORE_APPLE_ID: "0000000000"
-        APP_BUNDLE_ID: com.abdersrdi.voiceinvoice
-        WIDGET_BUNDLE_ID: com.abdersrdi.voiceinvoice.widgets
+        APP_BUNDLE_ID: cc.voiceinvoice.app
+        WIDGET_BUNDLE_ID: cc.voiceinvoice.app.widgets
     scripts:
       - name: Install XcodeGen
         script: brew install xcodegen

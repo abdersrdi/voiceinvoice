@@ -14,7 +14,7 @@ struct VoiceInvoiceWidgetBundle: WidgetBundle {
 
 struct QuickInvoiceControl: ControlWidget {
     var body: some ControlWidgetConfiguration {
-        StaticControlConfiguration(kind: "com.abdersrdi.voiceinvoice.control.newinvoice") {
+        StaticControlConfiguration(kind: "cc.voiceinvoice.app.control.newinvoice") {
             ControlWidgetButton(action: StartDictationIntent()) {
                 Label("New invoice", systemImage: "mic.fill")
             }
@@ -58,7 +58,7 @@ struct StatsProvider: TimelineProvider {
 
 struct StatsWidget: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "com.abdersrdi.voiceinvoice.stats", provider: StatsProvider()) { entry in
+        StaticConfiguration(kind: "cc.voiceinvoice.app.stats", provider: StatsProvider()) { entry in
             StatsWidgetView(entry: entry)
         }
         .configurationDisplayName("Today")

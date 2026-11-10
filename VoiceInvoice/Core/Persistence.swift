@@ -2,7 +2,7 @@ import Foundation
 import SwiftData
 
 enum Persistence {
-    static let cloudContainerID = "iCloud.com.abdersrdi.voiceinvoice"
+    static let cloudContainerID = "iCloud.cc.voiceinvoice.app"
 
     static var schema: Schema {
         Schema([

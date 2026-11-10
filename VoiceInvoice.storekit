@@ -24,7 +24,7 @@
           "localizations" : [
             { "description" : "Unlimited invoices", "displayName" : "Pro Yearly", "locale" : "en_US" }
           ],
-          "productID" : "com.abdersrdi.voiceinvoice.pro.yearly",
+          "productID" : "cc.voiceinvoice.app.pro.yearly",
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Pro Yearly",
           "subscriptionGroupID" : "21500001",
@@ -41,7 +41,7 @@
           "localizations" : [
             { "description" : "Unlimited invoices", "displayName" : "Pro Monthly", "locale" : "en_US" }
           ],
-          "productID" : "com.abdersrdi.voiceinvoice.pro.monthly",
+          "productID" : "cc.voiceinvoice.app.pro.monthly",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Pro Monthly",
           "subscriptionGroupID" : "21500001",

@@ -7,12 +7,14 @@ Hands-free invoicing for small merchants on iPhone and iPad. Dictate line items,
 - [Summary](VoiceInvoice_Project_Summary.md)
 - [Full v1 specification](VoiceInvoice_Complete_Project_Total_Specifications.md)
 - [Privacy policy (draft)](PRIVACY.md)
+- [Apple setup guide](docs/APPLE_SETUP.md)
+- [Test checklist](docs/TEST_CHECKLIST.md)
 
 ## What works
 
 | Area | Status |
 |---|---|
-| Invoices, customers, tax, discount, numbering, PDF export and share | Built, unit-tested |
+| Invoices, recent-customer reuse, tax, discount, numbering, PDF export and share | Built, unit-tested |
 | Shop profile, logo, signature (PencilKit), stamp scanning (camera, transparent PNG, clean-up slider) | Built, unit-tested |
 | Dictation and line-item parsing: English, French, Spanish, Italian, Simplified Chinese | Built, unit-tested on written phrases |
 | Freemium paywall: 5 free invoices a month, Pro monthly and yearly (StoreKit 2) | Built, needs App Store Connect products |
@@ -23,8 +25,8 @@ Hands-free invoicing for small merchants on iPhone and iPad. Dictate line items,
 ## Known limits
 
 - **Speaker identification** uses a small MFCC-based model, tested on synthetic voices only. It identifies who started a dictation; it does not separate overlapping speakers or gate the transcript by voice, and there is no always-on wake-phrase mode. Accuracy in noisy shops is unmeasured. It is a convenience label, not security.
-- **Siri phrases** are English only. Other languages need a localized App Shortcuts file.
-- **Foundation Models** parsing (Apple Intelligence) is not wired in yet; every device uses the rule-based parser.
+- **Siri phrases** are localized in an App Shortcuts catalog, but that format is unverified on a real device.
+- **Apple Intelligence** only assists when the rule-based parser could not read a price, and only on supported devices. It is compiled with Xcode 26 but cannot be exercised in CI.
 - **Widgets and controls** need iOS 18. The app itself runs on iOS 17.
 - Translations were written by an AI and should be reviewed by native speakers.
 
@@ -46,16 +48,8 @@ String catalogs are generated from `tools/translations.txt`:
 python tools/build_catalogs.py
 ```
 
-## Releasing (Codemagic to TestFlight)
+## Releasing
 
-`codemagic.yaml` builds a signed `.ipa` (app and widget extension) and uploads it to TestFlight. Before the first run:
+Step-by-step Apple and Codemagic setup (App Group, iCloud container, App IDs, subscriptions, signing, first development build, TestFlight) is in [docs/APPLE_SETUP.md](docs/APPLE_SETUP.md). What to test is in [docs/TEST_CHECKLIST.md](docs/TEST_CHECKLIST.md).
 
-1. **Apple Developer Program** membership and App IDs in the developer portal:
-   - `com.abdersrdi.voiceinvoice` with **iCloud (CloudKit)** and **App Groups**
-   - `com.abdersrdi.voiceinvoice.widgets` with **App Groups**
-   - iCloud container `iCloud.com.abdersrdi.voiceinvoice` and app group `group.com.abdersrdi.voiceinvoice`
-2. An **App Store Connect** app record for the main bundle ID.
-3. In App Store Connect, a subscription group with products `com.abdersrdi.voiceinvoice.pro.monthly` ($4.99/month) and `com.abdersrdi.voiceinvoice.pro.yearly` ($39.99/year, 7-day free trial).
-4. An **App Store Connect API key** (Users and Access > Integrations), added in Codemagic under Teams > Integrations > App Store Connect, named `VoiceInvoice`.
-5. A Codemagic variable group `signing` containing a secure variable `CERTIFICATE_PRIVATE_KEY` (an RSA private key, for example from `ssh-keygen -t rsa -b 2048 -m PEM -f cert_key -q -N ""`).
-6. Add this repo in Codemagic, choose `codemagic.yaml`, set `APP_STORE_APPLE_ID` in the file to the app's numeric Apple ID, and start the `ios-testflight` workflow manually.
+`codemagic.yaml` has two manual workflows: `ios-development` (install on your own iPhone and create the iCloud schema) and `ios-testflight`.

@@ -31,9 +31,10 @@ final class LocalizationTests: XCTestCase {
     }
 
     func testPluralForms() throws {
+        let french = try localizedBundle("fr")
         let fr = Locale(identifier: "fr")
-        let one = String(localized: "\(1) invoices", bundle: bundle, locale: fr)
-        let many = String(localized: "\(3) invoices", bundle: bundle, locale: fr)
+        let one = String(localized: "\(1) invoices", bundle: french, locale: fr)
+        let many = String(localized: "\(3) invoices", bundle: french, locale: fr)
         XCTAssertEqual(one, "1 facture")
         XCTAssertEqual(many, "3 factures")
     }

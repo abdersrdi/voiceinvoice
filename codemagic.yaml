@@ -1,14 +1,57 @@
-# Codemagic: builds a signed .ipa (app + widget extension) and uploads it to TestFlight.
-# Started manually from the Codemagic UI (no automatic trigger, to save build minutes).
+# Codemagic: signed builds of the app (with its widget extension).
+# Both workflows are started manually from the Codemagic UI, to save build minutes.
 # Unit tests run on every push in GitHub Actions (.github/workflows/ios.yml).
 #
-# One-time setup is listed in README.md ("Releasing"). In short:
+# Setup is explained step by step in docs/APPLE_SETUP.md. In short:
 #   1. Teams > Integrations > App Store Connect: add an API key named "VoiceInvoice".
-#   2. Add a secure variable CERTIFICATE_PRIVATE_KEY (an RSA private key, used to create
-#      the distribution certificate) to a group named "signing".
+#   2. Create a variable group named "signing" with a secure variable CERTIFICATE_PRIVATE_KEY.
 #   3. Set APP_STORE_APPLE_ID below (numeric Apple ID of the app in App Store Connect).
+#
+# Workflows:
+#   ios-development  development-signed build you install on your own iPhone. Run it FIRST:
+#                    development builds are what create the iCloud (CloudKit) schema.
+#   ios-testflight   App Store-signed build uploaded to TestFlight.
 
 workflows:
+  ios-development:
+    name: iOS development build (iPhone install, creates CloudKit schema)
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    integrations:
+      app_store_connect: VoiceInvoice
+    environment:
+      xcode: latest
+      groups:
+        - signing
+      vars:
+        APP_BUNDLE_ID: com.abdersrdi.voiceinvoice
+        WIDGET_BUNDLE_ID: com.abdersrdi.voiceinvoice.widgets
+    scripts:
+      - name: Install XcodeGen
+        script: brew install xcodegen
+      - name: Generate Xcode project
+        script: xcodegen generate
+      - name: Set up keychain
+        script: keychain initialize
+      - name: Fetch development signing files (needs your iPhone registered in the developer portal)
+        script: |
+          app-store-connect fetch-signing-files "$APP_BUNDLE_ID" \
+            --type IOS_APP_DEVELOPMENT --create
+          app-store-connect fetch-signing-files "$WIDGET_BUNDLE_ID" \
+            --type IOS_APP_DEVELOPMENT --create
+      - name: Add certificates to keychain
+        script: keychain add-certificates
+      - name: Apply provisioning profiles
+        script: xcode-project use-profiles
+      - name: Build development ipa
+        script: |
+          xcode-project build-ipa \
+            --project "VoiceInvoice.xcodeproj" \
+            --scheme "VoiceInvoice"
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+
   ios-testflight:
     name: iOS TestFlight
     instance_type: mac_mini_m2

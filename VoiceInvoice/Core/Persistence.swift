@@ -8,7 +8,6 @@ enum Persistence {
         Schema([
             StoreProfile.self,
             Employee.self,
-            Customer.self,
             Invoice.self,
             InvoiceLine.self
         ])

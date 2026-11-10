@@ -64,18 +64,6 @@ final class Employee {
 }
 
 @Model
-final class Customer {
-    var name: String = ""
-    var address: String = ""
-    var email: String = ""
-    var phone: String = ""
-    @Relationship(deleteRule: .nullify, inverse: \Invoice.customer)
-    var invoices: [Invoice]? = []
-
-    init() {}
-}
-
-@Model
 final class Invoice {
     var number: String = ""
     var issueDate: Date = Date()
@@ -93,7 +81,6 @@ final class Invoice {
     var updatedAt: Date = Date()
     @Relationship(deleteRule: .cascade, inverse: \InvoiceLine.invoice)
     var lines: [InvoiceLine]? = []
-    var customer: Customer?
 
     init() {}
 }

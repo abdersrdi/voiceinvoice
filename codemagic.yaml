@@ -1,0 +1,50 @@
+# Codemagic: builds a signed .ipa and uploads it to TestFlight.
+# Started manually from the Codemagic UI (no automatic trigger, to save build minutes).
+# Unit tests run on every push in GitHub Actions (.github/workflows/ios.yml).
+#
+# One-time setup in Codemagic (see README, "Releasing"):
+#   1. Teams > Integrations > App Store Connect: add an API key named "VoiceInvoice".
+#   2. Add the app from this GitHub repo and choose "codemagic.yaml" as the config.
+#   3. Set APP_STORE_APPLE_ID below (the numeric Apple ID of the app in App Store Connect).
+
+workflows:
+  ios-testflight:
+    name: iOS TestFlight
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    integrations:
+      app_store_connect: VoiceInvoice
+    environment:
+      xcode: latest
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.abdersrdi.voiceinvoice
+      vars:
+        # Numeric "Apple ID" shown under App Information in App Store Connect.
+        APP_STORE_APPLE_ID: "0000000000"
+    scripts:
+      - name: Install XcodeGen
+        script: brew install xcodegen
+      - name: Use the next TestFlight build number
+        script: |
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo 0)
+          case "$LATEST" in ''|*[!0-9]*) LATEST=0 ;; esac
+          NEXT=$((LATEST + 1))
+          echo "Latest TestFlight build: $LATEST, using $NEXT"
+          sed -i '' "s/CURRENT_PROJECT_VERSION: \"1\"/CURRENT_PROJECT_VERSION: \"$NEXT\"/" project.yml
+      - name: Generate Xcode project
+        script: xcodegen generate
+      - name: Set up code signing
+        script: xcode-project use-profiles
+      - name: Build signed ipa
+        script: |
+          xcode-project build-ipa \
+            --project "VoiceInvoice.xcodeproj" \
+            --scheme "VoiceInvoice"
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true

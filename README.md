@@ -20,11 +20,15 @@ Hands-free invoicing for small merchants on iPhone and iPad. Dictate line items,
 | Freemium paywall: 5 free invoices a month, Pro monthly and yearly (StoreKit 2) | Built, needs App Store Connect products |
 | Siri ("New invoice in VoiceInvoice"), Home/Lock Screen widget, Control Center control and Action Button | Built, needs a real device |
 | Voice profiles: enrollment with consent, up to 3 voices, speaker identification, per-line attribution | Built (lightweight on-device model), needs real-voice testing |
+| Counter mode (wake phrase "New invoice" in 5 languages, pause detection, speaker tag) and optional ignore-other-voices filter | Built, logic unit-tested, needs a real device |
+| Invoice PDF language chosen per shop or per invoice, status filter, duplicate, recent customers | Built |
 | Localization: UI, PDF labels, permission prompts in 5 languages | Built (machine-written translations, review before release) |
 
 ## Known limits
 
-- **Speaker identification** uses a small MFCC-based model, tested on synthetic voices only. It identifies who started a dictation; it does not separate overlapping speakers or gate the transcript by voice, and there is no always-on wake-phrase mode. Accuracy in noisy shops is unmeasured. It is a convenience label, not security.
+- **Speaker identification** uses a small MFCC-based model, tested on synthetic voices only. Accuracy in noisy shops is unmeasured. It is a convenience label, not security.
+- **Counter mode** (say "New invoice") works only while the app is open with the screen on, because iOS does not allow background wake words. It uses Apple's speech recognition to hear the phrase, so recognition quality sets how reliable it is.
+- **Ignore other voices** is a beta, off by default. It judges whole phrases against the speaker's voiceprint and keeps phrases it cannot judge.
 - **Siri phrases** are localized in an App Shortcuts catalog, but that format is unverified on a real device.
 - **Apple Intelligence** only assists when the rule-based parser could not read a price, and only on supported devices. It is compiled with Xcode 26 but cannot be exercised in CI.
 - **Widgets and controls** need iOS 18. The app itself runs on iOS 17.

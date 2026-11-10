@@ -38,9 +38,11 @@ workflows:
       - name: Fetch development signing files (needs your iPhone registered in the developer portal)
         script: |
           app-store-connect fetch-signing-files "$APP_BUNDLE_ID" \
-            --type IOS_APP_DEVELOPMENT --create \n            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
+            --type IOS_APP_DEVELOPMENT --create \
+            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
           app-store-connect fetch-signing-files "$WIDGET_BUNDLE_ID" \
-            --type IOS_APP_DEVELOPMENT --create \n            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
+            --type IOS_APP_DEVELOPMENT --create \
+            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
       - name: Add certificates to keychain
         script: keychain add-certificates
       - name: Apply provisioning profiles
@@ -84,9 +86,11 @@ workflows:
       - name: Fetch signing files for the app and the widget extension
         script: |
           app-store-connect fetch-signing-files "$APP_BUNDLE_ID" \
-            --type IOS_APP_STORE --create \n            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
+            --type IOS_APP_STORE --create \
+            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
           app-store-connect fetch-signing-files "$WIDGET_BUNDLE_ID" \
-            --type IOS_APP_STORE --create \n            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
+            --type IOS_APP_STORE --create \
+            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
       - name: Add certificates to keychain
         script: keychain add-certificates
       - name: Apply provisioning profiles

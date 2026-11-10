@@ -119,12 +119,7 @@ struct InvoiceListView: View {
             .navigationDestination(for: Invoice.self) { invoice in
                 InvoiceDetailView(invoice: invoice)
             }
-            .sheet(isPresented: $showDictation, onDismiss: {
-                if let pending = pendingRoute {
-                    route = pending
-                    pendingRoute = nil
-                }
-            }) {
+            .sheet(isPresented: $showDictation, onDismiss: presentPendingRoute) {
                 DictationView(currencyCode: store?.currencyCode ?? "USD") { items, speaker in
                     pendingRoute = makeRoute(from: items, speaker: speaker)
                 }
@@ -267,8 +262,12 @@ struct InvoiceListView: View {
         try? context.save()
     }
 
+    /// Opens the editor once the dictation sheet (and its keyboard) has finished closing.
+    /// Presenting straight away can be swallowed on iPad.
     private func presentPendingRoute() {
-        if let pending = pendingRoute {
+        guard let pending = pendingRoute else { return }
+        Task {
+            try? await Task.sleep(nanoseconds: 450_000_000)
             route = pending
             pendingRoute = nil
         }

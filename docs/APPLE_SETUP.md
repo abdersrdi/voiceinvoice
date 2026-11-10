@@ -70,17 +70,26 @@ Microphone, speech recognition and camera need no capability: the app only decla
 
 ## 5. Connect Codemagic
 
+No Teams plan is needed. Everything is passed as variables.
+
 1. **App Store Connect API key**: App Store Connect > **Users and Access** > **Integrations** > **App Store Connect API** > **Team Keys** > **+**. Name it, access **App Manager** (or Admin). Download the `.p8` file (only once), and note the **Issuer ID** and **Key ID**.
-2. In Codemagic: **Teams** > **Integrations** > **App Store Connect** > **Connect**. Name it exactly `VoiceInvoice`, enter the Issuer ID and Key ID and upload the `.p8`.
-3. **Certificate private key**: in a terminal (Windows 10/11 has `ssh-keygen`):
+2. **Certificate private key**: in a terminal (Windows 10/11 has `ssh-keygen`):
 
    ```bash
    ssh-keygen -t rsa -b 2048 -m PEM -f cert_key -q -N ""
    ```
 
    Open `cert_key` (the file without `.pub`) and copy the whole text including the BEGIN and END lines. Do not commit this file anywhere.
-4. In Codemagic: **Teams** > **Global variables and secrets** > create a group `signing` with a **secure** variable `CERTIFICATE_PRIVATE_KEY` holding that text.
-5. **Add application** in Codemagic, choose this GitHub repo, and pick **codemagic.yaml** as the configuration.
+3. In Codemagic, in your application's settings (or your personal account's global variables), create a variable group named `signing` with these **secure** variables:
+
+   | Name | Value |
+   |---|---|
+   | `APP_STORE_CONNECT_ISSUER_ID` | the Issuer ID |
+   | `APP_STORE_CONNECT_KEY_IDENTIFIER` | the Key ID |
+   | `APP_STORE_CONNECT_PRIVATE_KEY` | the full contents of the `.p8` file, BEGIN and END lines included |
+   | `CERTIFICATE_PRIVATE_KEY` | the full contents of `cert_key` |
+
+4. **Add application** in Codemagic, choose this GitHub repo, and pick **codemagic.yaml** as the configuration.
 
 ## 6. First run: the development build (important)
 

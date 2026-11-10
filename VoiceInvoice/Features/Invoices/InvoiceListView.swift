@@ -13,6 +13,8 @@ struct InvoiceListView: View {
 
     @State private var search = ""
     @State private var route: EditorRoute?
+    @State private var showDictation = false
+    @State private var pendingRoute: EditorRoute?
 
     private var store: StoreProfile? { stores.first }
 
@@ -63,6 +65,7 @@ struct InvoiceListView: View {
                 .padding(.bottom, 24)
             }
             .background(Theme.background.ignoresSafeArea())
+            .overlay(alignment: .bottomTrailing) { dictateButton }
             .navigationTitle("Invoices")
             .searchable(text: $search, prompt: "Search invoices")
             .toolbar {
@@ -79,6 +82,16 @@ struct InvoiceListView: View {
             }
             .navigationDestination(for: Invoice.self) { invoice in
                 InvoiceDetailView(invoice: invoice)
+            }
+            .sheet(isPresented: $showDictation, onDismiss: {
+                if let pending = pendingRoute {
+                    route = pending
+                    pendingRoute = nil
+                }
+            }) {
+                DictationView(currencyCode: store?.currencyCode ?? "USD") { items in
+                    pendingRoute = makeRoute(from: items)
+                }
             }
             .sheet(item: $route) { route in
                 NavigationStack {
@@ -125,13 +138,50 @@ struct InvoiceListView: View {
         .padding(.vertical, 48)
     }
 
-    private func newInvoice() {
-        guard let store else { return }
+    private var dictateButton: some View {
+        Button {
+            Haptics.tap()
+            showDictation = true
+        } label: {
+            Image(systemName: "mic.fill")
+                .font(.system(size: 26, weight: .semibold))
+                .foregroundStyle(.white)
+                .frame(width: 64, height: 64)
+                .background(Theme.heroGradient, in: Circle())
+                .shadow(color: Theme.burgundy.opacity(0.45), radius: 14, x: 0, y: 8)
+        }
+        .padding(.trailing, 20)
+        .padding(.bottom, 20)
+        .accessibilityLabel("Dictate an invoice")
+    }
+
+    private func makeInvoice() -> Invoice? {
+        guard let store else { return nil }
         let invoice = Invoice()
         invoice.currencyCode = store.currencyCode
         invoice.taxRate = store.defaultTaxRate
         context.insert(invoice)
+        return invoice
+    }
+
+    private func newInvoice() {
+        guard let invoice = makeInvoice() else { return }
         route = EditorRoute(invoice: invoice)
+    }
+
+    private func makeRoute(from items: [ParsedItem]) -> EditorRoute? {
+        guard let invoice = makeInvoice() else { return nil }
+        for (index, item) in items.enumerated() {
+            let line = InvoiceLine()
+            line.position = index
+            line.name = item.name
+            line.quantity = item.quantity
+            line.unitPrice = item.unitPrice
+            line.rawTranscript = item.rawText
+            context.insert(line)
+            line.invoice = invoice
+        }
+        return EditorRoute(invoice: invoice)
     }
 }
 

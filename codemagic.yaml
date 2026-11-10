@@ -49,6 +49,8 @@ workflows:
           echo "App Store Connect key first line: $(printf '%s\n' "$APP_STORE_CONNECT_PRIVATE_KEY" | head -1)"
           if [ -z "${CERTIFICATE_PRIVATE_KEY:-}" ]; then
             echo "ERROR: CERTIFICATE_PRIVATE_KEY is not defined. Add it to the VoiceInvoice variable group."
+            echo "Variables in this build whose NAME contains CERT, KEY, PRIVATE or P12 (names only):"
+            env | cut -d= -f1 | grep -i -E 'CERT|KEY|PRIVATE|P12' | grep -v -E '^CM_' | sort -u || echo "(none)"
             exit 1
           fi
           KEY_FILE="$HOME/certificate_key.pem"
@@ -125,6 +127,8 @@ workflows:
           echo "App Store Connect key first line: $(printf '%s\n' "$APP_STORE_CONNECT_PRIVATE_KEY" | head -1)"
           if [ -z "${CERTIFICATE_PRIVATE_KEY:-}" ]; then
             echo "ERROR: CERTIFICATE_PRIVATE_KEY is not defined. Add it to the VoiceInvoice variable group."
+            echo "Variables in this build whose NAME contains CERT, KEY, PRIVATE or P12 (names only):"
+            env | cut -d= -f1 | grep -i -E 'CERT|KEY|PRIVATE|P12' | grep -v -E '^CM_' | sort -u || echo "(none)"
             exit 1
           fi
           KEY_FILE="$HOME/certificate_key.pem"

@@ -35,6 +35,21 @@ workflows:
         script: xcodegen generate
       - name: Set up keychain
         script: keychain initialize
+      - name: Check the signing variables (prints no secrets)
+        script: |
+          for name in APP_STORE_CONNECT_ISSUER_ID APP_STORE_CONNECT_KEY_IDENTIFIER APP_STORE_CONNECT_PRIVATE_KEY CERTIFICATE_PRIVATE_KEY; do
+            value="${!name}"
+            if [ -z "$value" ]; then
+              echo "MISSING: $name"
+            else
+              echo "$name is set (${#value} characters)"
+            fi
+          done
+          echo "Certificate key first line: $(printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | head -1)"
+          echo "Certificate key line count: $(printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | wc -l | tr -d ' ')"
+          printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | openssl rsa -check -noout || echo "The certificate key is not a valid RSA key"
+          echo "App Store Connect key first line: $(printf '%s\n' "$APP_STORE_CONNECT_PRIVATE_KEY" | head -1)"
+          app-store-connect fetch-signing-files --help | grep -i -E "certificate-key" || echo "certificate-key option not found"
       - name: Fetch development signing files (needs your iPhone registered in the developer portal)
         script: |
           app-store-connect fetch-signing-files "$APP_BUNDLE_ID" \
@@ -83,6 +98,21 @@ workflows:
         script: xcodegen generate
       - name: Set up keychain
         script: keychain initialize
+      - name: Check the signing variables (prints no secrets)
+        script: |
+          for name in APP_STORE_CONNECT_ISSUER_ID APP_STORE_CONNECT_KEY_IDENTIFIER APP_STORE_CONNECT_PRIVATE_KEY CERTIFICATE_PRIVATE_KEY; do
+            value="${!name}"
+            if [ -z "$value" ]; then
+              echo "MISSING: $name"
+            else
+              echo "$name is set (${#value} characters)"
+            fi
+          done
+          echo "Certificate key first line: $(printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | head -1)"
+          echo "Certificate key line count: $(printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | wc -l | tr -d ' ')"
+          printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | openssl rsa -check -noout || echo "The certificate key is not a valid RSA key"
+          echo "App Store Connect key first line: $(printf '%s\n' "$APP_STORE_CONNECT_PRIVATE_KEY" | head -1)"
+          app-store-connect fetch-signing-files --help | grep -i -E "certificate-key" || echo "certificate-key option not found"
       - name: Fetch signing files for the app and the widget extension
         script: |
           app-store-connect fetch-signing-files "$APP_BUNDLE_ID" \

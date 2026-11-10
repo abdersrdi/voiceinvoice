@@ -35,7 +35,7 @@ workflows:
         script: xcodegen generate
       - name: Set up keychain
         script: keychain initialize
-      - name: Check the signing variables (prints no secrets)
+      - name: Prepare the certificate key (accepts plain text or base64; prints no secrets)
         script: |
           for name in APP_STORE_CONNECT_ISSUER_ID APP_STORE_CONNECT_KEY_IDENTIFIER APP_STORE_CONNECT_PRIVATE_KEY CERTIFICATE_PRIVATE_KEY; do
             value="${!name}"
@@ -45,19 +45,31 @@ workflows:
               echo "$name is set (${#value} characters)"
             fi
           done
-          echo "Certificate key first line: $(printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | head -1)"
-          echo "Certificate key line count: $(printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | wc -l | tr -d ' ')"
-          printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | openssl rsa -check -noout || echo "The certificate key is not a valid RSA key"
           echo "App Store Connect key first line: $(printf '%s\n' "$APP_STORE_CONNECT_PRIVATE_KEY" | head -1)"
-          app-store-connect fetch-signing-files --help | grep -i -E "certificate-key" || echo "certificate-key option not found"
+          if [ -z "${CERTIFICATE_PRIVATE_KEY:-}" ]; then
+            echo "ERROR: CERTIFICATE_PRIVATE_KEY is not defined. Add it to the VoiceInvoice variable group."
+            exit 1
+          fi
+          KEY_FILE="$HOME/certificate_key.pem"
+          if printf '%s' "$CERTIFICATE_PRIVATE_KEY" | grep -q -- '-----BEGIN'; then
+            echo "Certificate key is plain text"
+            printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" > "$KEY_FILE"
+          else
+            echo "Certificate key is not plain text, decoding it as base64"
+            printf '%s' "$CERTIFICATE_PRIVATE_KEY" | base64 -D > "$KEY_FILE" || { echo "ERROR: the certificate key could not be decoded"; exit 1; }
+          fi
+          chmod 600 "$KEY_FILE"
+          echo "Certificate key first line: $(head -1 "$KEY_FILE")"
+          openssl rsa -in "$KEY_FILE" -check -noout || { echo "ERROR: the certificate key is not a valid RSA key"; exit 1; }
+          echo "CERTIFICATE_KEY_FILE=$KEY_FILE" >> "$CM_ENV"
       - name: Fetch development signing files (needs your iPhone registered in the developer portal)
         script: |
           app-store-connect fetch-signing-files "$APP_BUNDLE_ID" \
             --type IOS_APP_DEVELOPMENT --create \
-            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
+            --certificate-key=@file:$CERTIFICATE_KEY_FILE
           app-store-connect fetch-signing-files "$WIDGET_BUNDLE_ID" \
             --type IOS_APP_DEVELOPMENT --create \
-            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
+            --certificate-key=@file:$CERTIFICATE_KEY_FILE
       - name: Add certificates to keychain
         script: keychain add-certificates
       - name: Apply provisioning profiles
@@ -98,7 +110,7 @@ workflows:
         script: xcodegen generate
       - name: Set up keychain
         script: keychain initialize
-      - name: Check the signing variables (prints no secrets)
+      - name: Prepare the certificate key (accepts plain text or base64; prints no secrets)
         script: |
           for name in APP_STORE_CONNECT_ISSUER_ID APP_STORE_CONNECT_KEY_IDENTIFIER APP_STORE_CONNECT_PRIVATE_KEY CERTIFICATE_PRIVATE_KEY; do
             value="${!name}"
@@ -108,19 +120,31 @@ workflows:
               echo "$name is set (${#value} characters)"
             fi
           done
-          echo "Certificate key first line: $(printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | head -1)"
-          echo "Certificate key line count: $(printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | wc -l | tr -d ' ')"
-          printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" | openssl rsa -check -noout || echo "The certificate key is not a valid RSA key"
           echo "App Store Connect key first line: $(printf '%s\n' "$APP_STORE_CONNECT_PRIVATE_KEY" | head -1)"
-          app-store-connect fetch-signing-files --help | grep -i -E "certificate-key" || echo "certificate-key option not found"
+          if [ -z "${CERTIFICATE_PRIVATE_KEY:-}" ]; then
+            echo "ERROR: CERTIFICATE_PRIVATE_KEY is not defined. Add it to the VoiceInvoice variable group."
+            exit 1
+          fi
+          KEY_FILE="$HOME/certificate_key.pem"
+          if printf '%s' "$CERTIFICATE_PRIVATE_KEY" | grep -q -- '-----BEGIN'; then
+            echo "Certificate key is plain text"
+            printf '%s\n' "$CERTIFICATE_PRIVATE_KEY" > "$KEY_FILE"
+          else
+            echo "Certificate key is not plain text, decoding it as base64"
+            printf '%s' "$CERTIFICATE_PRIVATE_KEY" | base64 -D > "$KEY_FILE" || { echo "ERROR: the certificate key could not be decoded"; exit 1; }
+          fi
+          chmod 600 "$KEY_FILE"
+          echo "Certificate key first line: $(head -1 "$KEY_FILE")"
+          openssl rsa -in "$KEY_FILE" -check -noout || { echo "ERROR: the certificate key is not a valid RSA key"; exit 1; }
+          echo "CERTIFICATE_KEY_FILE=$KEY_FILE" >> "$CM_ENV"
       - name: Fetch signing files for the app and the widget extension
         script: |
           app-store-connect fetch-signing-files "$APP_BUNDLE_ID" \
             --type IOS_APP_STORE --create \
-            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
+            --certificate-key=@file:$CERTIFICATE_KEY_FILE
           app-store-connect fetch-signing-files "$WIDGET_BUNDLE_ID" \
             --type IOS_APP_STORE --create \
-            --certificate-key=@env:CERTIFICATE_PRIVATE_KEY
+            --certificate-key=@file:$CERTIFICATE_KEY_FILE
       - name: Add certificates to keychain
         script: keychain add-certificates
       - name: Apply provisioning profiles

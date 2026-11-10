@@ -1,1 +1,7 @@
 WhatsApp Image*.jpeg
+*.xcodeproj/
+xcuserdata/
+DerivedData/
+build.log
+TestResults.xcresult
+.DS_Store

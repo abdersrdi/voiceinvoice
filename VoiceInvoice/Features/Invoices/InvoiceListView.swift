@@ -10,7 +10,9 @@ struct InvoiceListView: View {
     @Environment(\.modelContext) private var context
     @Query(sort: \Invoice.issueDate, order: .reverse) private var invoices: [Invoice]
     @Query private var stores: [StoreProfile]
+    @Environment(SubscriptionStore.self) private var subscriptions
 
+    @State private var showPaywall = false
     @State private var search = ""
     @State private var route: EditorRoute?
     @State private var showDictation = false
@@ -72,6 +74,7 @@ struct InvoiceListView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
                         Haptics.tap()
+                        guard allowCreation() else { return }
                         newInvoice()
                     } label: {
                         Image(systemName: "plus.circle.fill")
@@ -92,6 +95,9 @@ struct InvoiceListView: View {
                 DictationView(currencyCode: store?.currencyCode ?? "USD") { items in
                     pendingRoute = makeRoute(from: items)
                 }
+            }
+            .sheet(isPresented: $showPaywall) {
+                PaywallView(limitReached: !UsagePolicy.canCreate(store: store, isPro: subscriptions.isPro))
             }
             .sheet(item: $route) { route in
                 NavigationStack {
@@ -116,6 +122,19 @@ struct InvoiceListView: View {
                 Text("\(monthInvoices.count) invoices")
                     .font(.system(.footnote, design: .rounded))
                     .foregroundStyle(Theme.glacier)
+                if !subscriptions.isPro, let store {
+                    Button {
+                        showPaywall = true
+                    } label: {
+                        Label("\(UsagePolicy.remaining(in: store)) of \(UsagePolicy.freeMonthlyLimit) free invoices left", systemImage: "crown.fill")
+                            .font(.system(.caption, design: .rounded, weight: .semibold))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 6)
+                            .background(Color.white.opacity(0.16), in: Capsule())
+                    }
+                    .padding(.top, 4)
+                }
             }
         }
         .padding(.top, 4)
@@ -141,6 +160,7 @@ struct InvoiceListView: View {
     private var dictateButton: some View {
         Button {
             Haptics.tap()
+            guard allowCreation() else { return }
             showDictation = true
         } label: {
             Image(systemName: "mic.fill")
@@ -153,6 +173,12 @@ struct InvoiceListView: View {
         .padding(.trailing, 20)
         .padding(.bottom, 20)
         .accessibilityLabel("Dictate an invoice")
+    }
+
+    private func allowCreation() -> Bool {
+        if UsagePolicy.canCreate(store: store, isPro: subscriptions.isPro) { return true }
+        showPaywall = true
+        return false
     }
 
     private func makeInvoice() -> Invoice? {

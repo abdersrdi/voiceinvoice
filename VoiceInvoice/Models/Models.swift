@@ -38,6 +38,9 @@ final class StoreProfile {
     var invoicePrefix: String = "INV"
     var nextNumber: Int = 1
     var footerNote: String = ""
+    /// Free-tier counter ("2026-11") so deleting an invoice never gives the slot back.
+    var usageMonth: String = ""
+    var usageCount: Int = 0
     @Attribute(.externalStorage) var logoData: Data?
     @Attribute(.externalStorage) var stampData: Data?
     @Attribute(.externalStorage) var signatureData: Data?

@@ -176,6 +176,9 @@ struct InvoiceEditorView: View {
             context.delete(line)
         }
         if let store = stores.first {
+            if invoice.number.isEmpty {
+                UsagePolicy.register(in: store)
+            }
             InvoiceNumbering.assign(to: invoice, store: store)
         }
         invoice.updatedAt = Date()

@@ -18,10 +18,31 @@ struct ShopView: View {
 
 private struct ShopForm: View {
     @Bindable var store: StoreProfile
+    @Environment(SubscriptionStore.self) private var subscriptions
     @State private var showingSignature = false
+    @State private var showPaywall = false
+    @State private var showManage = false
 
     var body: some View {
         Form {
+            Section("Subscription") {
+                Button {
+                    showPaywall = true
+                } label: {
+                    HStack {
+                        Label(subscriptions.isPro ? "VoiceInvoice Pro" : "Free plan", systemImage: "crown.fill")
+                        Spacer()
+                        Text(subscriptions.isPro
+                             ? String(localized: "Active")
+                             : "\(UsagePolicy.remaining(in: store)) of \(UsagePolicy.freeMonthlyLimit) left")
+                            .foregroundStyle(Theme.secondaryText)
+                    }
+                }
+                if subscriptions.isPro {
+                    Button("Manage subscription") { showManage = true }
+                }
+            }
+
             Section("Shop") {
                 TextField("Shop name", text: $store.name)
                 TextField("Address", text: $store.address, axis: .vertical)
@@ -66,6 +87,10 @@ private struct ShopForm: View {
         .scrollContentBackground(.hidden)
         .background(Theme.background.ignoresSafeArea())
         .navigationTitle("Shop")
+        .manageSubscriptionsSheet(isPresented: $showManage)
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
+        }
         .sheet(isPresented: $showingSignature) {
             SignatureSheet { png in
                 store.signatureData = png

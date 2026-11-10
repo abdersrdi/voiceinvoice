@@ -3,7 +3,7 @@
 # Unit tests run on every push in GitHub Actions (.github/workflows/ios.yml).
 #
 # Setup is explained step by step in docs/APPLE_SETUP.md. In short:
-#   1. Create a variable group named "signing" with these SECURE variables:
+#   1. Create a variable group named "VoiceInvoice" with these SECURE variables:
 #        APP_STORE_CONNECT_ISSUER_ID       Issuer ID of your App Store Connect API key
 #        APP_STORE_CONNECT_KEY_IDENTIFIER  Key ID of that key
 #        APP_STORE_CONNECT_PRIVATE_KEY     the whole contents of the .p8 file (BEGIN and END lines too)
@@ -24,7 +24,7 @@ workflows:
     environment:
       xcode: latest
       groups:
-        - signing
+        - VoiceInvoice
       vars:
         APP_BUNDLE_ID: cc.voiceinvoice.app
         WIDGET_BUNDLE_ID: cc.voiceinvoice.app.widgets
@@ -61,7 +61,7 @@ workflows:
     environment:
       xcode: latest
       groups:
-        - signing
+        - VoiceInvoice
       vars:
         # Numeric "Apple ID" shown under App Information in App Store Connect.
         APP_STORE_APPLE_ID: "6833108908"

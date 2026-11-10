@@ -80,7 +80,7 @@ No Teams plan is needed. Everything is passed as variables.
    ```
 
    Open `cert_key` (the file without `.pub`) and copy the whole text including the BEGIN and END lines. Do not commit this file anywhere.
-3. In Codemagic, in your application's settings (or your personal account's global variables), create a variable group named `signing` with these **secure** variables:
+3. In Codemagic, in your application's settings (or your personal account's global variables), create a variable group named `VoiceInvoice` with these **secure** variables:
 
    | Name | Value |
    |---|---|

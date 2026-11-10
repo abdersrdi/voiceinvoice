@@ -47,11 +47,11 @@ final class SpeechService {
 
         let speechStatus = await Self.requestSpeechAuthorization()
         guard speechStatus == .authorized else {
-            state = .denied(String(localized: "Speech recognition is turned off for VoiceInvoice. You can enable it in Settings."))
+            state = .denied(String(localized: "Speech recognition is turned off for Talkstamp. You can enable it in Settings."))
             return
         }
         guard await Self.requestMicrophone() else {
-            state = .denied(String(localized: "Microphone access is turned off for VoiceInvoice. You can enable it in Settings."))
+            state = .denied(String(localized: "Microphone access is turned off for Talkstamp. You can enable it in Settings."))
             return
         }
         guard let recognizer = SFSpeechRecognizer(locale: Locale(identifier: localeIdentifier)),

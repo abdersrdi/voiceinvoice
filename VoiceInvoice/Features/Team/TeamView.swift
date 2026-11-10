@@ -17,7 +17,7 @@ struct TeamView: View {
     var body: some View {
         List {
             Section {
-                Text("Add the people who dictate invoices. Enroll up to \(VoiceLimits.maxEnrolledVoices) voices so VoiceInvoice can tell who is speaking and note it on each invoice.")
+                Text("Add the people who dictate invoices. Enroll up to \(VoiceLimits.maxEnrolledVoices) voices so Talkstamp can tell who is speaking and note it on each invoice.")
                     .font(.footnote)
                     .foregroundStyle(Theme.secondaryText)
             }
@@ -225,7 +225,7 @@ struct VoiceEnrollmentFlow: View {
                 .foregroundStyle(Theme.accent)
             Text("Voice consent")
                 .font(.system(.title2, design: .rounded, weight: .bold))
-            Text("VoiceInvoice will learn the voice of \(employee.name.isEmpty ? String(localized: "this person") : employee.name) from three short readings, so it can tell who is dictating.")
+            Text("Talkstamp will learn the voice of \(employee.name.isEmpty ? String(localized: "this person") : employee.name) from three short readings, so it can tell who is dictating.")
             Text("Only a numeric voiceprint is stored, never the recording. It can be deleted at any time, and it is removed from every device.")
                 .foregroundStyle(Theme.secondaryText)
             Text("A voiceprint is not a security lock. It only helps label who dictated an invoice.")

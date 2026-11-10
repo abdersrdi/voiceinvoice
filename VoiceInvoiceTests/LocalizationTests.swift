@@ -43,7 +43,7 @@ final class LocalizationTests: XCTestCase {
         let french = try localizedBundle("fr")
         let text = french.localizedString(forKey: "NSMicrophoneUsageDescription", value: "MISSING", table: "InfoPlist")
         XCTAssertNotEqual(text, "MISSING")
-        XCTAssertTrue(text.contains("VoiceInvoice"))
+        XCTAssertTrue(text.contains("Talkstamp"))
     }
 
     func testStatusTitlesFollowLanguage() {

@@ -46,11 +46,11 @@ es: Añadir miembro del equipo
 it: Aggiungi membro del team
 zh: 添加团队成员
 
-Add the people who dictate invoices. Enroll up to %lld voices so VoiceInvoice can tell who is speaking and note it on each invoice.
-fr: Ajoutez les personnes qui dictent des factures. Enregistrez jusqu'à %lld voix pour que VoiceInvoice sache qui parle et l'indique sur chaque facture.
-es: Añade a las personas que dictan facturas. Registra hasta %lld voces para que VoiceInvoice sepa quién habla y lo anote en cada factura.
-it: Aggiungi le persone che dettano le fatture. Registra fino a %lld voci così VoiceInvoice riconosce chi parla e lo annota su ogni fattura.
-zh: 添加会口述发票的人员。最多登记 %lld 个声音，VoiceInvoice 就能识别说话人并记录在每张发票上。
+Add the people who dictate invoices. Enroll up to %lld voices so Talkstamp can tell who is speaking and note it on each invoice.
+fr: Ajoutez les personnes qui dictent des factures. Enregistrez jusqu'à %lld voix pour que Talkstamp sache qui parle et l'indique sur chaque facture.
+es: Añade a las personas que dictan facturas. Registra hasta %lld voces para que Talkstamp sepa quién habla y lo anote en cada factura.
+it: Aggiungi le persone che dettano le fatture. Registra fino a %lld voci così Talkstamp riconosce chi parla e lo annota su ogni fattura.
+zh: 添加会口述发票的人员。最多登记 %lld 个声音，Talkstamp 就能识别说话人并记录在每张发票上。
 
 Address
 fr: Adresse
@@ -358,11 +358,11 @@ es: Gestionar suscripción
 it: Gestisci abbonamento
 zh: 管理订阅
 
-Microphone access is turned off for VoiceInvoice. You can enable it in Settings.
-fr: L'accès au micro est désactivé pour VoiceInvoice. Vous pouvez l'activer dans Réglages.
-es: El acceso al micrófono está desactivado para VoiceInvoice. Puedes activarlo en Ajustes.
-it: L'accesso al microfono è disattivato per VoiceInvoice. Puoi attivarlo in Impostazioni.
-zh: VoiceInvoice 的麦克风权限已关闭，可在“设置”中开启。
+Microphone access is turned off for Talkstamp. You can enable it in Settings.
+fr: L'accès au micro est désactivé pour Talkstamp. Vous pouvez l'activer dans Réglages.
+es: El acceso al micrófono está desactivado para Talkstamp. Puedes activarlo en Ajustes.
+it: L'accesso al microfono è disattivato per Talkstamp. Puoi attivarlo in Impostazioni.
+zh: Talkstamp 的麦克风权限已关闭，可在“设置”中开启。
 
 Monthly
 fr: Mensuel
@@ -676,11 +676,11 @@ es: El reconocimiento de voz no está disponible para este idioma ahora mismo.
 it: Il riconoscimento vocale non è disponibile per questa lingua al momento.
 zh: 暂时无法对该语言进行语音识别。
 
-Speech recognition is turned off for VoiceInvoice. You can enable it in Settings.
-fr: La reconnaissance vocale est désactivée pour VoiceInvoice. Vous pouvez l'activer dans Réglages.
-es: El reconocimiento de voz está desactivado para VoiceInvoice. Puedes activarlo en Ajustes.
-it: Il riconoscimento vocale è disattivato per VoiceInvoice. Puoi attivarlo in Impostazioni.
-zh: VoiceInvoice 的语音识别权限已关闭，可在“设置”中开启。
+Speech recognition is turned off for Talkstamp. You can enable it in Settings.
+fr: La reconnaissance vocale est désactivée pour Talkstamp. Vous pouvez l'activer dans Réglages.
+es: El reconocimiento de voz está desactivado para Talkstamp. Puedes activarlo en Ajustes.
+it: Il riconoscimento vocale è disattivato per Talkstamp. Puoi attivarlo in Impostazioni.
+zh: Talkstamp 的语音识别权限已关闭，可在“设置”中开启。
 
 Start dictating a new invoice.
 fr: Commencez à dicter une nouvelle facture.
@@ -916,11 +916,11 @@ es: Límite de voces alcanzado
 it: Limite di voci raggiunto
 zh: 已达声音数量上限
 
-VoiceInvoice will learn the voice of %@ from three short readings, so it can tell who is dictating.
-fr: VoiceInvoice apprendra la voix de %@ à partir de trois courtes lectures afin de reconnaître qui dicte.
-es: VoiceInvoice aprenderá la voz de %@ con tres lecturas cortas para saber quién está dictando.
-it: VoiceInvoice imparerà la voce di %@ da tre brevi letture, così saprà chi sta dettando.
-zh: VoiceInvoice 将通过三次简短朗读学习%@的声音，以便识别谁在口述。
+Talkstamp will learn the voice of %@ from three short readings, so it can tell who is dictating.
+fr: Talkstamp apprendra la voix de %@ à partir de trois courtes lectures afin de reconnaître qui dicte.
+es: Talkstamp aprenderá la voz de %@ con tres lecturas cortas para saber quién está dictando.
+it: Talkstamp imparerà la voce di %@ da tre brevi letture, così saprà chi sta dettando.
+zh: Talkstamp 将通过三次简短朗读学习%@的声音，以便识别谁在口述。
 
 We didn't hear enough. Move closer, speak a little louder and try again.
 fr: Nous n'avons pas assez entendu. Rapprochez-vous, parlez un peu plus fort et réessayez.
@@ -1248,25 +1248,25 @@ zh.other: %lld 张发票
 @infoplist
 
 NSMicrophoneUsageDescription
-en: VoiceInvoice listens while you dictate invoice items.
-fr: VoiceInvoice écoute pendant que vous dictez les articles de la facture.
-es: VoiceInvoice escucha mientras dictas los artículos de la factura.
-it: VoiceInvoice ascolta mentre detti gli articoli della fattura.
-zh: VoiceInvoice 会在你口述发票项目时收听。
+en: Talkstamp listens while you dictate invoice items.
+fr: Talkstamp écoute pendant que vous dictez les articles de la facture.
+es: Talkstamp escucha mientras dictas los artículos de la factura.
+it: Talkstamp ascolta mentre detti gli articoli della fattura.
+zh: Talkstamp 会在你口述发票项目时收听。
 
 NSSpeechRecognitionUsageDescription
-en: VoiceInvoice turns your dictation into invoice line items.
-fr: VoiceInvoice transforme votre dictée en lignes de facture.
-es: VoiceInvoice convierte tu dictado en líneas de factura.
-it: VoiceInvoice trasforma la tua dettatura in righe di fattura.
-zh: VoiceInvoice 会把你的口述转换为发票项目。
+en: Talkstamp turns your dictation into invoice line items.
+fr: Talkstamp transforme votre dictée en lignes de facture.
+es: Talkstamp convierte tu dictado en líneas de factura.
+it: Talkstamp trasforma la tua dettatura in righe di fattura.
+zh: Talkstamp 会把你的口述转换为发票项目。
 
 NSCameraUsageDescription
-en: VoiceInvoice scans your company stamp with the camera.
-fr: VoiceInvoice scanne le tampon de votre entreprise avec l'appareil photo.
-es: VoiceInvoice escanea el sello de tu empresa con la cámara.
-it: VoiceInvoice scansiona il timbro della tua azienda con la fotocamera.
-zh: VoiceInvoice 使用相机扫描你的公司印章。
+en: Talkstamp scans your company stamp with the camera.
+fr: Talkstamp scanne le tampon de votre entreprise avec l'appareil photo.
+es: Talkstamp escanea el sello de tu empresa con la cámara.
+it: Talkstamp scansiona il timbro della tua azienda con la fotocamera.
+zh: Talkstamp 使用相机扫描你的公司印章。
 
 @shortcuts
 

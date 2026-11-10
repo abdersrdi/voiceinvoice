@@ -1,6 +1,6 @@
-<p align="center"><img src="assets/icon.png" width="160" alt="VoiceInvoice PRO icon"></p>
+<p align="center"><img src="assets/icon.png" width="160" alt="Talkstamp icon"></p>
 
-# VoiceInvoice PRO
+# Talkstamp
 
 Hands-free invoicing for small merchants on iPhone and iPad. Dictate line items, get a finished invoice with your stamp and signature, share it as a PDF.
 
@@ -18,7 +18,7 @@ Hands-free invoicing for small merchants on iPhone and iPad. Dictate line items,
 | Shop profile, logo, signature (PencilKit), stamp scanning (camera, transparent PNG, clean-up slider) | Built, unit-tested |
 | Dictation and line-item parsing: English, French, Spanish, Italian, Simplified Chinese | Built, unit-tested on written phrases |
 | Freemium paywall: 5 free invoices a month, Pro monthly and yearly (StoreKit 2) | Built, needs App Store Connect products |
-| Siri ("New invoice in VoiceInvoice"), Home/Lock Screen widget, Control Center control and Action Button | Built, needs a real device |
+| Siri ("New invoice in Talkstamp"), Home/Lock Screen widget, Control Center control and Action Button | Built, needs a real device |
 | Voice profiles: enrollment with consent, up to 3 voices, speaker identification, per-line attribution | Built (lightweight on-device model), needs real-voice testing |
 | Counter mode (wake phrase "New invoice" in 5 languages, pause detection, speaker tag) and optional ignore-other-voices filter | Built, logic unit-tested, needs a real device |
 | Invoice PDF language chosen per shop or per invoice, status filter, duplicate, recent customers | Built |

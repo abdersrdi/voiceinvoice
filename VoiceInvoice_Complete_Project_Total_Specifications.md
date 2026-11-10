@@ -1,4 +1,4 @@
-# VoiceInvoice PRO: v1 Specification (rev. 2)
+# Talkstamp: v1 Specification (rev. 2)
 
 Hands-free invoicing for small merchants. The user dictates line items, the app builds the invoice, adds the shop's stamp and signature, and exports a PDF. Everything runs on-device; data syncs through the owner's own iCloud account. No backend.
 

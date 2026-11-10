@@ -53,7 +53,7 @@ struct PaywallView: View {
                 Image(systemName: "crown.fill")
                     .font(.system(size: 30))
                     .foregroundStyle(Theme.glacier)
-                Text("VoiceInvoice Pro")
+                Text("Talkstamp Pro")
                     .font(.system(.largeTitle, design: .rounded, weight: .bold))
                     .foregroundStyle(.white)
                 Text(limitReached

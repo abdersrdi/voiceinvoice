@@ -17,7 +17,7 @@ final class VoiceCapture {
     func start() async -> Bool {
         error = nil
         guard await Self.requestMicrophone() else {
-            error = String(localized: "Microphone access is turned off for VoiceInvoice. You can enable it in Settings.")
+            error = String(localized: "Microphone access is turned off for Talkstamp. You can enable it in Settings.")
             return false
         }
         buffer.reset()

@@ -525,31 +525,31 @@
         }
       }
     },
-    "Add the people who dictate invoices. Enroll up to %lld voices so VoiceInvoice can tell who is speaking and note it on each invoice.": {
+    "Add the people who dictate invoices. Enroll up to %lld voices so Talkstamp can tell who is speaking and note it on each invoice.": {
       "extractionState": "manual",
       "localizations": {
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Añade a las personas que dictan facturas. Registra hasta %lld voces para que VoiceInvoice sepa quién habla y lo anote en cada factura."
+            "value": "Añade a las personas que dictan facturas. Registra hasta %lld voces para que Talkstamp sepa quién habla y lo anote en cada factura."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ajoutez les personnes qui dictent des factures. Enregistrez jusqu'à %lld voix pour que VoiceInvoice sache qui parle et l'indique sur chaque facture."
+            "value": "Ajoutez les personnes qui dictent des factures. Enregistrez jusqu'à %lld voix pour que Talkstamp sache qui parle et l'indique sur chaque facture."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aggiungi le persone che dettano le fatture. Registra fino a %lld voci così VoiceInvoice riconosce chi parla e lo annota su ogni fattura."
+            "value": "Aggiungi le persone che dettano le fatture. Registra fino a %lld voci così Talkstamp riconosce chi parla e lo annota su ogni fattura."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "添加会口述发票的人员。最多登记 %lld 个声音，VoiceInvoice 就能识别说话人并记录在每张发票上。"
+            "value": "添加会口述发票的人员。最多登记 %lld 个声音，Talkstamp 就能识别说话人并记录在每张发票上。"
           }
         }
       }
@@ -2441,31 +2441,31 @@
         }
       }
     },
-    "Microphone access is turned off for VoiceInvoice. You can enable it in Settings.": {
+    "Microphone access is turned off for Talkstamp. You can enable it in Settings.": {
       "extractionState": "manual",
       "localizations": {
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El acceso al micrófono está desactivado para VoiceInvoice. Puedes activarlo en Ajustes."
+            "value": "El acceso al micrófono está desactivado para Talkstamp. Puedes activarlo en Ajustes."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "L'accès au micro est désactivé pour VoiceInvoice. Vous pouvez l'activer dans Réglages."
+            "value": "L'accès au micro est désactivé pour Talkstamp. Vous pouvez l'activer dans Réglages."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "L'accesso al microfono è disattivato per VoiceInvoice. Puoi attivarlo in Impostazioni."
+            "value": "L'accesso al microfono è disattivato per Talkstamp. Puoi attivarlo in Impostazioni."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice 的麦克风权限已关闭，可在“设置”中开启。"
+            "value": "Talkstamp 的麦克风权限已关闭，可在“设置”中开启。"
           }
         }
       }
@@ -4123,31 +4123,31 @@
         }
       }
     },
-    "Speech recognition is turned off for VoiceInvoice. You can enable it in Settings.": {
+    "Speech recognition is turned off for Talkstamp. You can enable it in Settings.": {
       "extractionState": "manual",
       "localizations": {
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El reconocimiento de voz está desactivado para VoiceInvoice. Puedes activarlo en Ajustes."
+            "value": "El reconocimiento de voz está desactivado para Talkstamp. Puedes activarlo en Ajustes."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "La reconnaissance vocale est désactivée pour VoiceInvoice. Vous pouvez l'activer dans Réglages."
+            "value": "La reconnaissance vocale est désactivée pour Talkstamp. Vous pouvez l'activer dans Réglages."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il riconoscimento vocale è disattivato per VoiceInvoice. Puoi attivarlo in Impostazioni."
+            "value": "Il riconoscimento vocale è disattivato per Talkstamp. Puoi attivarlo in Impostazioni."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice 的语音识别权限已关闭，可在“设置”中开启。"
+            "value": "Talkstamp 的语音识别权限已关闭，可在“设置”中开启。"
           }
         }
       }
@@ -4467,6 +4467,35 @@
           "stringUnit": {
             "state": "translated",
             "value": "合计"
+          }
+        }
+      }
+    },
+    "Talkstamp will learn the voice of %@ from three short readings, so it can tell who is dictating.": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp aprenderá la voz de %@ con tres lecturas cortas para saber quién está dictando."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp apprendra la voix de %@ à partir de trois courtes lectures afin de reconnaître qui dicte."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp imparerà la voce di %@ da tre brevi letture, così saprà chi sta dettando."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp 将通过三次简短朗读学习%@的声音，以便识别谁在口述。"
           }
         }
       }
@@ -5366,35 +5395,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "已达声音数量上限"
-          }
-        }
-      }
-    },
-    "VoiceInvoice will learn the voice of %@ from three short readings, so it can tell who is dictating.": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "VoiceInvoice aprenderá la voz de %@ con tres lecturas cortas para saber quién está dictando."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "VoiceInvoice apprendra la voix de %@ à partir de trois courtes lectures afin de reconnaître qui dicte."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "VoiceInvoice imparerà la voce di %@ da tre brevi letture, così saprà chi sta dettando."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "VoiceInvoice 将通过三次简短朗读学习%@的声音，以便识别谁在口述。"
           }
         }
       }

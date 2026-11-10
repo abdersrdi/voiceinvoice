@@ -16,7 +16,7 @@ struct OnboardingView: View {
                         Image(systemName: "waveform.and.mic")
                             .font(.system(size: 34, weight: .semibold))
                             .foregroundStyle(Theme.glacier)
-                        Text("VoiceInvoice")
+                        Text("Talkstamp")
                             .font(.system(.largeTitle, design: .rounded, weight: .bold))
                             .foregroundStyle(.white)
                         Text("Speak your sale. Send a finished invoice.")

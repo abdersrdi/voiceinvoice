@@ -29,7 +29,7 @@ targets:
     info:
       path: VoiceInvoice/Info.plist
       properties:
-        CFBundleDisplayName: VoiceInvoice
+        CFBundleDisplayName: Talkstamp
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         CFBundleDevelopmentRegion: en
@@ -56,9 +56,9 @@ targets:
           - UIInterfaceOrientationPortraitUpsideDown
           - UIInterfaceOrientationLandscapeLeft
           - UIInterfaceOrientationLandscapeRight
-        NSMicrophoneUsageDescription: VoiceInvoice listens while you dictate invoice items.
-        NSSpeechRecognitionUsageDescription: VoiceInvoice turns your dictation into invoice line items.
-        NSCameraUsageDescription: VoiceInvoice scans your company stamp with the camera.
+        NSMicrophoneUsageDescription: Talkstamp listens while you dictate invoice items.
+        NSSpeechRecognitionUsageDescription: Talkstamp turns your dictation into invoice line items.
+        NSCameraUsageDescription: Talkstamp scans your company stamp with the camera.
     entitlements:
       path: VoiceInvoice/VoiceInvoice.entitlements
       properties:
@@ -83,7 +83,7 @@ targets:
     info:
       path: VoiceInvoiceWidgets/Info.plist
       properties:
-        CFBundleDisplayName: VoiceInvoice
+        CFBundleDisplayName: Talkstamp
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         NSExtension:

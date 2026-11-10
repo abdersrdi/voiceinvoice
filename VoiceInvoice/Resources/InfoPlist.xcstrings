@@ -7,31 +7,31 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice scans your company stamp with the camera."
+            "value": "Talkstamp scans your company stamp with the camera."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice escanea el sello de tu empresa con la cámara."
+            "value": "Talkstamp escanea el sello de tu empresa con la cámara."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice scanne le tampon de votre entreprise avec l'appareil photo."
+            "value": "Talkstamp scanne le tampon de votre entreprise avec l'appareil photo."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice scansiona il timbro della tua azienda con la fotocamera."
+            "value": "Talkstamp scansiona il timbro della tua azienda con la fotocamera."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice 使用相机扫描你的公司印章。"
+            "value": "Talkstamp 使用相机扫描你的公司印章。"
           }
         }
       }
@@ -42,31 +42,31 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice listens while you dictate invoice items."
+            "value": "Talkstamp listens while you dictate invoice items."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice escucha mientras dictas los artículos de la factura."
+            "value": "Talkstamp escucha mientras dictas los artículos de la factura."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice écoute pendant que vous dictez les articles de la facture."
+            "value": "Talkstamp écoute pendant que vous dictez les articles de la facture."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice ascolta mentre detti gli articoli della fattura."
+            "value": "Talkstamp ascolta mentre detti gli articoli della fattura."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice 会在你口述发票项目时收听。"
+            "value": "Talkstamp 会在你口述发票项目时收听。"
           }
         }
       }
@@ -77,31 +77,31 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice turns your dictation into invoice line items."
+            "value": "Talkstamp turns your dictation into invoice line items."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice convierte tu dictado en líneas de factura."
+            "value": "Talkstamp convierte tu dictado en líneas de factura."
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice transforme votre dictée en lignes de facture."
+            "value": "Talkstamp transforme votre dictée en lignes de facture."
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice trasforma la tua dettatura in righe di fattura."
+            "value": "Talkstamp trasforma la tua dettatura in righe di fattura."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "VoiceInvoice 会把你的口述转换为发票项目。"
+            "value": "Talkstamp 会把你的口述转换为发票项目。"
           }
         }
       }

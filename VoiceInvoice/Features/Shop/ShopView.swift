@@ -36,7 +36,7 @@ private struct ShopForm: View {
                     showPaywall = true
                 } label: {
                     HStack {
-                        Label(subscriptions.isPro ? "VoiceInvoice Pro" : String(localized: "Free plan"), systemImage: "crown.fill")
+                        Label(subscriptions.isPro ? "Talkstamp Pro" : String(localized: "Free plan"), systemImage: "crown.fill")
                         Spacer()
                         Text(subscriptions.isPro
                              ? String(localized: "Active")

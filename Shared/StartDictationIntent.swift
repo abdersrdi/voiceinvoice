@@ -1,6 +1,6 @@
 import AppIntents
 
-/// Opens VoiceInvoice straight into dictation. Used by Siri, the Action Button,
+/// Opens Talkstamp straight into dictation. Used by Siri, the Action Button,
 /// the Control Center control and widgets.
 struct StartDictationIntent: AppIntent {
     static var title: LocalizedStringResource = "New invoice"

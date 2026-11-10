@@ -2,8 +2,10 @@ import SwiftUI
 import SwiftData
 
 struct EditorRoute: Identifiable {
+    /// A fixed id. A new invoice's persistent id can change when it is first saved, which would make
+    /// SwiftUI treat the editor sheet as a different item and close or skip it.
+    let id = UUID()
     let invoice: Invoice
-    var id: PersistentIdentifier { invoice.persistentModelID }
 }
 
 struct InvoiceListView: View {

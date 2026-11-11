@@ -9,6 +9,6 @@ Hands-free invoicing for small merchants on iPhone and iPad. Dictate line items,
 - **Voice profiles:** up to 3 voices per shop, speaker identification on a wake phrase, voiceprints synced with consent.
 - **Entry points:** Siri, Action Button, Control Center, widgets.
 - **Sync:** SwiftData + CloudKit, one iCloud account per shop.
-- **Business model:** freemium, 5 invoices per month free, monthly and yearly subscriptions.
+- **Business model:** freemium, 5 invoices per month free, Pro as a one-time purchase.
 
 Full details: [VoiceInvoice_Complete_Project_Total_Specifications.md](VoiceInvoice_Complete_Project_Total_Specifications.md)

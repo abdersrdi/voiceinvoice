@@ -15,7 +15,7 @@ Dictation uses Apple's Speech framework. When your device and language support i
 The camera is used only to scan your company stamp. The microphone is used only while you dictate.
 
 ## Purchases
-Subscriptions are handled by Apple. Talkstamp does not receive your payment details.
+The Pro unlock is a one-time purchase handled by Apple. Talkstamp does not receive your payment details.
 
 ## What we do not do
 No advertising, no analytics trackers, no selling or sharing of your data.

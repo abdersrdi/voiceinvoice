@@ -11,7 +11,7 @@ Names used in this project (change them everywhere if you pick different ones):
 | Widget bundle ID | `cc.voiceinvoice.app.widgets` |
 | App Group | `group.cc.voiceinvoice.app` |
 | iCloud container | `iCloud.cc.voiceinvoice.app` |
-| Subscription products | `cc.voiceinvoice.app.pro.monthly`, `cc.voiceinvoice.app.pro.yearly` |
+| In-app purchase (non-consumable) | `cc.voiceinvoice.app.pro.lifetime` |
 
 ## 1. Join the Apple Developer Program
 
@@ -58,15 +58,14 @@ Microphone, speech recognition and camera need no capability: the app only decla
 2. Platform iOS, Name `VoiceInvoice` (if taken, pick a variant such as `VoiceInvoice Pro`), Primary language English, Bundle ID `cc.voiceinvoice.app` from the dropdown, any SKU.
 3. After creating it, open **App Information** and note the numeric **Apple ID**. Put it in `codemagic.yaml` as `APP_STORE_APPLE_ID`.
 
-### Agreements, tax and banking (required for subscriptions)
+### Agreements, tax and banking (required for in-app purchases)
 **Business** (or **Agreements, Tax, and Banking**) > accept the **Paid Apps Agreement**, then add your bank account and tax forms.
 
-### Subscriptions
-1. In the app: **Monetization** > **Subscriptions** > create a group `VoiceInvoice Pro`.
-2. Add `cc.voiceinvoice.app.pro.monthly`: duration 1 month, price $4.99.
-3. Add `cc.voiceinvoice.app.pro.yearly`: duration 1 year, price $39.99.
-4. On the yearly product add an **Introductory Offer**: Free, 1 week, all territories.
-5. Fill the display name and description for each language you ship and add the review screenshot Apple asks for.
+### In-app purchase (one-time unlock)
+1. In the app: **Monetization** > **In-App Purchases** > create a **Non-Consumable**.
+2. Reference name `Talkstamp Pro`, product ID `cc.voiceinvoice.app.pro.lifetime`, price $19.99, all territories.
+3. Fill the display name and description for each language you ship and add the review screenshot Apple asks for.
+4. The app has no subscriptions. Nothing renews, so there is no trial and no subscription group.
 
 ## 5. Connect Codemagic
 
@@ -117,4 +116,4 @@ Skipping this means iCloud sync silently does nothing in TestFlight and App Stor
 | Widget does not show data | The App Group is not ticked on both App IDs, or the two App IDs are not in the same group. |
 | Sync does nothing in TestFlight | The schema was not deployed to Production (section 6, step 4). |
 | "Maximum number of certificates reached" | Apple allows a few distribution certificates. Revoke an unused one in the developer portal and re-run. |
-| Subscriptions show "Prices are not available" | Products not created or not approved yet, or the Paid Apps Agreement is not active. TestFlight can use them in sandbox once created. |
+| The paywall shows "Prices are not available" | Products not created or not approved yet, or the Paid Apps Agreement is not active. TestFlight can use them in sandbox once created. |

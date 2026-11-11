@@ -17,7 +17,7 @@ Hands-free invoicing for small merchants on iPhone and iPad. Dictate line items,
 | Invoices, recent-customer reuse, tax, discount, numbering, PDF export and share | Built, unit-tested |
 | Shop profile, logo, signature (PencilKit), stamp scanning (camera, transparent PNG, clean-up slider) | Built, unit-tested |
 | Dictation and line-item parsing: English, French, Spanish, Italian, Simplified Chinese | Built, unit-tested on written phrases |
-| Freemium paywall: 5 free invoices a month, Pro monthly and yearly (StoreKit 2) | Built, needs App Store Connect products |
+| Freemium paywall: 5 free invoices a month, Pro as a one-time purchase (StoreKit 2) | Built, needs App Store Connect products |
 | Siri ("New invoice in Talkstamp"), Home/Lock Screen widget, Control Center control and Action Button | Built, needs a real device |
 | Voice profiles: enrollment with consent, up to 3 voices, speaker identification, per-line attribution | Built (lightweight on-device model), needs real-voice testing |
 | Counter mode (wake phrase "New invoice" in 5 languages, pause detection, speaker tag) and optional ignore-other-voices filter | Built, logic unit-tested, needs a real device |
@@ -54,6 +54,6 @@ python tools/build_catalogs.py
 
 ## Releasing
 
-Step-by-step Apple and Codemagic setup (App Group, iCloud container, App IDs, subscriptions, signing, first development build, TestFlight) is in [docs/APPLE_SETUP.md](docs/APPLE_SETUP.md). What to test is in [docs/TEST_CHECKLIST.md](docs/TEST_CHECKLIST.md).
+Step-by-step Apple and Codemagic setup (App Group, iCloud container, App IDs, in-app purchase, signing, first development build, TestFlight) is in [docs/APPLE_SETUP.md](docs/APPLE_SETUP.md). What to test is in [docs/TEST_CHECKLIST.md](docs/TEST_CHECKLIST.md).
 
 `codemagic.yaml` has two manual workflows: `ios-development` (install on your own iPhone and create the iCloud schema) and `ios-testflight`.

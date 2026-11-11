@@ -31,7 +31,7 @@ Tick each item and note anything that looks or behaves wrong. Screenshots help.
 
 ## Free plan and Pro
 - [ ] The list shows "5 of 5 free invoices left", counting down after each saved invoice
-- [ ] The 6th invoice opens the paywall; prices and the 7-day trial show
+- [ ] The 6th invoice opens the paywall; the one-time price shows, buying unlocks Pro, Restore Purchases works
 - [ ] Buy with a sandbox tester; the app switches to Pro and invoices are unlimited
 - [ ] Restore Purchases works after reinstalling
 

@@ -15,7 +15,7 @@ Platform: iPhone and iPad (SwiftUI). Apple-only by design.
 | Languages | English, French, Spanish, Italian, Simplified Chinese at launch. Model-based parsing so later languages cost testing and localization, not new grammar (section 5). |
 | Parsing engine | Both: Foundation Models on Apple Intelligence devices, rule-based fallback elsewhere. |
 | Voiceprint sync | Yes. Voiceprints sync through the shop's iCloud so employees enroll once, with explicit consent and per-employee opt-out and deletion. |
-| Monetization | Freemium with monthly and yearly subscriptions. Free tier: 5 invoices per month. |
+| Monetization | Freemium with a one-time Pro purchase. Free tier: 5 invoices per month. |
 | Platform | iOS and iPadOS only. No Android. |
 | Brand | App icon recolored to the iPhone 18 Pro palette (Burgundy background, Glacier Blue glyph). See `assets/icon.png`. |
 | Reference setup | Shared counter iPad plus the owner's iPhone, same iCloud account. |
@@ -140,7 +140,7 @@ Microphone, Speech Recognition, Camera. No location. Each permission needs a cle
 
 ## 10. Monetization (to decide)
 
-Freemium with auto-renewing subscriptions (StoreKit 2), monthly and yearly.
+Freemium with a one-time non-consumable Pro unlock (StoreKit 2). Changed from subscriptions: the app runs fully on the device, so a one-time purchase fits it better.
 - **Free:** 5 invoices per month.
 - **Paid:** unlimited invoices. Which other features (voice profiles, iCloud sync, widgets) are free versus paid is still to be decided.
 - Count invoices by creation month. Exports and re-shares of existing invoices never count and are never blocked, so a user who hits the cap can still send what they already made.

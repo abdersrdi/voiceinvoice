@@ -352,23 +352,11 @@ es: Escuchando…
 it: In ascolto…
 zh: 正在聆听…
 
-Manage subscription
-fr: Gérer l'abonnement
-es: Gestionar suscripción
-it: Gestisci abbonamento
-zh: 管理订阅
-
 Microphone access is turned off for Talkstamp. You can enable it in Settings.
 fr: L'accès au micro est désactivé pour Talkstamp. Vous pouvez l'activer dans Réglages.
 es: El acceso al micrófono está desactivado para Talkstamp. Puedes activarlo en Ajustes.
 it: L'accesso al microfono è disattivato per Talkstamp. Puoi attivarlo in Impostazioni.
 zh: Talkstamp 的麦克风权限已关闭，可在“设置”中开启。
-
-Monthly
-fr: Mensuel
-es: Mensual
-it: Mensile
-zh: 按月
 
 Move right to keep faint ink. Move left to remove paper noise and shadows.
 fr: Déplacez à droite pour garder l'encre claire. Déplacez à gauche pour retirer le bruit et les ombres du papier.
@@ -393,12 +381,6 @@ fr: Nouvelle facture
 es: Nueva factura
 it: Nuova fattura
 zh: 新建发票
-
-No active subscription was found for this Apple ID.
-fr: Aucun abonnement actif n'a été trouvé pour cet identifiant Apple.
-es: No se encontró ninguna suscripción activa para este ID de Apple.
-it: Nessun abbonamento attivo trovato per questo ID Apple.
-zh: 此 Apple ID 下未找到有效订阅。
 
 No customer
 fr: Aucun client
@@ -490,12 +472,6 @@ es: Pagada
 it: Pagata
 zh: 已付款
 
-Payment is charged to your Apple ID at confirmation of purchase. The subscription renews automatically unless it is canceled at least 24 hours before the end of the current period. You can manage or cancel it in your Apple ID settings. Any free trial converts to a paid subscription unless canceled before it ends.
-fr: Le paiement est débité de votre identifiant Apple à la confirmation de l'achat. L'abonnement se renouvelle automatiquement, sauf s'il est annulé au moins 24 heures avant la fin de la période en cours. Vous pouvez gérer ou annuler l'abonnement dans les réglages de votre identifiant Apple. Tout essai gratuit devient un abonnement payant sauf annulation avant sa fin.
-es: El pago se carga a tu ID de Apple al confirmar la compra. La suscripción se renueva automáticamente salvo que se cancele al menos 24 horas antes del final del período en curso. Puedes gestionarla o cancelarla en los ajustes de tu ID de Apple. Cualquier prueba gratuita se convierte en una suscripción de pago salvo que se cancele antes de que termine.
-it: Il pagamento viene addebitato sul tuo ID Apple alla conferma dell'acquisto. L'abbonamento si rinnova automaticamente a meno che non venga annullato almeno 24 ore prima della fine del periodo in corso. Puoi gestirlo o annullarlo nelle impostazioni del tuo ID Apple. Qualsiasi prova gratuita diventa un abbonamento a pagamento se non viene annullata prima della scadenza.
-zh: 确认购买时，费用将从你的 Apple ID 扣除。除非在当前订阅期结束前至少 24 小时取消，否则订阅会自动续订。你可在 Apple ID 设置中管理或取消订阅。免费试用结束前若未取消，将自动转为付费订阅。
-
 Phone
 fr: Téléphone
 es: Teléfono
@@ -579,12 +555,6 @@ fr: Enregistrer
 es: Guardar
 it: Salva
 zh: 保存
-
-Save %lld%%
-fr: Économisez %lld %%
-es: Ahorra %lld %%
-it: Risparmia %lld%%
-zh: 省 %lld%%
 
 Say something like: “Two shirts at 20 each and a pair of pants for 40.”
 fr: Dites par exemple : « Deux chemises à 20 chacune et un pantalon pour 40. »
@@ -694,29 +664,11 @@ es: Iniciar dictado
 it: Avvia dettatura
 zh: 开始口述
 
-Start free trial
-fr: Démarrer l'essai gratuit
-es: Iniciar prueba gratuita
-it: Inizia la prova gratuita
-zh: 开始免费试用
-
 Stop dictation
 fr: Arrêter la dictée
 es: Detener dictado
 it: Interrompi dettatura
 zh: 停止口述
-
-Subscribe
-fr: S'abonner
-es: Suscribirse
-it: Abbonati
-zh: 订阅
-
-Subscription
-fr: Abonnement
-es: Suscripción
-it: Abbonamento
-zh: 订阅
 
 Subtotal
 fr: Sous-total
@@ -940,12 +892,6 @@ es: ¿Quién habla?
 it: Chi parla?
 zh: 谁在说话？
 
-Yearly
-fr: Annuel
-es: Anual
-it: Annuale
-zh: 按年
-
 You've used your %lld free invoices this month.
 fr: Vous avez utilisé vos %lld factures gratuites ce mois-ci.
 es: Has usado tus %lld facturas gratuitas de este mes.
@@ -1090,18 +1036,6 @@ es: El micrófono permanece activo mientras esta pantalla está abierta.
 it: Il microfono resta attivo finché questa schermata è aperta.
 zh: 此屏幕打开期间，麦克风会保持开启。
 
-per month
-fr: par mois
-es: por mes
-it: al mese
-zh: 每月
-
-per year
-fr: par an
-es: por año
-it: all'anno
-zh: 每年
-
 “Two shirts at twenty each and a pair of pants for forty.”
 fr: « Deux chemises à vingt chacune et un pantalon pour quarante. »
 es: «Dos camisas a veinte cada una y unos pantalones por cuarenta.»
@@ -1138,29 +1072,47 @@ es: %1$lld de %2$lld restantes
 it: %1$lld di %2$lld rimaste
 zh: 剩余 %1$lld / %2$lld
 
-%lld-day free trial
-fr: Essai gratuit de %lld jours
-es: Prueba gratuita de %lld días
-it: Prova gratuita di %lld giorni
-zh: %lld 天免费试用
+Plan
+fr: Formule
+es: Plan
+it: Piano
+zh: 套餐
 
-%lld-week free trial
-fr: Essai gratuit de %lld semaine(s)
-es: Prueba gratuita de %lld semana(s)
-it: Prova gratuita di %lld settimana/e
-zh: %lld 周免费试用
+Unlocked
+fr: Débloqué
+es: Desbloqueado
+it: Sbloccato
+zh: 已解锁
 
-%lld-month free trial
-fr: Essai gratuit de %lld mois
-es: Prueba gratuita de %lld mes(es)
-it: Prova gratuita di %lld mese/i
-zh: %lld 个月免费试用
+Unlock Pro
+fr: Débloquer Pro
+es: Desbloquear Pro
+it: Sblocca Pro
+zh: 解锁专业版
 
-%lld-year free trial
-fr: Essai gratuit de %lld an(s)
-es: Prueba gratuita de %lld año(s)
-it: Prova gratuita di %lld anno/i
-zh: %lld 年免费试用
+One-time purchase
+fr: Achat unique
+es: Compra única
+it: Acquisto singolo
+zh: 一次性购买
+
+Pay once, keep it forever. No subscription
+fr: Payez une fois, gardez pour toujours. Sans abonnement
+es: Paga una vez y es tuyo para siempre. Sin suscripción
+it: Paghi una volta e resta tuo per sempre. Nessun abbonamento
+zh: 一次付费，永久使用，无需订阅
+
+No purchase was found for this Apple ID.
+fr: Aucun achat n'a été trouvé pour cet identifiant Apple.
+es: No se encontró ninguna compra para este ID de Apple.
+it: Nessun acquisto trovato per questo ID Apple.
+zh: 此 Apple ID 下未找到购买记录。
+
+Payment is charged to your Apple ID at confirmation of purchase. This is a one-time purchase: there is no subscription and nothing renews. You can restore it on any device signed in with the same Apple ID.
+fr: Le paiement est débité de votre identifiant Apple à la confirmation de l'achat. Il s'agit d'un achat unique : il n'y a pas d'abonnement et rien ne se renouvelle. Vous pouvez le restaurer sur tout appareil connecté avec le même identifiant Apple.
+es: El pago se carga a tu ID de Apple al confirmar la compra. Es una compra única: no hay suscripción y nada se renueva. Puedes restaurarla en cualquier dispositivo con el mismo ID de Apple.
+it: Il pagamento viene addebitato sul tuo ID Apple alla conferma dell'acquisto. È un acquisto singolo: non c'è alcun abbonamento e nulla si rinnova. Puoi ripristinarlo su qualsiasi dispositivo con lo stesso ID Apple.
+zh: 确认购买时，费用将从你的 Apple ID 扣除。这是一次性购买：没有订阅，也不会续费。你可以在登录同一 Apple ID 的任何设备上恢复购买。
 
 @plural %lld invoices
 en.one: %lld invoice

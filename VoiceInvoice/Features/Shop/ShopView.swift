@@ -22,7 +22,6 @@ private struct ShopForm: View {
     @Environment(SubscriptionStore.self) private var subscriptions
     @State private var showingSignature = false
     @State private var showPaywall = false
-    @State private var showManage = false
     @State private var showScanner = false
     @State private var showStampPhotos = false
     @State private var stampPhotoItem: PhotosPickerItem?
@@ -31,7 +30,7 @@ private struct ShopForm: View {
 
     var body: some View {
         Form {
-            Section("Subscription") {
+            Section("Plan") {
                 Button {
                     showPaywall = true
                 } label: {
@@ -39,13 +38,10 @@ private struct ShopForm: View {
                         Label(subscriptions.isPro ? "Talkstamp Pro" : String(localized: "Free plan"), systemImage: "crown.fill")
                         Spacer()
                         Text(subscriptions.isPro
-                             ? String(localized: "Active")
+                             ? String(localized: "Unlocked")
                              : String(localized: "\(UsagePolicy.remaining(in: store)) of \(UsagePolicy.freeMonthlyLimit) left"))
                             .foregroundStyle(Theme.secondaryText)
                     }
-                }
-                if subscriptions.isPro {
-                    Button("Manage subscription") { showManage = true }
                 }
             }
 
@@ -113,7 +109,6 @@ private struct ShopForm: View {
         .scrollContentBackground(.hidden)
         .background(Theme.background.ignoresSafeArea())
         .navigationTitle("Shop")
-        .manageSubscriptionsSheet(isPresented: $showManage)
         .fullScreenCover(isPresented: $showScanner, onDismiss: presentPendingStamp) {
             DocumentScanner { image in
                 pendingStampImage = image

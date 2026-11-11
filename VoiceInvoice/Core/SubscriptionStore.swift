@@ -2,14 +2,13 @@ import Foundation
 import StoreKit
 import Observation
 
-/// StoreKit 2 subscriptions: Pro monthly and yearly in one group.
-/// Prices and the free-trial offer come from App Store Connect, so they can change without an app update.
+/// StoreKit 2 one-time purchase: a single non-consumable "Pro" unlock. No subscription, nothing renews.
+/// The price comes from App Store Connect, so it can change without an app update.
 @MainActor
 @Observable
 final class SubscriptionStore {
-    static let monthlyID = "cc.voiceinvoice.app.pro.monthly"
-    static let yearlyID = "cc.voiceinvoice.app.pro.yearly"
-    static let productIDs = [yearlyID, monthlyID]
+    static let proID = "cc.voiceinvoice.app.pro.lifetime"
+    static let productIDs = [proID]
 
     var products: [Product] = []
     var isPro = false
@@ -92,7 +91,7 @@ final class SubscriptionStore {
             try await AppStore.sync()
             await refreshEntitlements()
             if !isPro {
-                errorMessage = String(localized: "No active subscription was found for this Apple ID.")
+                errorMessage = String(localized: "No purchase was found for this Apple ID.")
             }
         } catch {
             errorMessage = error.localizedDescription

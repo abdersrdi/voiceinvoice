@@ -66,11 +66,11 @@ PRIVATE BY DESIGN
 - Speech recognition runs on your device when your language supports it, and the app tells you which mode it is using.
 - Voice profiles store a numeric voiceprint, never a recording, and only with the person's consent.
 
-FREE TO START
+FREE TO START, PAY ONCE
 - Create up to 5 invoices every month for free.
-- Talkstamp Pro removes the limit. Subscribe monthly or yearly, with a 7-day free trial on the yearly plan. Everything you already made stays free to view, export and share.
+- Talkstamp Pro removes the limit with a single one-time purchase. No subscription, nothing renews. Everything you already made stays free to view, export and share.
 
-Subscription details: payment is charged to your Apple ID at confirmation of purchase. Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period. Manage or cancel in your Apple ID settings. Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Payment is charged to your Apple ID at confirmation of purchase. Terms of Use: https://talkstamp.abdersrdi-950.workers.dev/terms  Privacy Policy: https://talkstamp.abdersrdi-950.workers.dev/privacy
 ```
 
 **Check before you submit:** the "own iCloud" claim is only true once sync has been tested on a real device and the iCloud schema is deployed to Production (see `docs/APPLE_SETUP.md`, section 6). If that is not done by submission, delete "and in your own iCloud" and the sync mention in the paywall text, or the claim will be false.
@@ -81,14 +81,13 @@ Subscription details: payment is charged to your Apple ID at confirmation of pur
 First release.
 ```
 
-## In-app purchases to create in App Store Connect
+## In-app purchase to create in App Store Connect
 
 | Product ID | Type | Price | Notes |
 |---|---|---|---|
-| `cc.voiceinvoice.app.pro.monthly` | Auto-renewable, 1 month | $4.99 | |
-| `cc.voiceinvoice.app.pro.yearly` | Auto-renewable, 1 year | $39.99 | Introductory offer: free, 1 week |
+| `cc.voiceinvoice.app.pro.lifetime` | Non-consumable | $19.99 | One-time unlock, no subscription |
 
-Display name for both: `Talkstamp Pro`. Description: `Unlimited invoices every month.` Each needs a review screenshot of the paywall (`store/screenshots/` has the app screens; take the paywall one from the screenshot tour, file `07-paywall.png`).
+Display name: `Talkstamp Pro`. Description: `Unlimited invoices, one-time purchase.` It needs a review screenshot of the paywall.
 
 ## App Review notes (paste into "Notes")
 
@@ -106,7 +105,7 @@ Other features to try:
 - Counter mode (the radio-waves icon at the top left of Invoices): listens for the phrase "New invoice" while the screen is open. It needs the microphone and speech recognition permission.
 - Team & voices (Shop tab): optional voice profiles for up to three people, with a consent screen.
 
-Subscriptions: the free plan allows 5 invoices per month. "Talkstamp Pro" (monthly or yearly) removes the limit. Restore Purchases is on the subscription screen.
+In-app purchase: the free plan allows 5 invoices per month. "Talkstamp Pro" is a one-time, non-consumable purchase that removes the limit. There is no subscription. Restore Purchases is on the paywall.
 
 Privacy: data stays on the device and the user's own iCloud. Speech recognition uses Apple's Speech framework, on-device when the language supports it.
 
@@ -125,7 +124,7 @@ The iPhone Duo is not an App Store screenshot size yet, so it has no slot.
 - [ ] Privacy policy reviewed and the URL works
 - [ ] Support URL set
 - [ ] App Privacy ("nutrition label") answered: no tracking; data not collected from the app by the developer. Voice and audio are processed on device or by Apple's Speech service, not by us.
-- [ ] Subscriptions created, a review screenshot added to each, and the subscription group localized
+- [ ] The Pro in-app purchase created with a review screenshot
 - [ ] Export compliance: the app already declares it uses no non-exempt encryption
 - [ ] A build uploaded through Codemagic and selected for this version
 - [ ] Sync claims removed from the text if iCloud sync has not been tested on a device

@@ -177,122 +177,6 @@
         }
       }
     },
-    "%lld-day free trial": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prueba gratuita de %lld días"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Essai gratuit de %lld jours"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prova gratuita di %lld giorni"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld 天免费试用"
-          }
-        }
-      }
-    },
-    "%lld-month free trial": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prueba gratuita de %lld mes(es)"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Essai gratuit de %lld mois"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prova gratuita di %lld mese/i"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld 个月免费试用"
-          }
-        }
-      }
-    },
-    "%lld-week free trial": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prueba gratuita de %lld semana(s)"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Essai gratuit de %lld semaine(s)"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prova gratuita di %lld settimana/e"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld 周免费试用"
-          }
-        }
-      }
-    },
-    "%lld-year free trial": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prueba gratuita de %lld año(s)"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Essai gratuit de %lld an(s)"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prova gratuita di %lld anno/i"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%lld 年免费试用"
-          }
-        }
-      }
-    },
     "A shop can enroll up to %lld voices. Delete one to enroll another.": {
       "extractionState": "manual",
       "localizations": {
@@ -2412,35 +2296,6 @@
         }
       }
     },
-    "Manage subscription": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gestionar suscripción"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gérer l'abonnement"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Gestisci abbonamento"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "管理订阅"
-          }
-        }
-      }
-    },
     "Microphone access is turned off for Talkstamp. You can enable it in Settings.": {
       "extractionState": "manual",
       "localizations": {
@@ -2466,35 +2321,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Talkstamp 的麦克风权限已关闭，可在“设置”中开启。"
-          }
-        }
-      }
-    },
-    "Monthly": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mensual"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mensuel"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mensile"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "按月"
           }
         }
       }
@@ -2615,35 +2441,6 @@
         }
       }
     },
-    "No active subscription was found for this Apple ID.": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No se encontró ninguna suscripción activa para este ID de Apple."
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aucun abonnement actif n'a été trouvé pour cet identifiant Apple."
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nessun abbonamento attivo trovato per questo ID Apple."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "此 Apple ID 下未找到有效订阅。"
-          }
-        }
-      }
-    },
     "No customer": {
       "extractionState": "manual",
       "localizations": {
@@ -2727,6 +2524,35 @@
           "stringUnit": {
             "state": "translated",
             "value": "今天还没有发票。"
+          }
+        }
+      }
+    },
+    "No purchase was found for this Apple ID.": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se encontró ninguna compra para este ID de Apple."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun achat n'a été trouvé pour cet identifiant Apple."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessun acquisto trovato per questo ID Apple."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 Apple ID 下未找到购买记录。"
           }
         }
       }
@@ -2963,6 +2789,35 @@
         }
       }
     },
+    "One-time purchase": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compra única"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Achat unique"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acquisto singolo"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一次性购买"
+          }
+        }
+      }
+    },
     "Only a numeric voiceprint is kept, never a recording. With sync on it is stored in the shop's iCloud so you enroll once; turn it off to keep it on this device only. Deleting removes it everywhere.": {
       "extractionState": "manual",
       "localizations": {
@@ -3108,31 +2963,60 @@
         }
       }
     },
-    "Payment is charged to your Apple ID at confirmation of purchase. The subscription renews automatically unless it is canceled at least 24 hours before the end of the current period. You can manage or cancel it in your Apple ID settings. Any free trial converts to a paid subscription unless canceled before it ends.": {
+    "Pay once, keep it forever. No subscription": {
       "extractionState": "manual",
       "localizations": {
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "El pago se carga a tu ID de Apple al confirmar la compra. La suscripción se renueva automáticamente salvo que se cancele al menos 24 horas antes del final del período en curso. Puedes gestionarla o cancelarla en los ajustes de tu ID de Apple. Cualquier prueba gratuita se convierte en una suscripción de pago salvo que se cancele antes de que termine."
+            "value": "Paga una vez y es tuyo para siempre. Sin suscripción"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Le paiement est débité de votre identifiant Apple à la confirmation de l'achat. L'abonnement se renouvelle automatiquement, sauf s'il est annulé au moins 24 heures avant la fin de la période en cours. Vous pouvez gérer ou annuler l'abonnement dans les réglages de votre identifiant Apple. Tout essai gratuit devient un abonnement payant sauf annulation avant sa fin."
+            "value": "Payez une fois, gardez pour toujours. Sans abonnement"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "Il pagamento viene addebitato sul tuo ID Apple alla conferma dell'acquisto. L'abbonamento si rinnova automaticamente a meno che non venga annullato almeno 24 ore prima della fine del periodo in corso. Puoi gestirlo o annullarlo nelle impostazioni del tuo ID Apple. Qualsiasi prova gratuita diventa un abbonamento a pagamento se non viene annullata prima della scadenza."
+            "value": "Paghi una volta e resta tuo per sempre. Nessun abbonamento"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "确认购买时，费用将从你的 Apple ID 扣除。除非在当前订阅期结束前至少 24 小时取消，否则订阅会自动续订。你可在 Apple ID 设置中管理或取消订阅。免费试用结束前若未取消，将自动转为付费订阅。"
+            "value": "一次付费，永久使用，无需订阅"
+          }
+        }
+      }
+    },
+    "Payment is charged to your Apple ID at confirmation of purchase. This is a one-time purchase: there is no subscription and nothing renews. You can restore it on any device signed in with the same Apple ID.": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El pago se carga a tu ID de Apple al confirmar la compra. Es una compra única: no hay suscripción y nada se renueva. Puedes restaurarla en cualquier dispositivo con el mismo ID de Apple."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le paiement est débité de votre identifiant Apple à la confirmation de l'achat. Il s'agit d'un achat unique : il n'y a pas d'abonnement et rien ne se renouvelle. Vous pouvez le restaurer sur tout appareil connecté avec le même identifiant Apple."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Il pagamento viene addebitato sul tuo ID Apple alla conferma dell'acquisto. È un acquisto singolo: non c'è alcun abbonamento e nulla si rinnova. Puoi ripristinarlo su qualsiasi dispositivo con lo stesso ID Apple."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认购买时，费用将从你的 Apple ID 扣除。这是一次性购买：没有订阅，也不会续费。你可以在登录同一 Apple ID 的任何设备上恢复购买。"
           }
         }
       }
@@ -3162,6 +3046,35 @@
           "stringUnit": {
             "state": "translated",
             "value": "电话"
+          }
+        }
+      }
+    },
+    "Plan": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plan"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Formule"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Piano"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "套餐"
           }
         }
       }
@@ -3626,35 +3539,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "保存"
-          }
-        }
-      }
-    },
-    "Save %lld%%": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ahorra %lld %%"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Économisez %lld %%"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Risparmia %lld%%"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "省 %lld%%"
           }
         }
       }
@@ -4210,35 +4094,6 @@
         }
       }
     },
-    "Start free trial": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Iniciar prueba gratuita"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Démarrer l'essai gratuit"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inizia la prova gratuita"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "开始免费试用"
-          }
-        }
-      }
-    },
     "Status": {
       "extractionState": "manual",
       "localizations": {
@@ -4293,64 +4148,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "停止口述"
-          }
-        }
-      }
-    },
-    "Subscribe": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suscribirse"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "S'abonner"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbonati"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "订阅"
-          }
-        }
-      }
-    },
-    "Subscription": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suscripción"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abonnement"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbonamento"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "订阅"
           }
         }
       }
@@ -5167,6 +4964,64 @@
         }
       }
     },
+    "Unlock Pro": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desbloquear Pro"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Débloquer Pro"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sblocca Pro"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解锁专业版"
+          }
+        }
+      }
+    },
+    "Unlocked": {
+      "extractionState": "manual",
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desbloqueado"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Débloqué"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sbloccato"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已解锁"
+          }
+        }
+      }
+    },
     "Unnamed": {
       "extractionState": "manual",
       "localizations": {
@@ -5486,35 +5341,6 @@
         }
       }
     },
-    "Yearly": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Anual"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annuel"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annuale"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "按年"
-          }
-        }
-      }
-    },
     "You've used your %lld free invoices this month.": {
       "extractionState": "manual",
       "localizations": {
@@ -5598,64 +5424,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "例如：王记商行"
-          }
-        }
-      }
-    },
-    "per month": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "por mes"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "par mois"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "al mese"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "每月"
-          }
-        }
-      }
-    },
-    "per year": {
-      "extractionState": "manual",
-      "localizations": {
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "por año"
-          }
-        },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "par an"
-          }
-        },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "all'anno"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "每年"
           }
         }
       }

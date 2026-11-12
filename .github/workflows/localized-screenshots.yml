@@ -1,0 +1,76 @@
+name: Localized screenshots
+
+# Renders sample invoices in Arabic, Hindi and Urdu to PNG files, and launches the app in those languages for
+# screenshots of the invoice list and the invoice preview. Started manually.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  shots:
+    runs-on: macos-26
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XcodeGen and generate the project
+        run: |
+          brew install xcodegen
+          xcodegen generate
+
+      - name: Create and boot an iPhone simulator
+        id: sim
+        run: |
+          read -r DEVICE_TYPE RUNTIME < <(python3 tools/pick_simulator.py "iPhone 17 Pro Max")
+          UDID=$(xcrun simctl create "Shots" "$DEVICE_TYPE" "$RUNTIME")
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularMode active --cellularBars 4 --wifiBars 3 || true
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+
+      - name: Render the sample invoices
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project VoiceInvoice.xcodeproj \
+            -scheme VoiceInvoice \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:VoiceInvoiceTests/LocalizedInvoiceImagesTests \
+            CODE_SIGNING_ALLOWED=NO \
+            2>&1 | tee invoices.log
+
+      - name: Launch the app in Arabic, Hindi and Urdu
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project VoiceInvoice.xcodeproj \
+            -scheme VoiceInvoiceUI \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -only-testing:VoiceInvoiceUITests/LocalizedScreenshotTests \
+            -resultBundlePath UITests.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            2>&1 | tee ui.log
+
+      - name: Screenshots found
+        if: always()
+        run: find "$HOME/ui-screenshots" -type f | sort || true
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: localized-screenshots
+          path: /Users/runner/ui-screenshots
+          if-no-files-found: warn
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: localized-logs
+          path: |
+            invoices.log
+            ui.log
+          if-no-files-found: warn

@@ -90,7 +90,7 @@ enum DemoData {
 
     // MARK: Generated artwork
 
-    private static func logoPNG() -> Data {
+    static func logoPNG() -> Data {
         let size = CGSize(width: 240, height: 240)
         return UIGraphicsImageRenderer(size: size).pngData { context in
             UIColor(red: 0.42, green: 0.12, blue: 0.18, alpha: 1).setFill()
@@ -108,7 +108,7 @@ enum DemoData {
         }
     }
 
-    private static func stampPNG() -> Data {
+    static func stampPNG() -> Data {
         let size = CGSize(width: 260, height: 260)
         let ink = UIColor(red: 0.1, green: 0.2, blue: 0.7, alpha: 0.9)
         return UIGraphicsImageRenderer(size: size).pngData { context in
@@ -133,7 +133,7 @@ enum DemoData {
         }
     }
 
-    private static func signaturePNG() -> Data {
+    static func signaturePNG() -> Data {
         let size = CGSize(width: 300, height: 140)
         return UIGraphicsImageRenderer(size: size).pngData { _ in
             UIColor.black.setStroke()

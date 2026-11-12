@@ -41,18 +41,11 @@ enum AmountInWords {
             "SAR": Unit(major: "रियाल", minor: "हलाला"),
             "USD": Unit(major: "डॉलर", minor: "सेंट"),
             "EUR": Unit(major: "यूरो", minor: "सेंट")
-        ],
-        "ur": [
-            "PKR": Unit(major: "روپے", minor: "پیسے"),
-            "INR": Unit(major: "روپے", minor: "پیسے"),
-            "AED": Unit(major: "درہم", minor: "فلس"),
-            "SAR": Unit(major: "ریال", minor: "ہللہ"),
-            "USD": Unit(major: "ڈالر", minor: "سینٹ")
         ]
     ]
 
-    private static let onlyWord: [String: String] = ["en": "only", "ar": "فقط", "hi": "मात्र", "ur": "صرف"]
-    private static let andWord: [String: String] = ["en": "and", "ar": "و", "hi": "और", "ur": "اور"]
+    private static let onlyWord: [String: String] = ["en": "only", "ar": "فقط", "hi": "मात्र"]
+    private static let andWord: [String: String] = ["en": "and", "ar": "و", "hi": "और"]
 
     /// Currencies where an amount in words is customary on invoices.
     static let customaryCurrencies: Set<String> = [
@@ -76,26 +69,51 @@ enum AmountInWords {
         let major = minorTotal / scale
         let minor = minorTotal % scale
 
-        let language = locale.language.languageCode?.identifier ?? "en"
+        // Urdu has no reliable system spell-out; Pakistani invoices customarily carry the English words anyway
+        var language = locale.language.languageCode?.identifier ?? "en"
+        var spellLocale = locale
+        if language == "ur" {
+            language = "en"
+            spellLocale = Locale(identifier: "en")
+        }
         let formatter = NumberFormatter()
         formatter.numberStyle = .spellOut
-        formatter.locale = locale
-        func spell(_ value: Int) -> String { formatter.string(from: NSNumber(value: value)) ?? String(value) }
+        formatter.locale = spellLocale
+        func spell(_ value: Int) -> String {
+            let text = formatter.string(from: NSNumber(value: value)) ?? String(value)
+            return language == "ar" ? fixArabic(text) : text
+        }
 
         let code = currencyCode.uppercased()
         let unit = names[language]?[code]
         let majorName = unit?.major ?? code
         let and = andWord[language] ?? "&"
 
-        var parts: [String] = ["\(spell(major)) \(majorName)"]
+        var text = "\(spell(major)) \(majorName)"
         if minor > 0 {
-            let minorName = unit?.minor ?? ""
-            parts.append(and)
-            parts.append("\(spell(minor)) \(minorName)".trimmingCharacters(in: .whitespaces))
+            let minorPart = "\(spell(minor)) \(unit?.minor ?? "")".trimmingCharacters(in: .whitespaces)
+            // in Arabic the "and" is a prefix glued to the next word
+            text += language == "ar" ? " \(and)\(minorPart)" : " \(and) \(minorPart)"
         }
-        if let only = onlyWord[language] { parts.append(only) }
-        var text = parts.joined(separator: " ")
+        if let only = onlyWord[language] { text += " \(only)" }
         if language == "en", let first = text.first { text = first.uppercased() + text.dropFirst() }
         return text
+    }
+
+    /// The system's Arabic spell-out writes the hundreds as two words and uses a hamza on "two"; this writes them the
+    /// usual way: ثلاثمائة, سبعمائة, اثنان.
+    private static func fixArabic(_ text: String) -> String {
+        var result = text.replacingOccurrences(of: "إثن", with: "اثن")
+        let hundreds: [(String, String)] = [
+            ("ثلاثة مائة", "ثلاثمائة"), ("ثلاث مائة", "ثلاثمائة"),
+            ("أربعة مائة", "أربعمائة"), ("أربع مائة", "أربعمائة"),
+            ("خمسة مائة", "خمسمائة"), ("خمس مائة", "خمسمائة"),
+            ("ستة مائة", "ستمائة"), ("ست مائة", "ستمائة"),
+            ("سبعة مائة", "سبعمائة"), ("سبع مائة", "سبعمائة"),
+            ("ثمانية مائة", "ثمانمائة"), ("ثماني مائة", "ثمانمائة"),
+            ("تسعة مائة", "تسعمائة"), ("تسع مائة", "تسعمائة")
+        ]
+        for (from, to) in hundreds { result = result.replacingOccurrences(of: from, with: to) }
+        return result
     }
 }

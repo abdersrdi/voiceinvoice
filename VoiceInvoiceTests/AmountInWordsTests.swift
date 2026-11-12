@@ -33,6 +33,21 @@ final class AmountInWordsTests: XCTestCase {
         XCTAssertTrue(hindi.contains("मात्र"), hindi)
     }
 
+    func testArabicHundredsAreWrittenAsOneWord() {
+        let text = AmountInWords.string(1742.25, currencyCode: "SAR", locale: Locale(identifier: "ar"))
+        XCTAssertTrue(text.contains("سبعمائة"), text)
+        XCTAssertFalse(text.contains("سبعة مائة"), text)
+        XCTAssertTrue(text.contains(" و"), text) // "and" is glued to the next word
+        XCTAssertFalse(text.contains("إثن"), text)
+    }
+
+    func testUrduUsesEnglishWords() {
+        let text = AmountInWords.string(27033, currencyCode: "PKR", locale: Locale(identifier: "ur")).lowercased()
+        XCTAssertTrue(text.contains("twenty-seven thousand") || text.contains("twenty seven thousand"), text)
+        XCTAssertTrue(text.contains("rupees"), text)
+        XCTAssertTrue(text.hasSuffix("only"), text)
+    }
+
     func testUnknownCurrencyFallsBackToCode() {
         let text = AmountInWords.string(3, currencyCode: "JPY", locale: en)
         XCTAssertTrue(text.contains("JPY"), text)

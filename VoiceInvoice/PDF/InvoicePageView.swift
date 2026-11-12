@@ -50,7 +50,7 @@ struct InvoicePageView: View {
         .background(Color.white)
         .environment(\.colorScheme, .light)
         .environment(\.locale, document.locale)
-        .environment(\.layoutDirection, DocumentLanguage.isRightToLeft(code: document.languageCode) ? .rightToLeft : .leftToRight)
+        .environment(\.layoutDirection, document.locale.language.characterDirection == .rightToLeft ? .rightToLeft : .leftToRight)
         .foregroundStyle(ink)
     }
 
@@ -203,7 +203,7 @@ struct InvoicePageView: View {
     /// The total in words, shown for currencies and languages where invoices customarily carry it.
     private var amountInWordsBlock: some View {
         Group {
-            if AmountInWords.isCustomary(currencyCode: document.currencyCode, languageCode: document.languageCode) {
+            if AmountInWords.isCustomary(currencyCode: document.currencyCode, languageCode: document.locale.language.languageCode?.identifier ?? "") {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("AMOUNT IN WORDS").font(.system(size: 8, weight: .bold)).foregroundStyle(muted)
                     Text(verbatim: AmountInWords.string(document.totals.total, currencyCode: document.currencyCode, locale: document.locale))

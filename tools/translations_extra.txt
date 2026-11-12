@@ -1,0 +1,1031 @@
+# Arabic, Hindi and Urdu strings, merged into the catalogs by tools/build_catalogs.py.
+# Same layout as translations.txt: section markers, a key line (the English text), then ar:/hi:/ur: lines.
+# Machine-written first drafts: have a native speaker review them before a public release.
+# Arabic and Urdu are written right to left; the system mirrors the layout automatically.
+
+@app
+
+A shop can enroll up to %lld voices. Delete one to enroll another.
+ar: يمكن لكل متجر تسجيل ما يصل إلى %lld أصوات. احذف صوتًا لتسجيل صوت آخر.
+hi: एक दुकान में अधिकतम %lld आवाज़ें दर्ज की जा सकती हैं। नई आवाज़ दर्ज करने के लिए पहले एक हटाएँ।
+ur: ایک دکان میں زیادہ سے زیادہ %lld آوازیں درج کی جا سکتی ہیں۔ نئی آواز درج کرنے کے لیے پہلے ایک حذف کریں۔
+
+A voiceprint is not a security lock. It only helps label who dictated an invoice.
+ar: بصمة الصوت ليست قفل أمان. هي فقط تساعد على تسمية من أملى الفاتورة.
+hi: वॉइसप्रिंट कोई सुरक्षा ताला नहीं है। यह सिर्फ़ यह बताने में मदद करता है कि इनवॉइस किसने बोला।
+ur: وائس پرنٹ کوئی حفاظتی تالا نہیں ہے۔ یہ صرف یہ بتانے میں مدد کرتا ہے کہ انوائس کس نے بولی۔
+
+AMOUNT
+ar: المبلغ
+hi: राशि
+ur: رقم
+
+Active
+ar: نشط
+hi: सक्रिय
+ur: فعال
+
+Add
+ar: إضافة
+hi: जोड़ें
+ur: شامل کریں
+
+Add item
+ar: إضافة بند
+hi: आइटम जोड़ें
+ur: آئٹم شامل کریں
+
+Add team member
+ar: إضافة عضو فريق
+hi: टीम सदस्य जोड़ें
+ur: ٹیم ممبر شامل کریں
+
+Add the people who dictate invoices. Enroll up to %lld voices so Talkstamp can tell who is speaking and note it on each invoice.
+ar: أضف الأشخاص الذين يُملون الفواتير. سجّل ما يصل إلى %lld أصوات ليتعرف Talkstamp على المتحدث ويذكره في كل فاتورة.
+hi: उन लोगों को जोड़ें जो इनवॉइस बोलते हैं। अधिकतम %lld आवाज़ें दर्ज करें ताकि Talkstamp पहचान सके कि कौन बोल रहा है और हर इनवॉइस पर उसका नाम लिख सके।
+ur: ان لوگوں کو شامل کریں جو انوائس بولتے ہیں۔ زیادہ سے زیادہ %lld آوازیں درج کریں تاکہ Talkstamp پہچان سکے کہ کون بول رہا ہے اور ہر انوائس پر اس کا نام لکھ سکے۔
+
+Address
+ar: العنوان
+hi: पता
+ur: پتہ
+
+Apple servers
+ar: خوادم Apple
+hi: Apple सर्वर
+ur: Apple سرورز
+
+Authorized signature
+ar: التوقيع المعتمد
+hi: अधिकृत हस्ताक्षर
+ur: مجاز دستخط
+
+BILL TO
+ar: فاتورة إلى
+hi: बिल प्राप्तकर्ता
+ur: بنام
+
+Branding
+ar: الهوية التجارية
+hi: ब्रांडिंग
+ur: برانڈنگ
+
+Cancel
+ar: إلغاء
+hi: रद्द करें
+ur: منسوخ کریں
+
+Check the price
+ar: تحقق من السعر
+hi: कीमत जाँचें
+ur: قیمت چیک کریں
+
+Choose
+ar: اختيار
+hi: चुनें
+ur: منتخب کریں
+
+Choose photo
+ar: اختيار صورة
+hi: फ़ोटो चुनें
+ur: تصویر منتخب کریں
+
+Clean-up
+ar: التنظيف
+hi: सफ़ाई
+ur: صفائی
+
+Clear
+ar: مسح
+hi: मिटाएँ
+ur: مٹائیں
+
+Close
+ar: إغلاق
+hi: बंद करें
+ur: بند کریں
+
+Company stamp
+ar: ختم الشركة
+hi: कंपनी की मुहर
+ur: کمپنی کی مہر
+
+Could not build the PDF
+ar: تعذّر إنشاء ملف PDF
+hi: PDF नहीं बन सका
+ur: PDF نہیں بن سکی
+
+Currency
+ar: العملة
+hi: मुद्रा
+ur: کرنسی
+
+Customer
+ar: العميل
+hi: ग्राहक
+ur: گاہک
+
+Customer name
+ar: اسم العميل
+hi: ग्राहक का नाम
+ur: گاہک کا نام
+
+DESCRIPTION
+ar: الوصف
+hi: विवरण
+ur: تفصیل
+
+Default tax (%)
+ar: الضريبة الافتراضية (%)
+hi: डिफ़ॉल्ट कर (%)
+ur: ڈیفالٹ ٹیکس (%)
+
+Default tax rate (%)
+ar: نسبة الضريبة الافتراضية (%)
+hi: डिफ़ॉल्ट कर दर (%)
+ur: ڈیفالٹ ٹیکس کی شرح (%)
+
+Delete
+ar: حذف
+hi: हटाएँ
+ur: حذف کریں
+
+Delete voice
+ar: حذف الصوت
+hi: आवाज़ हटाएँ
+ur: آواز حذف کریں
+
+Details
+ar: التفاصيل
+hi: विवरण
+ur: تفصیلات
+
+Dictate
+ar: إملاء
+hi: बोलें
+ur: بولیں
+
+Dictate an invoice
+ar: إملاء فاتورة
+hi: इनवॉइस बोलें
+ur: انوائس بولیں
+
+Discount
+ar: الخصم
+hi: छूट
+ur: رعایت
+
+Discount (%)
+ar: الخصم (%)
+hi: छूट (%)
+ur: رعایت (%)
+
+Done
+ar: تم
+hi: हो गया
+ur: ہو گیا
+
+Draft
+ar: مسودة
+hi: ड्राफ़्ट
+ur: مسودہ
+
+Due
+ar: مستحقة
+hi: देय
+ur: واجب الادا
+
+Due date
+ar: تاريخ الاستحقاق
+hi: देय तिथि
+ur: آخری تاریخ
+
+Edit
+ar: تعديل
+hi: संपादित करें
+ur: ترمیم کریں
+
+Edit invoice
+ar: تعديل الفاتورة
+hi: इनवॉइस संपादित करें
+ur: انوائس میں ترمیم کریں
+
+Email
+ar: البريد الإلكتروني
+hi: ईमेल
+ur: ای میل
+
+Enroll voice
+ar: تسجيل صوت
+hi: आवाज़ दर्ज करें
+ur: آواز درج کریں
+
+Enrollment did not work. Please try again.
+ar: لم ينجح التسجيل. يرجى المحاولة مرة أخرى.
+hi: दर्ज करना सफल नहीं हुआ। कृपया फिर से कोशिश करें।
+ur: اندراج کامیاب نہیں ہوا۔ براہ کرم دوبارہ کوشش کریں۔
+
+Everything you already made stays free to view, export and share
+ar: كل ما أنشأته سابقًا يبقى مجانيًا للعرض والتصدير والمشاركة
+hi: जो कुछ आप पहले बना चुके हैं वह देखने, निर्यात करने और साझा करने के लिए मुफ़्त रहेगा
+ur: جو کچھ آپ پہلے بنا چکے ہیں وہ دیکھنے، برآمد کرنے اور شیئر کرنے کے لیے مفت رہے گا
+
+Footer note
+ar: ملاحظة التذييل
+hi: फ़ुटर नोट
+ur: فوٹر نوٹ
+
+Free plan
+ar: الخطة المجانية
+hi: मुफ़्त प्लान
+ur: مفت پلان
+
+Get started
+ar: ابدأ الآن
+hi: शुरू करें
+ur: شروع کریں
+
+Hear how much you invoiced today.
+ar: اسمع كم أصدرت من فواتير اليوم.
+hi: सुनें कि आज आपने कितने का इनवॉइस बनाया।
+ur: سنیں کہ آج آپ نے کتنے کی انوائس بنائی۔
+
+INVOICE
+ar: فاتورة
+hi: इनवॉइस
+ur: انوائس
+
+Invoice
+ar: فاتورة
+hi: इनवॉइस
+ur: انوائس
+
+Invoices
+ar: الفواتير
+hi: इनवॉइस
+ur: انوائسز
+
+Invoicing
+ar: الفوترة
+hi: इनवॉइसिंग
+ur: انوائسنگ
+
+Issue date
+ar: تاريخ الإصدار
+hi: जारी करने की तिथि
+ur: اجراء کی تاریخ
+
+Issued
+ar: صادرة
+hi: जारी
+ur: جاری
+
+Item
+ar: البند
+hi: आइटम
+ur: آئٹم
+
+Items
+ar: البنود
+hi: आइटम
+ur: آئٹمز
+
+Listening…
+ar: جارٍ الاستماع…
+hi: सुन रहा है…
+ur: سن رہا ہے…
+
+Microphone access is turned off for Talkstamp. You can enable it in Settings.
+ar: الوصول إلى الميكروفون متوقف لتطبيق Talkstamp. يمكنك تفعيله من الإعدادات.
+hi: Talkstamp के लिए माइक्रोफ़ोन की अनुमति बंद है। आप इसे सेटिंग्स में चालू कर सकते हैं।
+ur: Talkstamp کے لیے مائیکروفون تک رسائی بند ہے۔ آپ اسے سیٹنگز میں آن کر سکتے ہیں۔
+
+Move right to keep faint ink. Move left to remove paper noise and shadows.
+ar: حرّك لليمين للإبقاء على الحبر الخفيف. حرّك لليسار لإزالة تشويش الورق والظلال.
+hi: हल्की स्याही रखने के लिए दाएँ खिसकाएँ। काग़ज़ का शोर और परछाइयाँ हटाने के लिए बाएँ खिसकाएँ।
+ur: ہلکی سیاہی رکھنے کے لیے دائیں سرکائیں۔ کاغذ کا شور اور سائے ہٹانے کے لیے بائیں سرکائیں۔
+
+NOTES
+ar: ملاحظات
+hi: टिप्पणियाँ
+ur: نوٹس
+
+Name
+ar: الاسم
+hi: नाम
+ur: نام
+
+New invoice
+ar: فاتورة جديدة
+hi: नया इनवॉइस
+ur: نئی انوائس
+
+No customer
+ar: بدون عميل
+hi: कोई ग्राहक नहीं
+ur: کوئی گاہک نہیں
+
+No invoices yet
+ar: لا توجد فواتير بعد
+hi: अभी कोई इनवॉइस नहीं
+ur: ابھی کوئی انوائس نہیں
+
+No invoices yet today.
+ar: لا توجد فواتير اليوم بعد.
+hi: आज अभी तक कोई इनवॉइस नहीं।
+ur: آج ابھی تک کوئی انوائس نہیں۔
+
+No results
+ar: لا توجد نتائج
+hi: कोई परिणाम नहीं
+ur: کوئی نتیجہ نہیں
+
+No stamp found. Try a clearer photo or move the slider right.
+ar: لم يتم العثور على ختم. جرّب صورة أوضح أو حرّك المنزلق لليمين.
+hi: कोई मुहर नहीं मिली। साफ़ फ़ोटो आज़माएँ या स्लाइडर को दाएँ खिसकाएँ।
+ur: کوئی مہر نہیں ملی۔ زیادہ صاف تصویر آزمائیں یا سلائیڈر کو دائیں سرکائیں۔
+
+No voice enrolled
+ar: لا يوجد صوت مسجّل
+hi: कोई आवाज़ दर्ज नहीं है
+ur: کوئی آواز درج نہیں
+
+Nobody listed
+ar: لا يوجد أحد في القائمة
+hi: सूची में कोई नहीं
+ur: فہرست میں کوئی نہیں
+
+Notes or payment terms
+ar: ملاحظات أو شروط الدفع
+hi: टिप्पणियाँ या भुगतान की शर्तें
+ur: نوٹس یا ادائیگی کی شرائط
+
+Number prefix
+ar: بادئة الرقم
+hi: नंबर का उपसर्ग
+ur: نمبر کا سابقہ
+
+OK
+ar: حسنًا
+hi: ठीक है
+ur: ٹھیک ہے
+
+On-device
+ar: على الجهاز
+hi: डिवाइस पर
+ur: ڈیوائس پر
+
+Only a numeric voiceprint is kept, never a recording. With sync on it is stored in the shop's iCloud so you enroll once; turn it off to keep it on this device only. Deleting removes it everywhere.
+ar: يُحفظ فقط رقم بصمة الصوت وليس التسجيل أبدًا. عند تفعيل المزامنة تُخزَّن في iCloud الخاص بالمتجر فتسجّل مرة واحدة؛ أوقفها لإبقائها على هذا الجهاز فقط. الحذف يزيلها من كل مكان.
+hi: सिर्फ़ संख्यात्मक वॉइसप्रिंट रखा जाता है, रिकॉर्डिंग कभी नहीं। सिंक चालू होने पर यह दुकान के iCloud में रहता है, इसलिए आपको एक ही बार दर्ज करना होता है; इसे सिर्फ़ इसी डिवाइस पर रखने के लिए सिंक बंद करें। हटाने पर यह हर जगह से हट जाता है।
+ur: صرف عددی وائس پرنٹ رکھا جاتا ہے، ریکارڈنگ کبھی نہیں۔ سنک آن ہونے پر یہ دکان کے iCloud میں رہتا ہے اس لیے آپ کو ایک ہی بار درج کرنا پڑتا ہے؛ اسے صرف اسی ڈیوائس پر رکھنے کے لیے سنک بند کریں۔ حذف کرنے سے یہ ہر جگہ سے ہٹ جاتا ہے۔
+
+Only a numeric voiceprint is stored, never the recording. It can be deleted at any time, and it is removed from every device.
+ar: يُخزَّن فقط رقم بصمة الصوت وليس التسجيل أبدًا. يمكن حذفها في أي وقت وتُزال من كل الأجهزة.
+hi: सिर्फ़ संख्यात्मक वॉइसप्रिंट संग्रहीत होता है, रिकॉर्डिंग कभी नहीं। इसे कभी भी हटाया जा सकता है और यह हर डिवाइस से हट जाता है।
+ur: صرف عددی وائس پرنٹ محفوظ ہوتا ہے، ریکارڈنگ کبھی نہیں۔ اسے کسی بھی وقت حذف کیا جا سکتا ہے اور یہ ہر ڈیوائس سے ہٹ جاتا ہے۔
+
+PRICE
+ar: السعر
+hi: कीमत
+ur: قیمت
+
+Paid
+ar: مدفوعة
+hi: भुगतान हो गया
+ur: ادا شدہ
+
+Phone
+ar: الهاتف
+hi: फ़ोन
+ur: فون
+
+Price
+ar: السعر
+hi: कीमत
+ur: قیمت
+
+Prices are not available right now.
+ar: الأسعار غير متاحة حاليًا.
+hi: कीमतें अभी उपलब्ध नहीं हैं।
+ur: قیمتیں اس وقت دستیاب نہیں ہیں۔
+
+Prices could not be loaded. Check your connection and try again.
+ar: تعذّر تحميل الأسعار. تحقق من اتصالك وحاول مرة أخرى.
+hi: कीमतें लोड नहीं हो सकीं। अपना कनेक्शन जाँचें और फिर कोशिश करें।
+ur: قیمتیں لوڈ نہیں ہو سکیں۔ اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔
+
+Pricing
+ar: التسعير
+hi: मूल्य निर्धारण
+ur: قیمتیں
+
+Privacy Policy
+ar: سياسة الخصوصية
+hi: गोपनीयता नीति
+ur: رازداری کی پالیسی
+
+QTY
+ar: الكمية
+hi: मात्रा
+ur: مقدار
+
+Qty
+ar: الكمية
+hi: मात्रा
+ur: مقدار
+
+Re-enroll voice
+ar: إعادة تسجيل الصوت
+hi: आवाज़ फिर से दर्ज करें
+ur: آواز دوبارہ درج کریں
+
+Reading %lld of %lld
+ar: القراءة %1$lld من %2$lld
+hi: %2$lld में से %1$lld पढ़ना
+ur: %2$lld میں سے %1$lld پڑھنا
+
+Redo
+ar: إعادة
+hi: दोबारा करें
+ur: دوبارہ کریں
+
+Replace
+ar: استبدال
+hi: बदलें
+ur: تبدیل کریں
+
+Restore purchases
+ar: استعادة المشتريات
+hi: खरीदारी पुनर्स्थापित करें
+ur: خریداری بحال کریں
+
+Save
+ar: حفظ
+hi: सहेजें
+ur: محفوظ کریں
+
+Say something like: “Two shirts at 20 each and a pair of pants for 40.”
+ar: قل شيئًا مثل: «قميصان بسعر 20 للواحد وبنطال بسعر 40.»
+hi: कुछ ऐसा बोलें: “दो शर्ट 20-20 के और एक पैंट 40 की।”
+ur: کچھ ایسا بولیں: “دو شرٹیں 20-20 کی اور ایک پتلون 40 کی۔”
+
+Scan with camera
+ar: مسح بالكاميرا
+hi: कैमरे से स्कैन करें
+ur: کیمرے سے اسکین کریں
+
+Search invoices
+ar: البحث في الفواتير
+hi: इनवॉइस खोजें
+ur: انوائسز تلاش کریں
+
+Sent
+ar: مُرسلة
+hi: भेजा गया
+ur: بھیجی گئی
+
+Set up your shop
+ar: أعدّ متجرك
+hi: अपनी दुकान सेट करें
+ur: اپنی دکان سیٹ کریں
+
+Share invoice
+ar: مشاركة الفاتورة
+hi: इनवॉइस साझा करें
+ur: انوائس شیئر کریں
+
+Shop
+ar: المتجر
+hi: दुकान
+ur: دکان
+
+Shop name
+ar: اسم المتجر
+hi: दुकान का नाम
+ur: دکان کا نام
+
+Sign
+ar: توقيع
+hi: हस्ताक्षर करें
+ur: دستخط کریں
+
+Sign inside the box
+ar: وقّع داخل المربع
+hi: बॉक्स के अंदर हस्ताक्षर करें
+ur: خانے کے اندر دستخط کریں
+
+Signature
+ar: التوقيع
+hi: हस्ताक्षर
+ur: دستخط
+
+Speak in your normal voice…
+ar: تحدّث بصوتك الطبيعي…
+hi: अपनी सामान्य आवाज़ में बोलें…
+ur: اپنی عام آواز میں بولیں…
+
+Speak your sale. Send a finished invoice.
+ar: انطق ببيعك. أرسل فاتورة جاهزة.
+hi: अपनी बिक्री बोलिए। तैयार इनवॉइस भेजिए।
+ur: اپنی فروخت بولیں۔ تیار انوائس بھیجیں۔
+
+Speaker
+ar: المتحدث
+hi: बोलने वाला
+ur: بولنے والا
+
+Speech recognition is not available for this language right now.
+ar: التعرف على الكلام غير متاح لهذه اللغة حاليًا.
+hi: इस भाषा के लिए स्पीच रिकग्निशन अभी उपलब्ध नहीं है।
+ur: اس زبان کے لیے اسپیچ ریکگنیشن اس وقت دستیاب نہیں ہے۔
+
+Speech recognition is turned off for Talkstamp. You can enable it in Settings.
+ar: التعرف على الكلام متوقف لتطبيق Talkstamp. يمكنك تفعيله من الإعدادات.
+hi: Talkstamp के लिए स्पीच रिकग्निशन बंद है। आप इसे सेटिंग्स में चालू कर सकते हैं।
+ur: Talkstamp کے لیے اسپیچ ریکگنیشن بند ہے۔ آپ اسے سیٹنگز میں آن کر سکتے ہیں۔
+
+Start dictating a new invoice.
+ar: ابدأ إملاء فاتورة جديدة.
+hi: नया इनवॉइस बोलना शुरू करें।
+ur: نئی انوائس بولنا شروع کریں۔
+
+Start dictation
+ar: بدء الإملاء
+hi: बोलना शुरू करें
+ur: بولنا شروع کریں
+
+Stop dictation
+ar: إيقاف الإملاء
+hi: बोलना रोकें
+ur: بولنا روکیں
+
+Subtotal
+ar: المجموع الفرعي
+hi: उप-योग
+ur: ذیلی کل
+
+Sync voice to my other devices
+ar: مزامنة الصوت مع أجهزتي الأخرى
+hi: आवाज़ को मेरे अन्य डिवाइसों से सिंक करें
+ur: آواز کو میرے دوسرے آلات سے سنک کریں
+
+Syncs across your devices through your own iCloud
+ar: تتم المزامنة بين أجهزتك عبر iCloud الخاص بك
+hi: आपके अपने iCloud के ज़रिए आपके सभी डिवाइसों पर सिंक होता है
+ur: آپ کے اپنے iCloud کے ذریعے آپ کے تمام آلات پر سنک ہوتا ہے
+
+TOTAL
+ar: الإجمالي
+hi: कुल
+ur: کل
+
+Tap + to create your first invoice.
+ar: اضغط + لإنشاء أول فاتورة لك.
+hi: अपना पहला इनवॉइस बनाने के लिए + दबाएँ।
+ur: اپنی پہلی انوائس بنانے کے لیے + دبائیں۔
+
+Tap the mic, or type here
+ar: اضغط على الميكروفون أو اكتب هنا
+hi: माइक दबाएँ या यहाँ टाइप करें
+ur: مائیک دبائیں یا یہاں ٹائپ کریں
+
+Tap the mic, then read the sentence aloud.
+ar: اضغط على الميكروفون ثم اقرأ الجملة بصوت عالٍ.
+hi: माइक दबाएँ, फिर वाक्य ज़ोर से पढ़ें।
+ur: مائیک دبائیں، پھر جملہ بلند آواز سے پڑھیں۔
+
+Tax
+ar: الضريبة
+hi: कर
+ur: ٹیکس
+
+Tax (%)
+ar: الضريبة (%)
+hi: कर (%)
+ur: ٹیکس (%)
+
+Tax ID
+ar: الرقم الضريبي
+hi: कर पहचान संख्या
+ur: ٹیکس شناختی نمبر
+
+Team & voices
+ar: الفريق والأصوات
+hi: टीम और आवाज़ें
+ur: ٹیم اور آوازیں
+
+Team member
+ar: عضو الفريق
+hi: टीम सदस्य
+ur: ٹیم ممبر
+
+Terms of Use
+ar: شروط الاستخدام
+hi: उपयोग की शर्तें
+ur: استعمال کی شرائط
+
+The PDF file could not be created.
+ar: تعذّر إنشاء ملف PDF.
+hi: PDF फ़ाइल नहीं बन सकी।
+ur: PDF فائل نہیں بن سکی۔
+
+The person being enrolled agrees
+ar: الشخص الذي يتم تسجيله يوافق
+hi: जिस व्यक्ति को दर्ज किया जा रहा है वह सहमत है
+ur: جس شخص کو درج کیا جا رہا ہے وہ متفق ہے
+
+The purchase could not be verified.
+ar: تعذّر التحقق من عملية الشراء.
+hi: खरीदारी की पुष्टि नहीं हो सकी।
+ur: خریداری کی تصدیق نہیں ہو سکی۔
+
+The purchase is waiting for approval.
+ar: عملية الشراء بانتظار الموافقة.
+hi: खरीदारी स्वीकृति की प्रतीक्षा में है।
+ur: خریداری منظوری کی منتظر ہے۔
+
+This month
+ar: هذا الشهر
+hi: इस महीने
+ur: اس مہینے
+
+this person
+ar: هذا الشخص
+hi: यह व्यक्ति
+ur: یہ شخص
+
+Today
+ar: اليوم
+hi: आज
+ur: آج
+
+Today you invoiced %@ across %lld invoices.
+ar: أصدرت اليوم فواتير بقيمة %1$@ في %2$lld فاتورة.
+hi: आज आपने %2$lld इनवॉइस में %1$@ का इनवॉइस बनाया।
+ur: آج آپ نے %2$lld انوائسز میں %1$@ کی انوائس بنائی۔
+
+Today's total
+ar: إجمالي اليوم
+hi: आज का कुल
+ur: آج کا کل
+
+Total
+ar: الإجمالي
+hi: कुल
+ur: کل
+
+Try again
+ar: حاول مرة أخرى
+hi: फिर कोशिश करें
+ur: دوبارہ کوشش کریں
+
+Unlimited invoices every month
+ar: فواتير غير محدودة كل شهر
+hi: हर महीने असीमित इनवॉइस
+ur: ہر مہینے لامحدود انوائسز
+
+Unlimited invoices, every month.
+ar: فواتير غير محدودة، كل شهر.
+hi: असीमित इनवॉइस, हर महीने।
+ur: لامحدود انوائسز، ہر مہینے۔
+
+Unnamed
+ar: بدون اسم
+hi: बिना नाम
+ur: بے نام
+
+Use these items
+ar: استخدام هذه البنود
+hi: इन आइटमों का उपयोग करें
+ur: یہ آئٹمز استعمال کریں
+
+Voice
+ar: الصوت
+hi: आवाज़
+ur: آواز
+
+Voice consent
+ar: موافقة الصوت
+hi: आवाज़ की सहमति
+ur: آواز کی رضامندی
+
+Voice enrolled
+ar: تم تسجيل الصوت
+hi: आवाज़ दर्ज हो गई
+ur: آواز درج ہو گئی
+
+Voice enrollment
+ar: تسجيل الصوت
+hi: आवाज़ दर्ज करना
+ur: آواز کا اندراج
+
+Voice limit reached
+ar: تم الوصول إلى حد الأصوات
+hi: आवाज़ों की सीमा पूरी हो गई
+ur: آوازوں کی حد پوری ہو گئی
+
+Talkstamp will learn the voice of %@ from three short readings, so it can tell who is dictating.
+ar: سيتعرف Talkstamp على صوت %@ من ثلاث قراءات قصيرة ليعرف من يُملي.
+hi: Talkstamp तीन छोटे पाठों से %@ की आवाज़ सीखेगा, ताकि वह पहचान सके कि कौन बोल रहा है।
+ur: Talkstamp تین مختصر قراتوں سے %@ کی آواز سیکھے گا تاکہ وہ پہچان سکے کہ کون بول رہا ہے۔
+
+We didn't hear enough. Move closer, speak a little louder and try again.
+ar: لم نسمع بما يكفي. اقترب وتحدّث بصوت أعلى قليلًا وحاول مرة أخرى.
+hi: हमने पर्याप्त नहीं सुना। पास आएँ, थोड़ा ज़ोर से बोलें और फिर कोशिश करें।
+ur: ہم نے کافی نہیں سنا۔ قریب آئیں، ذرا بلند آواز سے بولیں اور دوبارہ کوشش کریں۔
+
+What I heard
+ar: ما سمعته
+hi: मैंने क्या सुना
+ur: میں نے کیا سنا
+
+Who's speaking?
+ar: من يتحدث؟
+hi: कौन बोल रहा है?
+ur: کون بول رہا ہے؟
+
+You've used your %lld free invoices this month.
+ar: لقد استخدمت فواتيرك المجانية البالغة %lld هذا الشهر.
+hi: आपने इस महीने के अपने %lld मुफ़्त इनवॉइस इस्तेमाल कर लिए हैं।
+ur: آپ نے اس مہینے کی اپنی %lld مفت انوائسز استعمال کر لی ہیں۔
+
+Your invoices stay on your devices and sync through your own iCloud.
+ar: تبقى فواتيرك على أجهزتك وتتم مزامنتها عبر iCloud الخاص بك.
+hi: आपके इनवॉइस आपके डिवाइसों पर रहते हैं और आपके अपने iCloud से सिंक होते हैं।
+ur: آپ کی انوائسز آپ کے آلات پر رہتی ہیں اور آپ کے اپنے iCloud کے ذریعے سنک ہوتی ہیں۔
+
+e.g. Maison Dupont
+ar: مثال: مؤسسة الأمل
+hi: जैसे: शर्मा ट्रेडर्स
+ur: مثلاً: شرما ٹریڈرز
+
+About
+ar: حول
+hi: परिचय
+ur: بارے میں
+
+Checked with Apple Intelligence
+ar: تم التحقق باستخدام Apple Intelligence
+hi: Apple Intelligence से जाँचा गया
+ur: Apple Intelligence سے جانچا گیا
+
+Delete this invoice?
+ar: حذف هذه الفاتورة؟
+hi: यह इनवॉइस हटाएँ?
+ur: یہ انوائس حذف کریں؟
+
+Duplicate
+ar: تكرار
+hi: प्रतिलिपि बनाएँ
+ur: نقل بنائیں
+
+Looking for your shop in iCloud…
+ar: جارٍ البحث عن متجرك في iCloud…
+hi: iCloud में आपकी दुकान ढूँढ रहा है…
+ur: iCloud میں آپ کی دکان تلاش کر رہا ہے…
+
+Recent customers
+ar: العملاء الأخيرون
+hi: हाल के ग्राहक
+ur: حالیہ گاہک
+
+This can't be undone.
+ar: لا يمكن التراجع عن هذا.
+hi: इसे वापस नहीं किया जा सकता।
+ur: اسے واپس نہیں کیا جا سکتا۔
+
+Version
+ar: الإصدار
+hi: संस्करण
+ur: ورژن
+
+All
+ar: الكل
+hi: सभी
+ur: تمام
+
+After you stop, phrases that do not sound like the speaker are left out, and you can bring them back. Needs an enrolled voice.
+ar: بعد التوقف تُستبعد العبارات التي لا تشبه صوت المتحدث ويمكنك إعادتها. يتطلب صوتًا مسجّلًا.
+hi: रुकने के बाद, जो वाक्य बोलने वाले की आवाज़ जैसे नहीं लगते वे छोड़ दिए जाते हैं, और आप उन्हें वापस ला सकते हैं। इसके लिए दर्ज की गई आवाज़ ज़रूरी है।
+ur: رکنے کے بعد وہ جملے چھوڑ دیے جاتے ہیں جو بولنے والے کی آواز جیسے نہیں لگتے، اور آپ انہیں واپس لا سکتے ہیں۔ اس کے لیے درج شدہ آواز ضروری ہے۔
+
+Counter mode
+ar: وضع الكاونتر
+hi: काउंटर मोड
+ur: کاؤنٹر موڈ
+
+Discard
+ar: تجاهل
+hi: छोड़ दें
+ur: رد کریں
+
+Ignore other voices while dictating (beta)
+ar: تجاهل الأصوات الأخرى أثناء الإملاء (تجريبي)
+hi: बोलते समय अन्य आवाज़ें अनदेखी करें (बीटा)
+ur: بولتے وقت دوسری آوازوں کو نظر انداز کریں (بیٹا)
+
+Include everything
+ar: تضمين كل شيء
+hi: सब कुछ शामिल करें
+ur: سب کچھ شامل کریں
+
+Invoice language
+ar: لغة الفاتورة
+hi: इनवॉइस की भाषा
+ur: انوائس کی زبان
+
+Open invoice
+ar: فتح الفاتورة
+hi: इनवॉइस खोलें
+ur: انوائس کھولیں
+
+Same as shop
+ar: مثل المتجر
+hi: दुकान जैसी
+ur: دکان کے مطابق
+
+Same as the app
+ar: مثل التطبيق
+hi: ऐप जैसी
+ur: ایپ کے مطابق
+
+Say this to start an invoice
+ar: قل هذا لبدء فاتورة
+hi: इनवॉइस शुरू करने के लिए यह बोलें
+ur: انوائس شروع کرنے کے لیے یہ بولیں
+
+Status
+ar: الحالة
+hi: स्थिति
+ur: حالت
+
+The microphone stays on while this screen is open.
+ar: يبقى الميكروفون يعمل أثناء فتح هذه الشاشة.
+hi: यह स्क्रीन खुली रहने तक माइक चालू रहता है।
+ur: یہ اسکرین کھلی رہنے تک مائیکروفون آن رہتا ہے۔
+
+“Two shirts at twenty each and a pair of pants for forty.”
+ar: «قميصان بعشرين للواحد وبنطال بأربعين.»
+hi: “दो शर्ट बीस-बीस के और एक पैंट चालीस की।”
+ur: “دو شرٹیں بیس بیس کی اور ایک پتلون چالیس کی۔”
+
+“Add three coffees for twelve in total.”
+ar: «أضف ثلاثة أكواب قهوة بإجمالي اثني عشر.»
+hi: “तीन कॉफ़ी जोड़ें, कुल बारह की।”
+ur: “تین کافیاں شامل کریں، کل بارہ کی۔”
+
+“One jacket at a hundred and fifty, thank you.”
+ar: «سترة واحدة بمئة وخمسين، شكرًا.»
+hi: “एक जैकेट एक सौ पचास की, धन्यवाद।”
+ur: “ایک جیکٹ ایک سو پچاس کی، شکریہ۔”
+
+%@ / month
+ar: %@ / شهريًا
+hi: %@ / माह
+ur: %@ / ماہ
+
+%lld of %lld free invoices left
+ar: تبقّى %1$lld من %2$lld فاتورة مجانية
+hi: %2$lld में से %1$lld मुफ़्त इनवॉइस बचे हैं
+ur: %2$lld میں سے %1$lld مفت انوائسز باقی ہیں
+
+%lld of %lld left
+ar: تبقّى %1$lld من %2$lld
+hi: %2$lld में से %1$lld बचे हैं
+ur: %2$lld میں سے %1$lld باقی ہیں
+
+Plan
+ar: الخطة
+hi: प्लान
+ur: پلان
+
+Unlocked
+ar: مُفعَّل
+hi: अनलॉक
+ur: ان لاک
+
+Unlock Pro
+ar: فتح النسخة الاحترافية
+hi: प्रो अनलॉक करें
+ur: پرو ان لاک کریں
+
+One-time purchase
+ar: عملية شراء لمرة واحدة
+hi: एक बार की खरीदारी
+ur: ایک بار کی خریداری
+
+Pay once, keep it forever. No subscription
+ar: ادفع مرة واحدة واحتفظ به للأبد. بدون اشتراك
+hi: एक बार भुगतान करें, हमेशा के लिए रखें। कोई सब्सक्रिप्शन नहीं
+ur: ایک بار ادائیگی کریں، ہمیشہ کے لیے رکھیں۔ کوئی سبسکرپشن نہیں
+
+No purchase was found for this Apple ID.
+ar: لم يتم العثور على أي عملية شراء لمعرّف Apple هذا.
+hi: इस Apple ID के लिए कोई खरीदारी नहीं मिली।
+ur: اس Apple ID کے لیے کوئی خریداری نہیں ملی۔
+
+Payment is charged to your Apple ID at confirmation of purchase. This is a one-time purchase: there is no subscription and nothing renews. You can restore it on any device signed in with the same Apple ID.
+ar: يتم خصم المبلغ من حساب Apple ID الخاص بك عند تأكيد الشراء. هذه عملية شراء لمرة واحدة: لا يوجد اشتراك ولا شيء يتجدد. يمكنك استعادتها على أي جهاز مسجّل الدخول بنفس Apple ID.
+hi: खरीदारी की पुष्टि होने पर भुगतान आपकी Apple ID से लिया जाता है। यह एक बार की खरीदारी है: कोई सब्सक्रिप्शन नहीं है और कुछ भी नवीनीकृत नहीं होता। आप इसे उसी Apple ID से साइन इन किसी भी डिवाइस पर पुनर्स्थापित कर सकते हैं।
+ur: خریداری کی تصدیق پر ادائیگی آپ کی Apple ID سے لی جاتی ہے۔ یہ ایک بار کی خریداری ہے: کوئی سبسکرپشن نہیں اور کچھ بھی تجدید نہیں ہوتا۔ آپ اسے اسی Apple ID سے سائن ان کسی بھی آلے پر بحال کر سکتے ہیں۔
+
+AMOUNT IN WORDS
+ar: المبلغ بالحروف
+hi: शब्दों में राशि
+ur: رقم الفاظ میں
+
+@plural %lld invoices
+ar.zero: لا فواتير
+ar.one: فاتورة واحدة
+ar.two: فاتورتان
+ar.few: %lld فواتير
+ar.many: %lld فاتورة
+ar.other: %lld فاتورة
+hi.one: %lld इनवॉइस
+hi.other: %lld इनवॉइस
+ur.one: %lld انوائس
+ur.other: %lld انوائسز
+
+@plural Ignored %lld phrases from other voices
+ar.zero: لم يتم تجاهل أي عبارات من أصوات أخرى
+ar.one: تم تجاهل عبارة واحدة من صوت آخر
+ar.two: تم تجاهل عبارتين من أصوات أخرى
+ar.few: تم تجاهل %lld عبارات من أصوات أخرى
+ar.many: تم تجاهل %lld عبارة من أصوات أخرى
+ar.other: تم تجاهل %lld عبارة من أصوات أخرى
+hi.one: दूसरी आवाज़ का %lld वाक्य अनदेखा किया गया
+hi.other: दूसरी आवाज़ों के %lld वाक्य अनदेखे किए गए
+ur.one: دوسری آواز کا %lld جملہ نظر انداز کیا گیا
+ur.other: دوسری آوازوں کے %lld جملے نظر انداز کیے گئے
+
+@widget
+
+Today
+ar: اليوم
+hi: आज
+ur: آج
+
+New invoice
+ar: فاتورة جديدة
+hi: नया इनवॉइस
+ur: نئی انوائس
+
+Start dictating an invoice.
+ar: ابدأ إملاء فاتورة.
+hi: इनवॉइस बोलना शुरू करें।
+ur: انوائس بولنا شروع کریں۔
+
+Start dictating a new invoice.
+ar: ابدأ إملاء فاتورة جديدة.
+hi: नया इनवॉइस बोलना शुरू करें।
+ur: نئی انوائس بولنا شروع کریں۔
+
+Today's invoiced total. Tap to dictate a new invoice.
+ar: إجمالي فواتير اليوم. اضغط لإملاء فاتورة جديدة.
+hi: आज के इनवॉइस का कुल। नया इनवॉइस बोलने के लिए टैप करें।
+ur: آج کی انوائسز کا کل۔ نئی انوائس بولنے کے لیے ٹیپ کریں۔
+
+%@ today
+ar: %@ اليوم
+hi: आज %@
+ur: آج %@
+
+%lld today
+ar: %lld اليوم
+hi: आज %lld
+ur: آج %lld
+
+%lld free left this month
+ar: تبقّى %lld مجانية هذا الشهر
+hi: इस महीने %lld मुफ़्त बचे हैं
+ur: اس مہینے %lld مفت باقی ہیں
+
+@plural %lld invoices
+ar.zero: لا فواتير
+ar.one: فاتورة واحدة
+ar.two: فاتورتان
+ar.few: %lld فواتير
+ar.many: %lld فاتورة
+ar.other: %lld فاتورة
+hi.one: %lld इनवॉइस
+hi.other: %lld इनवॉइस
+ur.one: %lld انوائس
+ur.other: %lld انوائسز
+
+@infoplist
+
+NSMicrophoneUsageDescription
+ar: يستمع Talkstamp أثناء إملائك لبنود الفاتورة.
+hi: जब आप इनवॉइस के आइटम बोलते हैं तब Talkstamp सुनता है।
+ur: جب آپ انوائس کے آئٹمز بولتے ہیں تو Talkstamp سنتا ہے۔
+
+NSSpeechRecognitionUsageDescription
+ar: يحوّل Talkstamp إملاءك إلى بنود فاتورة.
+hi: Talkstamp आपके बोले हुए को इनवॉइस की पंक्तियों में बदलता है।
+ur: Talkstamp آپ کے بولے ہوئے کو انوائس کی سطروں میں بدلتا ہے۔
+
+NSCameraUsageDescription
+ar: يمسح Talkstamp ختم شركتك بالكاميرا.
+hi: Talkstamp कैमरे से आपकी कंपनी की मुहर स्कैन करता है।
+ur: Talkstamp کیمرے سے آپ کی کمپنی کی مہر اسکین کرتا ہے۔

@@ -4,6 +4,12 @@
     "%@ today": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ اليوم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -16,10 +22,22 @@
             "value": "%@ aujourd'hui"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आज %@"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "%@ oggi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آج %@"
           }
         },
         "zh-Hans": {
@@ -33,6 +51,12 @@
     "%lld free left this month": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تبقّى %lld مجانية هذا الشهر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -45,10 +69,22 @@
             "value": "%lld gratuites restantes ce mois-ci"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इस महीने %lld मुफ़्त बचे हैं"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "%lld gratuite rimaste questo mese"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اس مہینے %lld مفت باقی ہیں"
           }
         },
         "zh-Hans": {
@@ -62,6 +98,48 @@
     "%lld invoices": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld فواتير"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld فاتورة"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "فاتورة واحدة"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld فاتورة"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "فاتورتان"
+                }
+              },
+              "zero": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "لا فواتير"
+                }
+              }
+            }
+          }
+        },
         "en": {
           "variations": {
             "plural": {
@@ -116,6 +194,24 @@
             }
           }
         },
+        "hi": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld इनवॉइस"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld इनवॉइस"
+                }
+              }
+            }
+          }
+        },
         "it": {
           "variations": {
             "plural": {
@@ -129,6 +225,24 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld fatture"
+                }
+              }
+            }
+          }
+        },
+        "ur": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld انوائس"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld انوائسز"
                 }
               }
             }
@@ -151,6 +265,12 @@
     "%lld today": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld اليوم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -163,10 +283,22 @@
             "value": "%lld aujourd'hui"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आज %lld"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "%lld oggi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آج %lld"
           }
         },
         "zh-Hans": {
@@ -180,6 +312,12 @@
     "New invoice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فاتورة جديدة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -192,10 +330,22 @@
             "value": "Nouvelle facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नया इनवॉइस"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nuova fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نئی انوائس"
           }
         },
         "zh-Hans": {
@@ -209,6 +359,12 @@
     "Start dictating a new invoice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابدأ إملاء فاتورة جديدة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -221,10 +377,22 @@
             "value": "Commencez à dicter une nouvelle facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नया इनवॉइस बोलना शुरू करें।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Inizia a dettare una nuova fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نئی انوائس بولنا شروع کریں۔"
           }
         },
         "zh-Hans": {
@@ -238,6 +406,12 @@
     "Start dictating an invoice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابدأ إملاء فاتورة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -250,10 +424,22 @@
             "value": "Commencez à dicter une facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस बोलना शुरू करें।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Inizia a dettare una fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس بولنا شروع کریں۔"
           }
         },
         "zh-Hans": {
@@ -267,6 +453,12 @@
     "Today": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اليوم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -279,10 +471,22 @@
             "value": "Aujourd'hui"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आज"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Oggi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آج"
           }
         },
         "zh-Hans": {
@@ -296,6 +500,12 @@
     "Today's invoiced total. Tap to dictate a new invoice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إجمالي فواتير اليوم. اضغط لإملاء فاتورة جديدة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -308,10 +518,22 @@
             "value": "Total facturé aujourd'hui. Touchez pour dicter une nouvelle facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आज के इनवॉइस का कुल। नया इनवॉइस बोलने के लिए टैप करें।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Totale fatturato oggi. Tocca per dettare una nuova fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آج کی انوائسز کا کل۔ نئی انوائس بولنے کے لیے ٹیپ کریں۔"
           }
         },
         "zh-Hans": {

@@ -22,6 +22,12 @@ es: IMPORTE
 it: IMPORTO
 zh: 金额
 
+AMOUNT IN WORDS
+fr: MONTANT EN LETTRES
+es: IMPORTE EN LETRAS
+it: IMPORTO IN LETTERE
+zh: 大写金额
+
 Active
 fr: Actif
 es: Activo

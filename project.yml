@@ -39,6 +39,9 @@ targets:
           - es
           - it
           - zh-Hans
+          - ar
+          - hi
+          - ur
         UILaunchScreen: {}
         ITSAppUsesNonExemptEncryption: false
         CFBundleURLTypes:

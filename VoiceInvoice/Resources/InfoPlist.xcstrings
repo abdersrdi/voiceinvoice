@@ -4,6 +4,12 @@
     "NSCameraUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يمسح Talkstamp ختم شركتك بالكاميرا."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -22,10 +28,22 @@
             "value": "Talkstamp scanne le tampon de votre entreprise avec l'appareil photo."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp कैमरे से आपकी कंपनी की मुहर स्कैन करता है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Talkstamp scansiona il timbro della tua azienda con la fotocamera."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp کیمرے سے آپ کی کمپنی کی مہر اسکین کرتا ہے۔"
           }
         },
         "zh-Hans": {
@@ -39,6 +57,12 @@
     "NSMicrophoneUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يستمع Talkstamp أثناء إملائك لبنود الفاتورة."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -57,10 +81,22 @@
             "value": "Talkstamp écoute pendant que vous dictez les articles de la facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जब आप इनवॉइस के आइटम बोलते हैं तब Talkstamp सुनता है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Talkstamp ascolta mentre detti gli articoli della fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جب آپ انوائس کے آئٹمز بولتے ہیں تو Talkstamp سنتا ہے۔"
           }
         },
         "zh-Hans": {
@@ -74,6 +110,12 @@
     "NSSpeechRecognitionUsageDescription": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يحوّل Talkstamp إملاءك إلى بنود فاتورة."
+          }
+        },
         "en": {
           "stringUnit": {
             "state": "translated",
@@ -92,10 +134,22 @@
             "value": "Talkstamp transforme votre dictée en lignes de facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp आपके बोले हुए को इनवॉइस की पंक्तियों में बदलता है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Talkstamp trasforma la tua dettatura in righe di fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp آپ کے بولے ہوئے کو انوائس کی سطروں میں بدلتا ہے۔"
           }
         },
         "zh-Hans": {

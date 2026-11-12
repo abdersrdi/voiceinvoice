@@ -4,6 +4,12 @@
     "%@ / month": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ / شهريًا"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -16,10 +22,22 @@
             "value": "%@ / mois"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ / माह"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "%@ / mese"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ / ماہ"
           }
         },
         "zh-Hans": {
@@ -33,6 +51,48 @@
     "%lld invoices": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld فواتير"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld فاتورة"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "فاتورة واحدة"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld فاتورة"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "فاتورتان"
+                }
+              },
+              "zero": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "لا فواتير"
+                }
+              }
+            }
+          }
+        },
         "en": {
           "variations": {
             "plural": {
@@ -87,6 +147,24 @@
             }
           }
         },
+        "hi": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld इनवॉइस"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld इनवॉइस"
+                }
+              }
+            }
+          }
+        },
         "it": {
           "variations": {
             "plural": {
@@ -100,6 +178,24 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "%lld fatture"
+                }
+              }
+            }
+          }
+        },
+        "ur": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld انوائس"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld انوائسز"
                 }
               }
             }
@@ -122,6 +218,12 @@
     "%lld of %lld free invoices left": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تبقّى %1$lld من %2$lld فاتورة مجانية"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -134,10 +236,22 @@
             "value": "%1$lld sur %2$lld factures gratuites restantes"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$lld में से %1$lld मुफ़्त इनवॉइस बचे हैं"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$lld di %2$lld fatture gratuite rimaste"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$lld میں سے %1$lld مفت انوائسز باقی ہیں"
           }
         },
         "zh-Hans": {
@@ -151,6 +265,12 @@
     "%lld of %lld left": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تبقّى %1$lld من %2$lld"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -163,10 +283,22 @@
             "value": "%1$lld sur %2$lld restantes"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$lld में से %1$lld बचे हैं"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "%1$lld di %2$lld rimaste"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$lld میں سے %1$lld باقی ہیں"
           }
         },
         "zh-Hans": {
@@ -180,6 +312,12 @@
     "A shop can enroll up to %lld voices. Delete one to enroll another.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يمكن لكل متجر تسجيل ما يصل إلى %lld أصوات. احذف صوتًا لتسجيل صوت آخر."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -192,10 +330,22 @@
             "value": "Un commerce peut enregistrer jusqu'à %lld voix. Supprimez-en une pour en enregistrer une autre."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "एक दुकान में अधिकतम %lld आवाज़ें दर्ज की जा सकती हैं। नई आवाज़ दर्ज करने के लिए पहले एक हटाएँ।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Un negozio può registrare fino a %lld voci. Eliminane una per registrarne un'altra."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ایک دکان میں زیادہ سے زیادہ %lld آوازیں درج کی جا سکتی ہیں۔ نئی آواز درج کرنے کے لیے پہلے ایک حذف کریں۔"
           }
         },
         "zh-Hans": {
@@ -209,6 +359,12 @@
     "A voiceprint is not a security lock. It only helps label who dictated an invoice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بصمة الصوت ليست قفل أمان. هي فقط تساعد على تسمية من أملى الفاتورة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -221,10 +377,22 @@
             "value": "Une empreinte vocale n'est pas un verrou de sécurité. Elle sert uniquement à indiquer qui a dicté une facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "वॉइसप्रिंट कोई सुरक्षा ताला नहीं है। यह सिर्फ़ यह बताने में मदद करता है कि इनवॉइस किसने बोला।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Un'impronta vocale non è un blocco di sicurezza. Serve solo a indicare chi ha dettato una fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وائس پرنٹ کوئی حفاظتی تالا نہیں ہے۔ یہ صرف یہ بتانے میں مدد کرتا ہے کہ انوائس کس نے بولی۔"
           }
         },
         "zh-Hans": {
@@ -238,6 +406,12 @@
     "AMOUNT": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المبلغ"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -250,10 +424,22 @@
             "value": "MONTANT"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "राशि"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "IMPORTO"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رقم"
           }
         },
         "zh-Hans": {
@@ -264,9 +450,62 @@
         }
       }
     },
+    "AMOUNT IN WORDS": {
+      "extractionState": "manual",
+      "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المبلغ بالحروف"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IMPORTE EN LETRAS"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MONTANT EN LETTRES"
+          }
+        },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "शब्दों में राशि"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "IMPORTO IN LETTERE"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رقم الفاظ میں"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大写金额"
+          }
+        }
+      }
+    },
     "About": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حول"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -279,10 +518,22 @@
             "value": "À propos"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "परिचय"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Informazioni"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بارے میں"
           }
         },
         "zh-Hans": {
@@ -296,6 +547,12 @@
     "Active": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نشط"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -308,10 +565,22 @@
             "value": "Actif"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सक्रिय"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Attivo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فعال"
           }
         },
         "zh-Hans": {
@@ -325,6 +594,12 @@
     "Add": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إضافة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -337,10 +612,22 @@
             "value": "Ajouter"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जोड़ें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Aggiungi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شامل کریں"
           }
         },
         "zh-Hans": {
@@ -354,6 +641,12 @@
     "Add item": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إضافة بند"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -366,10 +659,22 @@
             "value": "Ajouter un article"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आइटम जोड़ें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Aggiungi articolo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آئٹم شامل کریں"
           }
         },
         "zh-Hans": {
@@ -383,6 +688,12 @@
     "Add team member": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إضافة عضو فريق"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -395,10 +706,22 @@
             "value": "Ajouter un membre"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टीम सदस्य जोड़ें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Aggiungi membro del team"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹیم ممبر شامل کریں"
           }
         },
         "zh-Hans": {
@@ -412,6 +735,12 @@
     "Add the people who dictate invoices. Enroll up to %lld voices so Talkstamp can tell who is speaking and note it on each invoice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أضف الأشخاص الذين يُملون الفواتير. سجّل ما يصل إلى %lld أصوات ليتعرف Talkstamp على المتحدث ويذكره في كل فاتورة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -424,10 +753,22 @@
             "value": "Ajoutez les personnes qui dictent des factures. Enregistrez jusqu'à %lld voix pour que Talkstamp sache qui parle et l'indique sur chaque facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "उन लोगों को जोड़ें जो इनवॉइस बोलते हैं। अधिकतम %lld आवाज़ें दर्ज करें ताकि Talkstamp पहचान सके कि कौन बोल रहा है और हर इनवॉइस पर उसका नाम लिख सके।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Aggiungi le persone che dettano le fatture. Registra fino a %lld voci così Talkstamp riconosce chi parla e lo annota su ogni fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ان لوگوں کو شامل کریں جو انوائس بولتے ہیں۔ زیادہ سے زیادہ %lld آوازیں درج کریں تاکہ Talkstamp پہچان سکے کہ کون بول رہا ہے اور ہر انوائس پر اس کا نام لکھ سکے۔"
           }
         },
         "zh-Hans": {
@@ -441,6 +782,12 @@
     "Address": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العنوان"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -453,10 +800,22 @@
             "value": "Adresse"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "पता"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Indirizzo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پتہ"
           }
         },
         "zh-Hans": {
@@ -470,6 +829,12 @@
     "After you stop, phrases that do not sound like the speaker are left out, and you can bring them back. Needs an enrolled voice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بعد التوقف تُستبعد العبارات التي لا تشبه صوت المتحدث ويمكنك إعادتها. يتطلب صوتًا مسجّلًا."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -482,10 +847,22 @@
             "value": "Après l'arrêt, les phrases qui ne ressemblent pas à la voix du locuteur sont écartées, et vous pouvez les rétablir. Nécessite une voix enregistrée."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "रुकने के बाद, जो वाक्य बोलने वाले की आवाज़ जैसे नहीं लगते वे छोड़ दिए जाते हैं, और आप उन्हें वापस ला सकते हैं। इसके लिए दर्ज की गई आवाज़ ज़रूरी है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Quando smetti, le frasi che non assomigliano alla voce di chi parla vengono escluse e puoi recuperarle. Richiede una voce registrata."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رکنے کے بعد وہ جملے چھوڑ دیے جاتے ہیں جو بولنے والے کی آواز جیسے نہیں لگتے، اور آپ انہیں واپس لا سکتے ہیں۔ اس کے لیے درج شدہ آواز ضروری ہے۔"
           }
         },
         "zh-Hans": {
@@ -499,6 +876,12 @@
     "All": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الكل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -511,10 +894,22 @@
             "value": "Tous"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सभी"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Tutte"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تمام"
           }
         },
         "zh-Hans": {
@@ -528,6 +923,12 @@
     "Apple servers": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خوادم Apple"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -540,10 +941,22 @@
             "value": "Serveurs Apple"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple सर्वर"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Server Apple"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple سرورز"
           }
         },
         "zh-Hans": {
@@ -557,6 +970,12 @@
     "Authorized signature": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التوقيع المعتمد"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -569,10 +988,22 @@
             "value": "Signature autorisée"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अधिकृत हस्ताक्षर"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Firma autorizzata"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مجاز دستخط"
           }
         },
         "zh-Hans": {
@@ -586,6 +1017,12 @@
     "BILL TO": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فاتورة إلى"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -598,10 +1035,22 @@
             "value": "FACTURÉ À"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बिल प्राप्तकर्ता"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "INTESTATARIO"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بنام"
           }
         },
         "zh-Hans": {
@@ -615,6 +1064,12 @@
     "Branding": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الهوية التجارية"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -627,10 +1082,22 @@
             "value": "Image de marque"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ब्रांडिंग"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Immagine del marchio"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "برانڈنگ"
           }
         },
         "zh-Hans": {
@@ -644,6 +1111,12 @@
     "Cancel": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إلغاء"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -656,10 +1129,22 @@
             "value": "Annuler"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "रद्द करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Annulla"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "منسوخ کریں"
           }
         },
         "zh-Hans": {
@@ -673,6 +1158,12 @@
     "Check the price": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحقق من السعر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -685,10 +1176,22 @@
             "value": "Vérifiez le prix"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कीमत जाँचें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Controlla il prezzo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قیمت چیک کریں"
           }
         },
         "zh-Hans": {
@@ -702,6 +1205,12 @@
     "Checked with Apple Intelligence": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم التحقق باستخدام Apple Intelligence"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -714,10 +1223,22 @@
             "value": "Vérifié avec Apple Intelligence"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence से जाँचा गया"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Verificato con Apple Intelligence"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence سے جانچا گیا"
           }
         },
         "zh-Hans": {
@@ -731,6 +1252,12 @@
     "Choose": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختيار"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -743,10 +1270,22 @@
             "value": "Choisir"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "चुनें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Scegli"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "منتخب کریں"
           }
         },
         "zh-Hans": {
@@ -760,6 +1299,12 @@
     "Choose photo": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اختيار صورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -772,10 +1317,22 @@
             "value": "Choisir une photo"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "फ़ोटो चुनें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Scegli foto"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تصویر منتخب کریں"
           }
         },
         "zh-Hans": {
@@ -789,6 +1346,12 @@
     "Clean-up": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التنظيف"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -801,10 +1364,22 @@
             "value": "Nettoyage"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सफ़ाई"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Pulizia"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "صفائی"
           }
         },
         "zh-Hans": {
@@ -818,6 +1393,12 @@
     "Clear": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسح"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -830,10 +1411,22 @@
             "value": "Effacer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मिटाएँ"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Cancella"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مٹائیں"
           }
         },
         "zh-Hans": {
@@ -847,6 +1440,12 @@
     "Close": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إغلاق"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -859,10 +1458,22 @@
             "value": "Fermer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बंद करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Chiudi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بند کریں"
           }
         },
         "zh-Hans": {
@@ -876,6 +1487,12 @@
     "Company stamp": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ختم الشركة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -888,10 +1505,22 @@
             "value": "Tampon de l'entreprise"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कंपनी की मुहर"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Timbro aziendale"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کمپنی کی مہر"
           }
         },
         "zh-Hans": {
@@ -905,6 +1534,12 @@
     "Could not build the PDF": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذّر إنشاء ملف PDF"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -917,10 +1552,22 @@
             "value": "Impossible de créer le PDF"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PDF नहीं बन सका"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Impossibile creare il PDF"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PDF نہیں بن سکی"
           }
         },
         "zh-Hans": {
@@ -934,6 +1581,12 @@
     "Counter mode": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وضع الكاونتر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -946,10 +1599,22 @@
             "value": "Mode comptoir"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "काउंटर मोड"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Modalità banco"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کاؤنٹر موڈ"
           }
         },
         "zh-Hans": {
@@ -963,6 +1628,12 @@
     "Currency": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العملة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -975,10 +1646,22 @@
             "value": "Devise"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मुद्रा"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Valuta"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کرنسی"
           }
         },
         "zh-Hans": {
@@ -992,6 +1675,12 @@
     "Customer": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العميل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1004,10 +1693,22 @@
             "value": "Client"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ग्राहक"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Cliente"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "گاہک"
           }
         },
         "zh-Hans": {
@@ -1021,6 +1722,12 @@
     "Customer name": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اسم العميل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1033,10 +1740,22 @@
             "value": "Nom du client"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ग्राहक का नाम"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nome del cliente"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "گاہک کا نام"
           }
         },
         "zh-Hans": {
@@ -1050,6 +1769,12 @@
     "DESCRIPTION": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الوصف"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1062,10 +1787,22 @@
             "value": "DESCRIPTION"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "विवरण"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "DESCRIZIONE"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تفصیل"
           }
         },
         "zh-Hans": {
@@ -1079,6 +1816,12 @@
     "Default tax (%)": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الضريبة الافتراضية (%)"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1091,10 +1834,22 @@
             "value": "Taxe par défaut (%)"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "डिफ़ॉल्ट कर (%)"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Imposta predefinita (%)"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ڈیفالٹ ٹیکس (%)"
           }
         },
         "zh-Hans": {
@@ -1108,6 +1863,12 @@
     "Default tax rate (%)": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نسبة الضريبة الافتراضية (%)"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1120,10 +1881,22 @@
             "value": "Taux de taxe par défaut (%)"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "डिफ़ॉल्ट कर दर (%)"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Aliquota predefinita (%)"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ڈیفالٹ ٹیکس کی شرح (%)"
           }
         },
         "zh-Hans": {
@@ -1137,6 +1910,12 @@
     "Delete": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1149,10 +1928,22 @@
             "value": "Supprimer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हटाएँ"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Elimina"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف کریں"
           }
         },
         "zh-Hans": {
@@ -1166,6 +1957,12 @@
     "Delete this invoice?": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف هذه الفاتورة؟"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1178,10 +1975,22 @@
             "value": "Supprimer cette facture ?"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह इनवॉइस हटाएँ?"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Eliminare questa fattura?"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "یہ انوائس حذف کریں؟"
           }
         },
         "zh-Hans": {
@@ -1195,6 +2004,12 @@
     "Delete voice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف الصوت"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1207,10 +2022,22 @@
             "value": "Supprimer la voix"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़ हटाएँ"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Elimina voce"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آواز حذف کریں"
           }
         },
         "zh-Hans": {
@@ -1224,6 +2051,12 @@
     "Details": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التفاصيل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1236,10 +2069,22 @@
             "value": "Détails"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "विवरण"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Dettagli"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تفصیلات"
           }
         },
         "zh-Hans": {
@@ -1253,6 +2098,12 @@
     "Dictate": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إملاء"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1265,10 +2116,22 @@
             "value": "Dicter"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बोलें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Detta"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بولیں"
           }
         },
         "zh-Hans": {
@@ -1282,6 +2145,12 @@
     "Dictate an invoice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إملاء فاتورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1294,10 +2163,22 @@
             "value": "Dicter une facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस बोलें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Detta una fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس بولیں"
           }
         },
         "zh-Hans": {
@@ -1311,6 +2192,12 @@
     "Discard": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تجاهل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1323,10 +2210,22 @@
             "value": "Ignorer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "छोड़ दें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Scarta"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رد کریں"
           }
         },
         "zh-Hans": {
@@ -1340,6 +2239,12 @@
     "Discount": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الخصم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1352,10 +2257,22 @@
             "value": "Remise"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "छूट"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Sconto"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رعایت"
           }
         },
         "zh-Hans": {
@@ -1369,6 +2286,12 @@
     "Discount (%)": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الخصم (%)"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1381,10 +2304,22 @@
             "value": "Remise (%)"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "छूट (%)"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Sconto (%)"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رعایت (%)"
           }
         },
         "zh-Hans": {
@@ -1398,6 +2333,12 @@
     "Done": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1410,10 +2351,22 @@
             "value": "Terminé"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हो गया"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Fine"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ہو گیا"
           }
         },
         "zh-Hans": {
@@ -1427,6 +2380,12 @@
     "Draft": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسودة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1439,10 +2398,22 @@
             "value": "Brouillon"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ड्राफ़्ट"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Bozza"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسودہ"
           }
         },
         "zh-Hans": {
@@ -1456,6 +2427,12 @@
     "Due": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مستحقة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1468,10 +2445,22 @@
             "value": "Échéance"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "देय"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Scadenza"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "واجب الادا"
           }
         },
         "zh-Hans": {
@@ -1485,6 +2474,12 @@
     "Due date": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تاريخ الاستحقاق"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1497,10 +2492,22 @@
             "value": "Date d'échéance"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "देय तिथि"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Data di scadenza"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آخری تاریخ"
           }
         },
         "zh-Hans": {
@@ -1514,6 +2521,12 @@
     "Duplicate": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تكرار"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1526,10 +2539,22 @@
             "value": "Dupliquer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "प्रतिलिपि बनाएँ"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Duplica"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نقل بنائیں"
           }
         },
         "zh-Hans": {
@@ -1543,6 +2568,12 @@
     "Edit": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعديل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1555,10 +2586,22 @@
             "value": "Modifier"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "संपादित करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Modifica"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ترمیم کریں"
           }
         },
         "zh-Hans": {
@@ -1572,6 +2615,12 @@
     "Edit invoice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعديل الفاتورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1584,10 +2633,22 @@
             "value": "Modifier la facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस संपादित करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Modifica fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس میں ترمیم کریں"
           }
         },
         "zh-Hans": {
@@ -1601,6 +2662,12 @@
     "Email": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البريد الإلكتروني"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1613,10 +2680,22 @@
             "value": "E-mail"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ईमेल"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "E-mail"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ای میل"
           }
         },
         "zh-Hans": {
@@ -1630,6 +2709,12 @@
     "Enroll voice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تسجيل صوت"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1642,10 +2727,22 @@
             "value": "Enregistrer la voix"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़ दर्ज करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Registra voce"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آواز درج کریں"
           }
         },
         "zh-Hans": {
@@ -1659,6 +2756,12 @@
     "Enrollment did not work. Please try again.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم ينجح التسجيل. يرجى المحاولة مرة أخرى."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1671,10 +2774,22 @@
             "value": "L'enregistrement a échoué. Veuillez réessayer."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दर्ज करना सफल नहीं हुआ। कृपया फिर से कोशिश करें।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "La registrazione non è riuscita. Riprova."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اندراج کامیاب نہیں ہوا۔ براہ کرم دوبارہ کوشش کریں۔"
           }
         },
         "zh-Hans": {
@@ -1688,6 +2803,12 @@
     "Everything you already made stays free to view, export and share": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "كل ما أنشأته سابقًا يبقى مجانيًا للعرض والتصدير والمشاركة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1700,10 +2821,22 @@
             "value": "Tout ce que vous avez déjà créé reste gratuit à consulter, exporter et partager"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जो कुछ आप पहले बना चुके हैं वह देखने, निर्यात करने और साझा करने के लिए मुफ़्त रहेगा"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Tutto ciò che hai già creato resta gratuito da consultare, esportare e condividere"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جو کچھ آپ پہلے بنا چکے ہیں وہ دیکھنے، برآمد کرنے اور شیئر کرنے کے لیے مفت رہے گا"
           }
         },
         "zh-Hans": {
@@ -1717,6 +2850,12 @@
     "Footer note": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ملاحظة التذييل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1729,10 +2868,22 @@
             "value": "Note de bas de page"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "फ़ुटर नोट"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nota a piè di pagina"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فوٹر نوٹ"
           }
         },
         "zh-Hans": {
@@ -1746,6 +2897,12 @@
     "Free plan": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الخطة المجانية"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1758,10 +2915,22 @@
             "value": "Offre gratuite"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मुफ़्त प्लान"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Piano gratuito"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مفت پلان"
           }
         },
         "zh-Hans": {
@@ -1775,6 +2944,12 @@
     "Get started": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابدأ الآن"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1787,10 +2962,22 @@
             "value": "Commencer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "शुरू करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Inizia"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شروع کریں"
           }
         },
         "zh-Hans": {
@@ -1804,6 +2991,12 @@
     "Hear how much you invoiced today.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اسمع كم أصدرت من فواتير اليوم."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1816,10 +3009,22 @@
             "value": "Écoutez le montant facturé aujourd'hui."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सुनें कि आज आपने कितने का इनवॉइस बनाया।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Ascolta quanto hai fatturato oggi."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سنیں کہ آج آپ نے کتنے کی انوائس بنائی۔"
           }
         },
         "zh-Hans": {
@@ -1833,6 +3038,12 @@
     "INVOICE": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فاتورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1845,10 +3056,22 @@
             "value": "FACTURE"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "FATTURA"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس"
           }
         },
         "zh-Hans": {
@@ -1862,6 +3085,12 @@
     "Ignore other voices while dictating (beta)": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تجاهل الأصوات الأخرى أثناء الإملاء (تجريبي)"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1874,10 +3103,22 @@
             "value": "Ignorer les autres voix pendant la dictée (bêta)"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बोलते समय अन्य आवाज़ें अनदेखी करें (बीटा)"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Ignora le altre voci durante la dettatura (beta)"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بولتے وقت دوسری آوازوں کو نظر انداز کریں (بیٹا)"
           }
         },
         "zh-Hans": {
@@ -1891,6 +3132,48 @@
     "Ignored %lld phrases from other voices": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "تم تجاهل %lld عبارات من أصوات أخرى"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "تم تجاهل %lld عبارة من أصوات أخرى"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "تم تجاهل عبارة واحدة من صوت آخر"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "تم تجاهل %lld عبارة من أصوات أخرى"
+                }
+              },
+              "two": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "تم تجاهل عبارتين من أصوات أخرى"
+                }
+              },
+              "zero": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "لم يتم تجاهل أي عبارات من أصوات أخرى"
+                }
+              }
+            }
+          }
+        },
         "en": {
           "variations": {
             "plural": {
@@ -1945,6 +3228,24 @@
             }
           }
         },
+        "hi": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "दूसरी आवाज़ का %lld वाक्य अनदेखा किया गया"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "दूसरी आवाज़ों के %lld वाक्य अनदेखे किए गए"
+                }
+              }
+            }
+          }
+        },
         "it": {
           "variations": {
             "plural": {
@@ -1958,6 +3259,24 @@
                 "stringUnit": {
                   "state": "translated",
                   "value": "Ignorate %lld frasi di altre voci"
+                }
+              }
+            }
+          }
+        },
+        "ur": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "دوسری آواز کا %lld جملہ نظر انداز کیا گیا"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "دوسری آوازوں کے %lld جملے نظر انداز کیے گئے"
                 }
               }
             }
@@ -1980,6 +3299,12 @@
     "Include everything": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تضمين كل شيء"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -1992,10 +3317,22 @@
             "value": "Tout inclure"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सब कुछ शामिल करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Includi tutto"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سب کچھ شامل کریں"
           }
         },
         "zh-Hans": {
@@ -2009,6 +3346,12 @@
     "Invoice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فاتورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2021,10 +3364,22 @@
             "value": "Facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس"
           }
         },
         "zh-Hans": {
@@ -2038,6 +3393,12 @@
     "Invoice language": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لغة الفاتورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2050,10 +3411,22 @@
             "value": "Langue de la facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस की भाषा"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Lingua della fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس کی زبان"
           }
         },
         "zh-Hans": {
@@ -2067,6 +3440,12 @@
     "Invoices": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الفواتير"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2079,10 +3458,22 @@
             "value": "Factures"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Fatture"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائسز"
           }
         },
         "zh-Hans": {
@@ -2096,6 +3487,12 @@
     "Invoicing": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الفوترة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2108,10 +3505,22 @@
             "value": "Facturation"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइसिंग"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Fatturazione"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائسنگ"
           }
         },
         "zh-Hans": {
@@ -2125,6 +3534,12 @@
     "Issue date": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تاريخ الإصدار"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2137,10 +3552,22 @@
             "value": "Date d'émission"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जारी करने की तिथि"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Data di emissione"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اجراء کی تاریخ"
           }
         },
         "zh-Hans": {
@@ -2154,6 +3581,12 @@
     "Issued": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "صادرة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2166,10 +3599,22 @@
             "value": "Émise le"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जारी"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Emessa"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جاری"
           }
         },
         "zh-Hans": {
@@ -2183,6 +3628,12 @@
     "Item": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البند"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2195,10 +3646,22 @@
             "value": "Article"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आइटम"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Articolo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آئٹم"
           }
         },
         "zh-Hans": {
@@ -2212,6 +3675,12 @@
     "Items": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البنود"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2224,10 +3693,22 @@
             "value": "Articles"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आइटम"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Articoli"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آئٹمز"
           }
         },
         "zh-Hans": {
@@ -2241,6 +3722,12 @@
     "Listening…": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جارٍ الاستماع…"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2253,10 +3740,22 @@
             "value": "Écoute…"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सुन रहा है…"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "In ascolto…"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سن رہا ہے…"
           }
         },
         "zh-Hans": {
@@ -2270,6 +3769,12 @@
     "Looking for your shop in iCloud…": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جارٍ البحث عن متجرك في iCloud…"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2282,10 +3787,22 @@
             "value": "Recherche de votre commerce dans iCloud…"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iCloud में आपकी दुकान ढूँढ रहा है…"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Ricerca del tuo negozio in iCloud…"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iCloud میں آپ کی دکان تلاش کر رہا ہے…"
           }
         },
         "zh-Hans": {
@@ -2299,6 +3816,12 @@
     "Microphone access is turned off for Talkstamp. You can enable it in Settings.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الوصول إلى الميكروفون متوقف لتطبيق Talkstamp. يمكنك تفعيله من الإعدادات."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2311,10 +3834,22 @@
             "value": "L'accès au micro est désactivé pour Talkstamp. Vous pouvez l'activer dans Réglages."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp के लिए माइक्रोफ़ोन की अनुमति बंद है। आप इसे सेटिंग्स में चालू कर सकते हैं।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "L'accesso al microfono è disattivato per Talkstamp. Puoi attivarlo in Impostazioni."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp کے لیے مائیکروفون تک رسائی بند ہے۔ آپ اسے سیٹنگز میں آن کر سکتے ہیں۔"
           }
         },
         "zh-Hans": {
@@ -2328,6 +3863,12 @@
     "Move right to keep faint ink. Move left to remove paper noise and shadows.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حرّك لليمين للإبقاء على الحبر الخفيف. حرّك لليسار لإزالة تشويش الورق والظلال."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2340,10 +3881,22 @@
             "value": "Déplacez à droite pour garder l'encre claire. Déplacez à gauche pour retirer le bruit et les ombres du papier."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हल्की स्याही रखने के लिए दाएँ खिसकाएँ। काग़ज़ का शोर और परछाइयाँ हटाने के लिए बाएँ खिसकाएँ।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Sposta a destra per mantenere l'inchiostro tenue. Sposta a sinistra per eliminare disturbi e ombre della carta."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ہلکی سیاہی رکھنے کے لیے دائیں سرکائیں۔ کاغذ کا شور اور سائے ہٹانے کے لیے بائیں سرکائیں۔"
           }
         },
         "zh-Hans": {
@@ -2357,6 +3910,12 @@
     "NOTES": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ملاحظات"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2369,10 +3928,22 @@
             "value": "NOTES"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टिप्पणियाँ"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "NOTE"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نوٹس"
           }
         },
         "zh-Hans": {
@@ -2386,6 +3957,12 @@
     "Name": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الاسم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2398,10 +3975,22 @@
             "value": "Nom"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नाम"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nome"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نام"
           }
         },
         "zh-Hans": {
@@ -2415,6 +4004,12 @@
     "New invoice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فاتورة جديدة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2427,10 +4022,22 @@
             "value": "Nouvelle facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नया इनवॉइस"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nuova fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نئی انوائس"
           }
         },
         "zh-Hans": {
@@ -2444,6 +4051,12 @@
     "No customer": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بدون عميل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2456,10 +4069,22 @@
             "value": "Aucun client"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कोई ग्राहक नहीं"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nessun cliente"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کوئی گاہک نہیں"
           }
         },
         "zh-Hans": {
@@ -2473,6 +4098,12 @@
     "No invoices yet": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد فواتير بعد"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2485,10 +4116,22 @@
             "value": "Aucune facture pour l'instant"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अभी कोई इनवॉइस नहीं"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Ancora nessuna fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابھی کوئی انوائس نہیں"
           }
         },
         "zh-Hans": {
@@ -2502,6 +4145,12 @@
     "No invoices yet today.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد فواتير اليوم بعد."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2514,10 +4163,22 @@
             "value": "Aucune facture aujourd'hui."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आज अभी तक कोई इनवॉइस नहीं।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nessuna fattura oggi."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آج ابھی تک کوئی انوائس نہیں۔"
           }
         },
         "zh-Hans": {
@@ -2531,6 +4192,12 @@
     "No purchase was found for this Apple ID.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم يتم العثور على أي عملية شراء لمعرّف Apple هذا."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2543,10 +4210,22 @@
             "value": "Aucun achat n'a été trouvé pour cet identifiant Apple."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इस Apple ID के लिए कोई खरीदारी नहीं मिली।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nessun acquisto trovato per questo ID Apple."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اس Apple ID کے لیے کوئی خریداری نہیں ملی۔"
           }
         },
         "zh-Hans": {
@@ -2560,6 +4239,12 @@
     "No results": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا توجد نتائج"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2572,10 +4257,22 @@
             "value": "Aucun résultat"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कोई परिणाम नहीं"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nessun risultato"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کوئی نتیجہ نہیں"
           }
         },
         "zh-Hans": {
@@ -2589,6 +4286,12 @@
     "No stamp found. Try a clearer photo or move the slider right.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم يتم العثور على ختم. جرّب صورة أوضح أو حرّك المنزلق لليمين."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2601,10 +4304,22 @@
             "value": "Aucun tampon trouvé. Essayez une photo plus nette ou déplacez le curseur à droite."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कोई मुहर नहीं मिली। साफ़ फ़ोटो आज़माएँ या स्लाइडर को दाएँ खिसकाएँ।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nessun timbro trovato. Prova una foto più nitida o sposta il cursore a destra."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کوئی مہر نہیں ملی۔ زیادہ صاف تصویر آزمائیں یا سلائیڈر کو دائیں سرکائیں۔"
           }
         },
         "zh-Hans": {
@@ -2618,6 +4333,12 @@
     "No voice enrolled": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يوجد صوت مسجّل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2630,10 +4351,22 @@
             "value": "Aucune voix enregistrée"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कोई आवाज़ दर्ज नहीं है"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nessuna voce registrata"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کوئی آواز درج نہیں"
           }
         },
         "zh-Hans": {
@@ -2647,6 +4380,12 @@
     "Nobody listed": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يوجد أحد في القائمة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2659,10 +4398,22 @@
             "value": "Personne dans la liste"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सूची में कोई नहीं"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nessuno in elenco"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فہرست میں کوئی نہیں"
           }
         },
         "zh-Hans": {
@@ -2676,6 +4427,12 @@
     "Notes or payment terms": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ملاحظات أو شروط الدفع"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2688,10 +4445,22 @@
             "value": "Notes ou conditions de paiement"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टिप्पणियाँ या भुगतान की शर्तें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Note o condizioni di pagamento"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نوٹس یا ادائیگی کی شرائط"
           }
         },
         "zh-Hans": {
@@ -2705,6 +4474,12 @@
     "Number prefix": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بادئة الرقم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2717,10 +4492,22 @@
             "value": "Préfixe de numéro"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नंबर का उपसर्ग"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Prefisso numerazione"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نمبر کا سابقہ"
           }
         },
         "zh-Hans": {
@@ -2734,6 +4521,12 @@
     "OK": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حسنًا"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2746,10 +4539,22 @@
             "value": "OK"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ठीक है"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "OK"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹھیک ہے"
           }
         },
         "zh-Hans": {
@@ -2763,6 +4568,12 @@
     "On-device": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "على الجهاز"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2775,10 +4586,22 @@
             "value": "Sur l'appareil"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "डिवाइस पर"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Sul dispositivo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ڈیوائس پر"
           }
         },
         "zh-Hans": {
@@ -2792,6 +4615,12 @@
     "One-time purchase": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عملية شراء لمرة واحدة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2804,10 +4633,22 @@
             "value": "Achat unique"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "एक बार की खरीदारी"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Acquisto singolo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ایک بار کی خریداری"
           }
         },
         "zh-Hans": {
@@ -2821,6 +4662,12 @@
     "Only a numeric voiceprint is kept, never a recording. With sync on it is stored in the shop's iCloud so you enroll once; turn it off to keep it on this device only. Deleting removes it everywhere.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يُحفظ فقط رقم بصمة الصوت وليس التسجيل أبدًا. عند تفعيل المزامنة تُخزَّن في iCloud الخاص بالمتجر فتسجّل مرة واحدة؛ أوقفها لإبقائها على هذا الجهاز فقط. الحذف يزيلها من كل مكان."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2833,10 +4680,22 @@
             "value": "Seule une empreinte vocale numérique est conservée, jamais un enregistrement. Avec la synchronisation, elle est stockée dans l'iCloud du commerce : vous ne l'enregistrez qu'une fois. Désactivez-la pour la garder sur cet appareil uniquement. La supprimer l'efface partout."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सिर्फ़ संख्यात्मक वॉइसप्रिंट रखा जाता है, रिकॉर्डिंग कभी नहीं। सिंक चालू होने पर यह दुकान के iCloud में रहता है, इसलिए आपको एक ही बार दर्ज करना होता है; इसे सिर्फ़ इसी डिवाइस पर रखने के लिए सिंक बंद करें। हटाने पर यह हर जगह से हट जाता है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Viene conservata solo un'impronta vocale numerica, mai una registrazione. Con la sincronizzazione attiva è salvata nell'iCloud del negozio, quindi la registri una sola volta; disattivala per tenerla solo su questo dispositivo. Eliminandola sparisce ovunque."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "صرف عددی وائس پرنٹ رکھا جاتا ہے، ریکارڈنگ کبھی نہیں۔ سنک آن ہونے پر یہ دکان کے iCloud میں رہتا ہے اس لیے آپ کو ایک ہی بار درج کرنا پڑتا ہے؛ اسے صرف اسی ڈیوائس پر رکھنے کے لیے سنک بند کریں۔ حذف کرنے سے یہ ہر جگہ سے ہٹ جاتا ہے۔"
           }
         },
         "zh-Hans": {
@@ -2850,6 +4709,12 @@
     "Only a numeric voiceprint is stored, never the recording. It can be deleted at any time, and it is removed from every device.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يُخزَّن فقط رقم بصمة الصوت وليس التسجيل أبدًا. يمكن حذفها في أي وقت وتُزال من كل الأجهزة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2862,10 +4727,22 @@
             "value": "Seule une empreinte vocale numérique est enregistrée, jamais la voix elle-même. Elle peut être supprimée à tout moment et disparaît de tous les appareils."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सिर्फ़ संख्यात्मक वॉइसप्रिंट संग्रहीत होता है, रिकॉर्डिंग कभी नहीं। इसे कभी भी हटाया जा सकता है और यह हर डिवाइस से हट जाता है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Viene salvata solo un'impronta vocale numerica, mai la registrazione. Può essere eliminata in qualsiasi momento e viene rimossa da ogni dispositivo."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "صرف عددی وائس پرنٹ محفوظ ہوتا ہے، ریکارڈنگ کبھی نہیں۔ اسے کسی بھی وقت حذف کیا جا سکتا ہے اور یہ ہر ڈیوائس سے ہٹ جاتا ہے۔"
           }
         },
         "zh-Hans": {
@@ -2879,6 +4756,12 @@
     "Open invoice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فتح الفاتورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2891,10 +4774,22 @@
             "value": "Ouvrir la facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस खोलें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Apri fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس کھولیں"
           }
         },
         "zh-Hans": {
@@ -2908,6 +4803,12 @@
     "PRICE": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "السعر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2920,10 +4821,22 @@
             "value": "PRIX"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कीमत"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "PREZZO"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قیمت"
           }
         },
         "zh-Hans": {
@@ -2937,6 +4850,12 @@
     "Paid": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مدفوعة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2949,10 +4868,22 @@
             "value": "Payée"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "भुगतान हो गया"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Pagata"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ادا شدہ"
           }
         },
         "zh-Hans": {
@@ -2966,6 +4897,12 @@
     "Pay once, keep it forever. No subscription": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ادفع مرة واحدة واحتفظ به للأبد. بدون اشتراك"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -2978,10 +4915,22 @@
             "value": "Payez une fois, gardez pour toujours. Sans abonnement"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "एक बार भुगतान करें, हमेशा के लिए रखें। कोई सब्सक्रिप्शन नहीं"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Paghi una volta e resta tuo per sempre. Nessun abbonamento"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ایک بار ادائیگی کریں، ہمیشہ کے لیے رکھیں۔ کوئی سبسکرپشن نہیں"
           }
         },
         "zh-Hans": {
@@ -2995,6 +4944,12 @@
     "Payment is charged to your Apple ID at confirmation of purchase. This is a one-time purchase: there is no subscription and nothing renews. You can restore it on any device signed in with the same Apple ID.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يتم خصم المبلغ من حساب Apple ID الخاص بك عند تأكيد الشراء. هذه عملية شراء لمرة واحدة: لا يوجد اشتراك ولا شيء يتجدد. يمكنك استعادتها على أي جهاز مسجّل الدخول بنفس Apple ID."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3007,10 +4962,22 @@
             "value": "Le paiement est débité de votre identifiant Apple à la confirmation de l'achat. Il s'agit d'un achat unique : il n'y a pas d'abonnement et rien ne se renouvelle. Vous pouvez le restaurer sur tout appareil connecté avec le même identifiant Apple."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "खरीदारी की पुष्टि होने पर भुगतान आपकी Apple ID से लिया जाता है। यह एक बार की खरीदारी है: कोई सब्सक्रिप्शन नहीं है और कुछ भी नवीनीकृत नहीं होता। आप इसे उसी Apple ID से साइन इन किसी भी डिवाइस पर पुनर्स्थापित कर सकते हैं।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Il pagamento viene addebitato sul tuo ID Apple alla conferma dell'acquisto. È un acquisto singolo: non c'è alcun abbonamento e nulla si rinnova. Puoi ripristinarlo su qualsiasi dispositivo con lo stesso ID Apple."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خریداری کی تصدیق پر ادائیگی آپ کی Apple ID سے لی جاتی ہے۔ یہ ایک بار کی خریداری ہے: کوئی سبسکرپشن نہیں اور کچھ بھی تجدید نہیں ہوتا۔ آپ اسے اسی Apple ID سے سائن ان کسی بھی آلے پر بحال کر سکتے ہیں۔"
           }
         },
         "zh-Hans": {
@@ -3024,6 +4991,12 @@
     "Phone": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الهاتف"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3036,10 +5009,22 @@
             "value": "Téléphone"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "फ़ोन"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Telefono"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فون"
           }
         },
         "zh-Hans": {
@@ -3053,6 +5038,12 @@
     "Plan": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الخطة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3065,10 +5056,22 @@
             "value": "Formule"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "प्लान"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Piano"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پلان"
           }
         },
         "zh-Hans": {
@@ -3082,6 +5085,12 @@
     "Price": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "السعر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3094,10 +5103,22 @@
             "value": "Prix"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कीमत"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Prezzo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قیمت"
           }
         },
         "zh-Hans": {
@@ -3111,6 +5132,12 @@
     "Prices are not available right now.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الأسعار غير متاحة حاليًا."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3123,10 +5150,22 @@
             "value": "Les prix ne sont pas disponibles pour le moment."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कीमतें अभी उपलब्ध नहीं हैं।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "I prezzi non sono disponibili al momento."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قیمتیں اس وقت دستیاب نہیں ہیں۔"
           }
         },
         "zh-Hans": {
@@ -3140,6 +5179,12 @@
     "Prices could not be loaded. Check your connection and try again.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذّر تحميل الأسعار. تحقق من اتصالك وحاول مرة أخرى."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3152,10 +5197,22 @@
             "value": "Impossible de charger les prix. Vérifiez votre connexion et réessayez."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कीमतें लोड नहीं हो सकीं। अपना कनेक्शन जाँचें और फिर कोशिश करें।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Impossibile caricare i prezzi. Controlla la connessione e riprova."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قیمتیں لوڈ نہیں ہو سکیں۔ اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔"
           }
         },
         "zh-Hans": {
@@ -3169,6 +5226,12 @@
     "Pricing": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التسعير"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3181,10 +5244,22 @@
             "value": "Tarification"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मूल्य निर्धारण"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Prezzi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قیمتیں"
           }
         },
         "zh-Hans": {
@@ -3198,6 +5273,12 @@
     "Privacy Policy": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سياسة الخصوصية"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3210,10 +5291,22 @@
             "value": "Politique de confidentialité"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "गोपनीयता नीति"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Informativa sulla privacy"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رازداری کی پالیسی"
           }
         },
         "zh-Hans": {
@@ -3227,6 +5320,12 @@
     "QTY": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الكمية"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3239,10 +5338,22 @@
             "value": "QTÉ"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मात्रा"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Q.TÀ"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مقدار"
           }
         },
         "zh-Hans": {
@@ -3256,6 +5367,12 @@
     "Qty": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الكمية"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3268,10 +5385,22 @@
             "value": "Qté"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मात्रा"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Q.tà"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مقدار"
           }
         },
         "zh-Hans": {
@@ -3285,6 +5414,12 @@
     "Re-enroll voice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إعادة تسجيل الصوت"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3297,10 +5432,22 @@
             "value": "Réenregistrer la voix"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़ फिर से दर्ज करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Registra di nuovo la voce"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آواز دوبارہ درج کریں"
           }
         },
         "zh-Hans": {
@@ -3314,6 +5461,12 @@
     "Reading %lld of %lld": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "القراءة %1$lld من %2$lld"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3326,10 +5479,22 @@
             "value": "Lecture %1$lld sur %2$lld"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$lld में से %1$lld पढ़ना"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Lettura %1$lld di %2$lld"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$lld میں سے %1$lld پڑھنا"
           }
         },
         "zh-Hans": {
@@ -3343,6 +5508,12 @@
     "Recent customers": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "العملاء الأخيرون"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3355,10 +5526,22 @@
             "value": "Clients récents"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हाल के ग्राहक"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Clienti recenti"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حالیہ گاہک"
           }
         },
         "zh-Hans": {
@@ -3372,6 +5555,12 @@
     "Redo": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إعادة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3384,10 +5573,22 @@
             "value": "Refaire"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दोबारा करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Rifai"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دوبارہ کریں"
           }
         },
         "zh-Hans": {
@@ -3401,6 +5602,12 @@
     "Replace": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استبدال"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3413,10 +5620,22 @@
             "value": "Remplacer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बदलें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Sostituisci"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تبدیل کریں"
           }
         },
         "zh-Hans": {
@@ -3430,6 +5649,12 @@
     "Restore purchases": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استعادة المشتريات"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3442,10 +5667,22 @@
             "value": "Restaurer les achats"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "खरीदारी पुनर्स्थापित करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Ripristina acquisti"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خریداری بحال کریں"
           }
         },
         "zh-Hans": {
@@ -3459,6 +5696,12 @@
     "Same as shop": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مثل المتجر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3471,10 +5714,22 @@
             "value": "Comme le commerce"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दुकान जैसी"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Come il negozio"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دکان کے مطابق"
           }
         },
         "zh-Hans": {
@@ -3488,6 +5743,12 @@
     "Same as the app": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مثل التطبيق"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3500,10 +5761,22 @@
             "value": "Comme l'app"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ऐप जैसी"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Come l'app"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ایپ کے مطابق"
           }
         },
         "zh-Hans": {
@@ -3517,6 +5790,12 @@
     "Save": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حفظ"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3529,10 +5808,22 @@
             "value": "Enregistrer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "सहेजें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Salva"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "محفوظ کریں"
           }
         },
         "zh-Hans": {
@@ -3546,6 +5837,12 @@
     "Say something like: “Two shirts at 20 each and a pair of pants for 40.”": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قل شيئًا مثل: «قميصان بسعر 20 للواحد وبنطال بسعر 40.»"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3558,10 +5855,22 @@
             "value": "Dites par exemple : « Deux chemises à 20 chacune et un pantalon pour 40. »"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कुछ ऐसा बोलें: “दो शर्ट 20-20 के और एक पैंट 40 की।”"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Di' qualcosa come: «Due camicie a 20 l'una e un paio di pantaloni a 40.»"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کچھ ایسا بولیں: “دو شرٹیں 20-20 کی اور ایک پتلون 40 کی۔”"
           }
         },
         "zh-Hans": {
@@ -3575,6 +5884,12 @@
     "Say this to start an invoice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قل هذا لبدء فاتورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3587,10 +5902,22 @@
             "value": "Dites ceci pour démarrer une facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस शुरू करने के लिए यह बोलें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Di' questo per iniziare una fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس شروع کرنے کے لیے یہ بولیں"
           }
         },
         "zh-Hans": {
@@ -3604,6 +5931,12 @@
     "Scan with camera": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مسح بالكاميرا"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3616,10 +5949,22 @@
             "value": "Scanner avec l'appareil photo"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कैमरे से स्कैन करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Scansiona con la fotocamera"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کیمرے سے اسکین کریں"
           }
         },
         "zh-Hans": {
@@ -3633,6 +5978,12 @@
     "Search invoices": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "البحث في الفواتير"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3645,10 +5996,22 @@
             "value": "Rechercher des factures"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस खोजें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Cerca fatture"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائسز تلاش کریں"
           }
         },
         "zh-Hans": {
@@ -3662,6 +6025,12 @@
     "Sent": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مُرسلة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3674,10 +6043,22 @@
             "value": "Envoyée"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "भेजा गया"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Inviata"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بھیجی گئی"
           }
         },
         "zh-Hans": {
@@ -3691,6 +6072,12 @@
     "Set up your shop": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أعدّ متجرك"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3703,10 +6090,22 @@
             "value": "Configurez votre commerce"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अपनी दुकान सेट करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Configura il tuo negozio"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اپنی دکان سیٹ کریں"
           }
         },
         "zh-Hans": {
@@ -3720,6 +6119,12 @@
     "Share invoice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مشاركة الفاتورة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3732,10 +6137,22 @@
             "value": "Partager la facture"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इनवॉइस साझा करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Condividi fattura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انوائس شیئر کریں"
           }
         },
         "zh-Hans": {
@@ -3749,6 +6166,12 @@
     "Shop": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المتجر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3761,10 +6184,22 @@
             "value": "Commerce"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दुकान"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Negozio"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دکان"
           }
         },
         "zh-Hans": {
@@ -3778,6 +6213,12 @@
     "Shop name": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اسم المتجر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3790,10 +6231,22 @@
             "value": "Nom du commerce"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "दुकान का नाम"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Nome del negozio"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دکان کا نام"
           }
         },
         "zh-Hans": {
@@ -3807,6 +6260,12 @@
     "Sign": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "توقيع"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3819,10 +6278,22 @@
             "value": "Signer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हस्ताक्षर करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Firma"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دستخط کریں"
           }
         },
         "zh-Hans": {
@@ -3836,6 +6307,12 @@
     "Sign inside the box": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وقّع داخل المربع"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3848,10 +6325,22 @@
             "value": "Signez dans le cadre"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बॉक्स के अंदर हस्ताक्षर करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Firma nel riquadro"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خانے کے اندر دستخط کریں"
           }
         },
         "zh-Hans": {
@@ -3865,6 +6354,12 @@
     "Signature": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التوقيع"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3877,10 +6372,22 @@
             "value": "Signature"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हस्ताक्षर"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Firma"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دستخط"
           }
         },
         "zh-Hans": {
@@ -3894,6 +6401,12 @@
     "Speak in your normal voice…": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تحدّث بصوتك الطبيعي…"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3906,10 +6419,22 @@
             "value": "Parlez d'une voix normale…"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अपनी सामान्य आवाज़ में बोलें…"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Parla con la tua voce normale…"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اپنی عام آواز میں بولیں…"
           }
         },
         "zh-Hans": {
@@ -3923,6 +6448,12 @@
     "Speak your sale. Send a finished invoice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انطق ببيعك. أرسل فاتورة جاهزة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3935,10 +6466,22 @@
             "value": "Dictez votre vente. Envoyez une facture prête."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अपनी बिक्री बोलिए। तैयार इनवॉइस भेजिए।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Detta la tua vendita. Invia una fattura pronta."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اپنی فروخت بولیں۔ تیار انوائس بھیجیں۔"
           }
         },
         "zh-Hans": {
@@ -3952,6 +6495,12 @@
     "Speaker": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المتحدث"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3964,10 +6513,22 @@
             "value": "Locuteur"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बोलने वाला"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Parlante"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بولنے والا"
           }
         },
         "zh-Hans": {
@@ -3981,6 +6542,12 @@
     "Speech recognition is not available for this language right now.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التعرف على الكلام غير متاح لهذه اللغة حاليًا."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -3993,10 +6560,22 @@
             "value": "La reconnaissance vocale n'est pas disponible pour cette langue pour le moment."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इस भाषा के लिए स्पीच रिकग्निशन अभी उपलब्ध नहीं है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Il riconoscimento vocale non è disponibile per questa lingua al momento."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اس زبان کے لیے اسپیچ ریکگنیشن اس وقت دستیاب نہیں ہے۔"
           }
         },
         "zh-Hans": {
@@ -4010,6 +6589,12 @@
     "Speech recognition is turned off for Talkstamp. You can enable it in Settings.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "التعرف على الكلام متوقف لتطبيق Talkstamp. يمكنك تفعيله من الإعدادات."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4022,10 +6607,22 @@
             "value": "La reconnaissance vocale est désactivée pour Talkstamp. Vous pouvez l'activer dans Réglages."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp के लिए स्पीच रिकग्निशन बंद है। आप इसे सेटिंग्स में चालू कर सकते हैं।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Il riconoscimento vocale è disattivato per Talkstamp. Puoi attivarlo in Impostazioni."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp کے لیے اسپیچ ریکگنیشن بند ہے۔ آپ اسے سیٹنگز میں آن کر سکتے ہیں۔"
           }
         },
         "zh-Hans": {
@@ -4039,6 +6636,12 @@
     "Start dictating a new invoice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابدأ إملاء فاتورة جديدة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4051,10 +6654,22 @@
             "value": "Commencez à dicter une nouvelle facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "नया इनवॉइस बोलना शुरू करें।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Inizia a dettare una nuova fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نئی انوائس بولنا شروع کریں۔"
           }
         },
         "zh-Hans": {
@@ -4068,6 +6683,12 @@
     "Start dictation": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بدء الإملاء"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4080,10 +6701,22 @@
             "value": "Démarrer la dictée"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बोलना शुरू करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Avvia dettatura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بولنا شروع کریں"
           }
         },
         "zh-Hans": {
@@ -4097,6 +6730,12 @@
     "Status": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الحالة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4109,10 +6748,22 @@
             "value": "Statut"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "स्थिति"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Stato"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حالت"
           }
         },
         "zh-Hans": {
@@ -4126,6 +6777,12 @@
     "Stop dictation": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إيقاف الإملاء"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4138,10 +6795,22 @@
             "value": "Arrêter la dictée"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बोलना रोकें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Interrompi dettatura"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بولنا روکیں"
           }
         },
         "zh-Hans": {
@@ -4155,6 +6824,12 @@
     "Subtotal": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "المجموع الفرعي"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4167,10 +6842,22 @@
             "value": "Sous-total"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "उप-योग"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Subtotale"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ذیلی کل"
           }
         },
         "zh-Hans": {
@@ -4184,6 +6871,12 @@
     "Sync voice to my other devices": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مزامنة الصوت مع أجهزتي الأخرى"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4196,10 +6889,22 @@
             "value": "Synchroniser la voix sur mes autres appareils"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़ को मेरे अन्य डिवाइसों से सिंक करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Sincronizza la voce sugli altri dispositivi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آواز کو میرے دوسرے آلات سے سنک کریں"
           }
         },
         "zh-Hans": {
@@ -4213,6 +6918,12 @@
     "Syncs across your devices through your own iCloud": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تتم المزامنة بين أجهزتك عبر iCloud الخاص بك"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4225,10 +6936,22 @@
             "value": "Synchronisé sur vos appareils via votre propre iCloud"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आपके अपने iCloud के ज़रिए आपके सभी डिवाइसों पर सिंक होता है"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Si sincronizza sui tuoi dispositivi tramite il tuo iCloud"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آپ کے اپنے iCloud کے ذریعے آپ کے تمام آلات پر سنک ہوتا ہے"
           }
         },
         "zh-Hans": {
@@ -4242,6 +6965,12 @@
     "TOTAL": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإجمالي"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4254,10 +6983,22 @@
             "value": "TOTAL"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कुल"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "TOTALE"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کل"
           }
         },
         "zh-Hans": {
@@ -4271,6 +7012,12 @@
     "Talkstamp will learn the voice of %@ from three short readings, so it can tell who is dictating.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سيتعرف Talkstamp على صوت %@ من ثلاث قراءات قصيرة ليعرف من يُملي."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4283,10 +7030,22 @@
             "value": "Talkstamp apprendra la voix de %@ à partir de trois courtes lectures afin de reconnaître qui dicte."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp तीन छोटे पाठों से %@ की आवाज़ सीखेगा, ताकि वह पहचान सके कि कौन बोल रहा है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Talkstamp imparerà la voce di %@ da tre brevi letture, così saprà chi sta dettando."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Talkstamp تین مختصر قراتوں سے %@ کی آواز سیکھے گا تاکہ وہ پہچان سکے کہ کون بول رہا ہے۔"
           }
         },
         "zh-Hans": {
@@ -4300,6 +7059,12 @@
     "Tap + to create your first invoice.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اضغط + لإنشاء أول فاتورة لك."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4312,10 +7077,22 @@
             "value": "Touchez + pour créer votre première facture."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अपना पहला इनवॉइस बनाने के लिए + दबाएँ।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Tocca + per creare la tua prima fattura."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اپنی پہلی انوائس بنانے کے لیے + دبائیں۔"
           }
         },
         "zh-Hans": {
@@ -4329,6 +7106,12 @@
     "Tap the mic, or type here": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اضغط على الميكروفون أو اكتب هنا"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4341,10 +7124,22 @@
             "value": "Touchez le micro ou saisissez ici"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "माइक दबाएँ या यहाँ टाइप करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Tocca il microfono o scrivi qui"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مائیک دبائیں یا یہاں ٹائپ کریں"
           }
         },
         "zh-Hans": {
@@ -4358,6 +7153,12 @@
     "Tap the mic, then read the sentence aloud.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اضغط على الميكروفون ثم اقرأ الجملة بصوت عالٍ."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4370,10 +7171,22 @@
             "value": "Touchez le micro, puis lisez la phrase à voix haute."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "माइक दबाएँ, फिर वाक्य ज़ोर से पढ़ें।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Tocca il microfono e leggi la frase ad alta voce."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مائیک دبائیں، پھر جملہ بلند آواز سے پڑھیں۔"
           }
         },
         "zh-Hans": {
@@ -4387,6 +7200,12 @@
     "Tax": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الضريبة"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4399,10 +7218,22 @@
             "value": "Taxe"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कर"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Imposta"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹیکس"
           }
         },
         "zh-Hans": {
@@ -4416,6 +7247,12 @@
     "Tax (%)": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الضريبة (%)"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4428,10 +7265,22 @@
             "value": "Taxe (%)"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कर (%)"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Imposta (%)"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹیکس (%)"
           }
         },
         "zh-Hans": {
@@ -4445,6 +7294,12 @@
     "Tax ID": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الرقم الضريبي"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4457,10 +7312,22 @@
             "value": "Numéro fiscal"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कर पहचान संख्या"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Codice fiscale / P. IVA"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹیکس شناختی نمبر"
           }
         },
         "zh-Hans": {
@@ -4474,6 +7341,12 @@
     "Team & voices": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الفريق والأصوات"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4486,10 +7359,22 @@
             "value": "Équipe et voix"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टीम और आवाज़ें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Team e voci"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹیم اور آوازیں"
           }
         },
         "zh-Hans": {
@@ -4503,6 +7388,12 @@
     "Team member": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عضو الفريق"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4515,10 +7406,22 @@
             "value": "Membre de l'équipe"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "टीम सदस्य"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Membro del team"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ٹیم ممبر"
           }
         },
         "zh-Hans": {
@@ -4532,6 +7435,12 @@
     "Terms of Use": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شروط الاستخدام"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4544,10 +7453,22 @@
             "value": "Conditions d'utilisation"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "उपयोग की शर्तें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Termini di utilizzo"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استعمال کی شرائط"
           }
         },
         "zh-Hans": {
@@ -4561,6 +7482,12 @@
     "The PDF file could not be created.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذّر إنشاء ملف PDF."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4573,10 +7500,22 @@
             "value": "Le fichier PDF n'a pas pu être créé."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PDF फ़ाइल नहीं बन सकी।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Impossibile creare il file PDF."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PDF فائل نہیں بن سکی۔"
           }
         },
         "zh-Hans": {
@@ -4590,6 +7529,12 @@
     "The microphone stays on while this screen is open.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "يبقى الميكروفون يعمل أثناء فتح هذه الشاشة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4602,10 +7547,22 @@
             "value": "Le micro reste actif tant que cet écran est ouvert."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह स्क्रीन खुली रहने तक माइक चालू रहता है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Il microfono resta attivo finché questa schermata è aperta."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "یہ اسکرین کھلی رہنے تک مائیکروفون آن رہتا ہے۔"
           }
         },
         "zh-Hans": {
@@ -4619,6 +7576,12 @@
     "The person being enrolled agrees": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الشخص الذي يتم تسجيله يوافق"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4631,10 +7594,22 @@
             "value": "La personne enregistrée est d'accord"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जिस व्यक्ति को दर्ज किया जा रहा है वह सहमत है"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "La persona registrata acconsente"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جس شخص کو درج کیا جا رہا ہے وہ متفق ہے"
           }
         },
         "zh-Hans": {
@@ -4648,6 +7623,12 @@
     "The purchase could not be verified.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تعذّر التحقق من عملية الشراء."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4660,10 +7641,22 @@
             "value": "L'achat n'a pas pu être vérifié."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "खरीदारी की पुष्टि नहीं हो सकी।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Impossibile verificare l'acquisto."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خریداری کی تصدیق نہیں ہو سکی۔"
           }
         },
         "zh-Hans": {
@@ -4677,6 +7670,12 @@
     "The purchase is waiting for approval.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عملية الشراء بانتظار الموافقة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4689,10 +7688,22 @@
             "value": "L'achat est en attente d'approbation."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "खरीदारी स्वीकृति की प्रतीक्षा में है।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "L'acquisto è in attesa di approvazione."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خریداری منظوری کی منتظر ہے۔"
           }
         },
         "zh-Hans": {
@@ -4706,6 +7717,12 @@
     "This can't be undone.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لا يمكن التراجع عن هذا."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4718,10 +7735,22 @@
             "value": "Cette action est irréversible."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इसे वापस नहीं किया जा सकता।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Questa azione non può essere annullata."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اسے واپس نہیں کیا جا سکتا۔"
           }
         },
         "zh-Hans": {
@@ -4735,6 +7764,12 @@
     "This month": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هذا الشهر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4747,10 +7782,22 @@
             "value": "Ce mois-ci"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इस महीने"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Questo mese"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اس مہینے"
           }
         },
         "zh-Hans": {
@@ -4764,6 +7811,12 @@
     "Today": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اليوم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4776,10 +7829,22 @@
             "value": "Aujourd'hui"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आज"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Oggi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آج"
           }
         },
         "zh-Hans": {
@@ -4793,6 +7858,12 @@
     "Today you invoiced %@ across %lld invoices.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "أصدرت اليوم فواتير بقيمة %1$@ في %2$lld فاتورة."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4805,10 +7876,22 @@
             "value": "Aujourd'hui, vous avez facturé %1$@ sur %2$lld factures."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आज आपने %2$lld इनवॉइस में %1$@ का इनवॉइस बनाया।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Oggi hai fatturato %1$@ su %2$lld fatture."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آج آپ نے %2$lld انوائسز میں %1$@ کی انوائس بنائی۔"
           }
         },
         "zh-Hans": {
@@ -4822,6 +7905,12 @@
     "Today's total": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "إجمالي اليوم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4834,10 +7923,22 @@
             "value": "Total du jour"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आज का कुल"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Totale di oggi"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آج کا کل"
           }
         },
         "zh-Hans": {
@@ -4851,6 +7952,12 @@
     "Total": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإجمالي"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4863,10 +7970,22 @@
             "value": "Total"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कुल"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Totale"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کل"
           }
         },
         "zh-Hans": {
@@ -4880,6 +7999,12 @@
     "Try again": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حاول مرة أخرى"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4892,10 +8017,22 @@
             "value": "Réessayer"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "फिर कोशिश करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Riprova"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "دوبارہ کوشش کریں"
           }
         },
         "zh-Hans": {
@@ -4909,6 +8046,12 @@
     "Unlimited invoices every month": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فواتير غير محدودة كل شهر"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4921,10 +8064,22 @@
             "value": "Factures illimitées chaque mois"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हर महीने असीमित इनवॉइस"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Fatture illimitate ogni mese"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ہر مہینے لامحدود انوائسز"
           }
         },
         "zh-Hans": {
@@ -4938,6 +8093,12 @@
     "Unlimited invoices, every month.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فواتير غير محدودة، كل شهر."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4950,10 +8111,22 @@
             "value": "Factures illimitées, chaque mois."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "असीमित इनवॉइस, हर महीने।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Fatture illimitate, ogni mese."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لامحدود انوائسز، ہر مہینے۔"
           }
         },
         "zh-Hans": {
@@ -4967,6 +8140,12 @@
     "Unlock Pro": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فتح النسخة الاحترافية"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -4979,10 +8158,22 @@
             "value": "Débloquer Pro"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "प्रो अनलॉक करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Sblocca Pro"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پرو ان لاک کریں"
           }
         },
         "zh-Hans": {
@@ -4996,6 +8187,12 @@
     "Unlocked": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مُفعَّل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5008,10 +8205,22 @@
             "value": "Débloqué"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "अनलॉक"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Sbloccato"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ان لاک"
           }
         },
         "zh-Hans": {
@@ -5025,6 +8234,12 @@
     "Unnamed": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بدون اسم"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5037,10 +8252,22 @@
             "value": "Sans nom"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "बिना नाम"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Senza nome"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بے نام"
           }
         },
         "zh-Hans": {
@@ -5054,6 +8281,12 @@
     "Use these items": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "استخدام هذه البنود"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5066,10 +8299,22 @@
             "value": "Utiliser ces articles"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "इन आइटमों का उपयोग करें"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Usa questi articoli"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "یہ آئٹمز استعمال کریں"
           }
         },
         "zh-Hans": {
@@ -5083,6 +8328,12 @@
     "Version": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الإصدار"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5095,10 +8346,22 @@
             "value": "Version"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "संस्करण"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Versione"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ورژن"
           }
         },
         "zh-Hans": {
@@ -5112,6 +8375,12 @@
     "Voice": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "الصوت"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5124,10 +8393,22 @@
             "value": "Voix"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Voce"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آواز"
           }
         },
         "zh-Hans": {
@@ -5141,6 +8422,12 @@
     "Voice consent": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "موافقة الصوت"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5153,10 +8440,22 @@
             "value": "Consentement vocal"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़ की सहमति"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Consenso vocale"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آواز کی رضامندی"
           }
         },
         "zh-Hans": {
@@ -5170,6 +8469,12 @@
     "Voice enrolled": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم تسجيل الصوت"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5182,10 +8487,22 @@
             "value": "Voix enregistrée"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़ दर्ज हो गई"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Voce registrata"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آواز درج ہو گئی"
           }
         },
         "zh-Hans": {
@@ -5199,6 +8516,12 @@
     "Voice enrollment": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تسجيل الصوت"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5211,10 +8534,22 @@
             "value": "Enregistrement de la voix"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़ दर्ज करना"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Registrazione della voce"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آواز کا اندراج"
           }
         },
         "zh-Hans": {
@@ -5228,6 +8563,12 @@
     "Voice limit reached": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تم الوصول إلى حد الأصوات"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5240,10 +8581,22 @@
             "value": "Limite de voix atteinte"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आवाज़ों की सीमा पूरी हो गई"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Limite di voci raggiunto"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آوازوں کی حد پوری ہو گئی"
           }
         },
         "zh-Hans": {
@@ -5257,6 +8610,12 @@
     "We didn't hear enough. Move closer, speak a little louder and try again.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لم نسمع بما يكفي. اقترب وتحدّث بصوت أعلى قليلًا وحاول مرة أخرى."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5269,10 +8628,22 @@
             "value": "Nous n'avons pas assez entendu. Rapprochez-vous, parlez un peu plus fort et réessayez."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "हमने पर्याप्त नहीं सुना। पास आएँ, थोड़ा ज़ोर से बोलें और फिर कोशिश करें।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Non abbiamo sentito abbastanza. Avvicinati, parla un po' più forte e riprova."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ہم نے کافی نہیں سنا۔ قریب آئیں، ذرا بلند آواز سے بولیں اور دوبارہ کوشش کریں۔"
           }
         },
         "zh-Hans": {
@@ -5286,6 +8657,12 @@
     "What I heard": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ما سمعته"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5298,10 +8675,22 @@
             "value": "Ce que j'ai entendu"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "मैंने क्या सुना"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Cosa ho sentito"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "میں نے کیا سنا"
           }
         },
         "zh-Hans": {
@@ -5315,6 +8704,12 @@
     "Who's speaking?": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "من يتحدث؟"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5327,10 +8722,22 @@
             "value": "Qui parle ?"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "कौन बोल रहा है?"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Chi parla?"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کون بول رہا ہے؟"
           }
         },
         "zh-Hans": {
@@ -5344,6 +8751,12 @@
     "You've used your %lld free invoices this month.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لقد استخدمت فواتيرك المجانية البالغة %lld هذا الشهر."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5356,10 +8769,22 @@
             "value": "Vous avez utilisé vos %lld factures gratuites ce mois-ci."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आपने इस महीने के अपने %lld मुफ़्त इनवॉइस इस्तेमाल कर लिए हैं।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Hai usato le tue %lld fatture gratuite di questo mese."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آپ نے اس مہینے کی اپنی %lld مفت انوائسز استعمال کر لی ہیں۔"
           }
         },
         "zh-Hans": {
@@ -5373,6 +8798,12 @@
     "Your invoices stay on your devices and sync through your own iCloud.": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تبقى فواتيرك على أجهزتك وتتم مزامنتها عبر iCloud الخاص بك."
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5385,10 +8816,22 @@
             "value": "Vos factures restent sur vos appareils et se synchronisent via votre propre iCloud."
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "आपके इनवॉइस आपके डिवाइसों पर रहते हैं और आपके अपने iCloud से सिंक होते हैं।"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "Le tue fatture restano sui tuoi dispositivi e si sincronizzano tramite il tuo iCloud."
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آپ کی انوائسز آپ کے آلات پر رہتی ہیں اور آپ کے اپنے iCloud کے ذریعے سنک ہوتی ہیں۔"
           }
         },
         "zh-Hans": {
@@ -5402,6 +8845,12 @@
     "e.g. Maison Dupont": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مثال: مؤسسة الأمل"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5414,10 +8863,22 @@
             "value": "p. ex. Maison Dupont"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "जैसे: शर्मा ट्रेडर्स"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "es. Rossi & Figli"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مثلاً: شرما ٹریڈرز"
           }
         },
         "zh-Hans": {
@@ -5431,6 +8892,12 @@
     "this person": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هذا الشخص"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5443,10 +8910,22 @@
             "value": "cette personne"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "यह व्यक्ति"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "questa persona"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "یہ شخص"
           }
         },
         "zh-Hans": {
@@ -5460,6 +8939,12 @@
     "“Add three coffees for twelve in total.”": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«أضف ثلاثة أكواب قهوة بإجمالي اثني عشر.»"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5472,10 +8957,22 @@
             "value": "« Ajoute trois cafés pour douze au total. »"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“तीन कॉफ़ी जोड़ें, कुल बारह की।”"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "«Aggiungi tre caffè per dodici in totale.»"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“تین کافیاں شامل کریں، کل بارہ کی۔”"
           }
         },
         "zh-Hans": {
@@ -5489,6 +8986,12 @@
     "“One jacket at a hundred and fifty, thank you.”": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«سترة واحدة بمئة وخمسين، شكرًا.»"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5501,10 +9004,22 @@
             "value": "« Une veste à cent cinquante, merci. »"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“एक जैकेट एक सौ पचास की, धन्यवाद।”"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "«Una giacca a centocinquanta, grazie.»"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“ایک جیکٹ ایک سو پچاس کی، شکریہ۔”"
           }
         },
         "zh-Hans": {
@@ -5518,6 +9033,12 @@
     "“Two shirts at twenty each and a pair of pants for forty.”": {
       "extractionState": "manual",
       "localizations": {
+        "ar": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«قميصان بعشرين للواحد وبنطال بأربعين.»"
+          }
+        },
         "es": {
           "stringUnit": {
             "state": "translated",
@@ -5530,10 +9051,22 @@
             "value": "« Deux chemises à vingt chacune et un pantalon pour quarante. »"
           }
         },
+        "hi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“दो शर्ट बीस-बीस के और एक पैंट चालीस की।”"
+          }
+        },
         "it": {
           "stringUnit": {
             "state": "translated",
             "value": "«Due camicie a venti l'una e un paio di pantaloni a quaranta.»"
+          }
+        },
+        "ur": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“دو شرٹیں بیس بیس کی اور ایک پتلون چالیس کی۔”"
           }
         },
         "zh-Hans": {

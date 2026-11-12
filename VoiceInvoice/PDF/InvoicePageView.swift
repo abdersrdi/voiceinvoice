@@ -33,6 +33,7 @@ struct InvoicePageView: View {
 
             if isLast {
                 totalsBlock
+                amountInWordsBlock
                 notesBlock
                 Spacer(minLength: 12)
                 signatureBlock
@@ -49,6 +50,7 @@ struct InvoicePageView: View {
         .background(Color.white)
         .environment(\.colorScheme, .light)
         .environment(\.locale, document.locale)
+        .environment(\.layoutDirection, DocumentLanguage.isRightToLeft(code: document.languageCode) ? .rightToLeft : .leftToRight)
         .foregroundStyle(ink)
     }
 
@@ -196,6 +198,21 @@ struct InvoicePageView: View {
             .frame(width: 230)
         }
         .padding(.top, 16)
+    }
+
+    /// The total in words, shown for currencies and languages where invoices customarily carry it.
+    private var amountInWordsBlock: some View {
+        Group {
+            if AmountInWords.isCustomary(currencyCode: document.currencyCode, languageCode: document.languageCode) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("AMOUNT IN WORDS").font(.system(size: 8, weight: .bold)).foregroundStyle(muted)
+                    Text(verbatim: AmountInWords.string(document.totals.total, currencyCode: document.currencyCode, locale: document.locale))
+                        .font(.system(size: 9.5))
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 12)
+            }
+        }
     }
 
     private func totalLine(_ title: LocalizedStringKey, _ value: String) -> some View {
